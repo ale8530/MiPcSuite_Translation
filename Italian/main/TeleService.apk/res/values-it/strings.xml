@@ -1027,7 +1027,7 @@ Sarà usata al suo posto la rete preferita.</string>
     <string name="answer_state_setting_title">Impostazioni chiamate in arrivo</string>
     <string name="answer_state_setting_summary">Opzioni aggiuntive per chiamate in arrivo</string>
     <string name="turnover_mute_title">Capovolgi per silenziare la suoneria</string>
-    <string name="turnover_mute_summary">Quando Mi4C è in posizione orizzontale, capovolgilo per silenziare la suoneria</string>
+    <string name="turnover_mute_summary">Quando il dispositivo è in posizione orizzontale, capovolgilo per silenziare la suoneria</string>
     <string name="handon_ringer_summary">Il dispositivo non vibrerà quando hai una chiamata in arrivo</string>
     <string name="handon_ringer_title">Non vibrare</string>
     <string name="flash_when_ring_summary">Notifica lampeggiante per le chiamate in arrivo</string>
