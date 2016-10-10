@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="about" size="580,400" type="window" borderwindow="dialog_border_skin.xml">
+    <Layout left="0" backgroundimage="about/bg.png;;5,5,5,5" right="0" bottom="0">
+		<Title left="0" top="0" width="580" height="160" align="near">
+            <VerticalLayout left="0" top="0" width="580" height="160">
+                <HorizontalLayout height="30">
+                    <PlaceHolder width="10" />
+                    <Label name="about_title" width="120" height="16" text="Who we are" font="bold_12" textcolor="#FFFFFF" align="left, top" />
+                    <PlaceHolder />
+                    <Button name="about_close" backgroundtransparent="true" imagelist="about/close.png" width="11" height="11" padding="0,2,0,0"/>
+                    <PlaceHolder width="10" />
+                </HorizontalLayout>
+                <HorizontalLayout height="130">
+                    <PlaceHolder width="205" />
+                    <Layout>
+                        <HorizontalLayout left="0" top="35" right="0" height="40">
+                            <Label autosize="true" text="Mi Pc Suite" font="32" align="center,venter" textcolor="#FFFFFF" backgroundtransparent="true" />
+                            <Label name="version_label" width="200" font="bold_14" height="30" text="2.2.0" textcolor="#FFFFFF" />
+                        </HorizontalLayout>
+                    </Layout>
+                </HorizontalLayout>
+            </VerticalLayout>
+		</Title>
+        <VerticalLayout left="0" top="160" right="0" bottom="0">
+            <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" visible="false" />
+            <HorizontalLayout height="60">
+                <PlaceHolder width="60" />
+                <DecorateButton name="about_official_site" defaultnodename="common_controls:about_item_button" >
+                    <Button name="icon" imagelist="about/website_icon.png" />
+                    <Label name="text" text="Official Site" />
+                </DecorateButton>
+                <PlaceHolder width="5" />
+                <DecorateButton name="about_forum" defaultnodename="common_controls:about_item_button" >
+                    <Button name="icon" imagelist="about/forum_icon.png" />
+                    <Label name="text" text="Official Forum" />
+                </DecorateButton>
+                <PlaceHolder width="5" />
+                <DecorateButton name="about_weibo" defaultnodename="common_controls:about_item_button" >
+                    <Button name="icon" imagelist="about/weibo_icon.png" />
+                    <Label name="text" text="Weibo" />
+                </DecorateButton>
+            </HorizontalLayout>
+            <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" visible="false"/>
+            <VerticalLayout padding="20,0,0,0">
+                <PlaceHolder height="5" />
+                <Label text="Thanks this users in the forum to provide feedback：" textcolor="#181818" height="30" align="center" />
+                <ArrangeLayout name="forum_id_list" hittest="true" />
+                <PlaceHolder height="10" />
+                <Label text="Copyright© mi.com   All Rights Reserved" font="12" textcolor="#b2b2b2" height="18" align="center" />
+                <PlaceHolder height="10" />
+            </VerticalLayout>
+        </VerticalLayout>
+	</Layout>
+</window>

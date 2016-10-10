@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="common_message_box" size="348,220" type="progress_message_box" backgroundimage="common_message_box_bg.png;;15,15,15,15" translucent="true" alphaborders="15,15,15,15">
+	<Layout right="0" bottom="0" padding="10,6,10,10">
+		<VerticalLayout left="10" top="0" right="0" bottom="0">
+			<Title height="34" focusenable="false" padding="0,0,0,0">
+				<Label name="dialog_title" width="200" height="18" font="12" textcolor="#606060" align="left,venter" />
+				<PlaceHolder />
+				<Button name="dialog_close" width="14" height="14" backgroundtransparent="true" backgroundimage="messagebox_close.png" backgroundhotimage="messagebox_close2.png" backgroundpushedimage="messagebox_close3.png" />
+				<PlaceHolder width="12" />
+			</Title>
+			<PlaceHolder height="28" />
+			<HorizontalLayout height="40">
+				<Label name="dialog_text" font="14" textcolor="#3d3d3d" align="left,venter_multiline" backgroundtransparent="true" endellipsis="true" />
+                <PlaceHolder width="5" />
+				<Label name="dialog_text_right" width="80" font="14" textcolor="#3d3d3d" align="right,venter_multiline"  backgroundtransparent="true" />
+                <PlaceHolder width="10" />
+			</HorizontalLayout>
+			<PlaceHolder height="5" />
+			<Layout height="6">
+				<Control name="progress_background" left="3" width="300" height="6" backgroundimage="download/progress_bar_bg.png;;4,0,4,0" backgroundtransparent="true" />
+				<Control name="progress_front" left="3" width="1" height="6" backgroundimage="download/progress_bar.png;;4,0,4,0" backgroundtransparent="true" />
+			</Layout>
+			<PlaceHolder height="25" />
+			<Layout width="340" height="60">
+				<HorizontalLayout left="0" top="20" width="340" height="30" bottom="20" name="dialog_button_one" visible="true">
+					<placeHolder />
+					<Button name="dialog_button_1" backgroundtransparent="true" width="80" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<placeHolder width="32" />
+				</HorizontalLayout>
+				<HorizontalLayout left="0" top="20" width="340" height="30" bottom="20" name="dialog_button_two" visible="false">
+					<placeHolder />
+					<Button name="dialog_button_1" backgroundtransparent="true" width="80" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<placeHolder width="5" />
+					<Button name="dialog_button_2" backgroundtransparent="true" width="80" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<placeHolder width="32" />
+				</HorizontalLayout>
+				<HorizontalLayout left="0" top="20" width="340" height="30" bottom="20" name="dialog_button_three"  visible="false">
+					<placeHolder />
+					<Button name="dialog_button_1" backgroundtransparent="true" width="80" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<placeHolder width="5" />
+					<Button name="dialog_button_2" backgroundtransparent="true" width="80" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<placeHolder width="5" />
+					<Button name="dialog_button_3" backgroundtransparent="true" width="80" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<placeHolder width="32" />
+				</HorizontalLayout>
+			</Layout>
+		</VerticalLayout>
+	</Layout>
+</window>

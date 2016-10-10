@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="menu" size="100,95" type="menu_window"  backgroundimage="app_menu_bg.png;;12,12,12,16" translucent="true" alphaborders="1,1,10,10">
+	<Layout left="2" top="2" right="2" bottom="2">
+		<Control name="menu_item_check_1" left="12" top="10" width="11" height="8" hittest="false"  backgroundimage="对号.png" backgroundtransparent="true" />
+		<Button  name="menu_item_1"  left="0" top="0"   width="203"  height="29" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2"  padding="30,0,0,5" backgroundtransparent="true" textcolor="#656565" texthotcolor="#191919" text="" font="songti_12" align='left,bottom'/>
+		<Control name="common_line_1" left="0" top="29"  width="203"  height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+		<Control name="menu_item_check_2" left="12" top="40" width="11" height="8" hittest="false"  backgroundimage="对号.png" backgroundtransparent="true" />
+		<Button  name="menu_item_2"  left="0" top="30"  width="203"  height="29" padding="30,0,0,5"   backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundtransparent="true" textcolor="#656565" texthotcolor="#191919" text="" font="songti_12" align='left,bottom'/>
+		<Control name="common_line_2" left="0" top="59"  width="203"  height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+		<Control name="menu_item_check_3" left="12" top="70" width="11" height="8" hittest="false"  backgroundimage="对号.png" backgroundtransparent="true" />
+		<Button  name="menu_item_3"  left="0" top="60"  width="203"  height="29" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="30,0,0,5" backgroundtransparent="true" textcolor="#656565" texthotcolor="#191919"  text="" font="songti_12" align='left,bottom'/>
+	</Layout>
+</window>

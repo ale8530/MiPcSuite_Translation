@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window" size="592, 422" borderwindow="dialog_border_skin.xml">
+    <Layout name="restore_client" backgroundimage="bro/bro_frame.png;;1,34,1,1" left="0" top="0" right="0" bottom="0" >
+        <Title backgroundtransparent="true" left="0" right="0" top="0" bottom="0" height="33" padding="10,9,10,0" align="near">
+            <Label name="restore_title" text="还原" font="12" textcolor="#656565" align="left, top" />
+            <Button name="restore_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14"/>
+        </Title>
+		<Layout name="restore_main" left="0" top="34" right="0" bottom="0">
+            <VerticalLayout name="restore_start" left="0" top="10" right="0" bottom="0">
+                <VerticalLayout height="145" name="restore_start_icon_vlayout" visible="false">
+                    <PlaceHolder height="100"/>
+                    <Control name="restore_start_icon" backgroundtransparent="true" backgroundimage="bro/backup_start.png" left="0" top="0" width="43" height="43" />
+                </VerticalLayout>
+                <VerticalLayout height="145" name="restore_start_waiting_vlayout">
+                    <PlaceHolder height="69"/>
+                    <ProgressBarCircle name="restore_start_waiting" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+                </VerticalLayout>
+                <PlaceHolder height="13"/>
+                <Label name="restore_start_title" height="30" text="正在检查备份记录..." textcolor="#191919" font="18" align="center" />
+                <PlaceHolder height="137" />
+                <Button name="restore_start_cancel_btn" text="取消" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+			<VerticalLayout name="resotre_select" left="0" top="0" right="0" bottom="0" align="near" visible="false">
+				<HorizontalLayout name="select_restore_host" width="590" height="340" backgroundtransparent="true">
+                    <PlaceHolder width="1"/>
+					<VerticalLayout width="125" backgroundimage="dev_left_bar.png;;0,0,0,1" backgroundtransparent="true">
+                        <PlaceHolder height="15"/>
+						<TextList name="device_list_on_restore_select" itemheight="34" backgroundtransparent="true" >
+							<Indicate value="<PlaceHolder width='1' height='1'/>" />
+							<Content value="<Label textcolor='#fb5a45' font='12' textfocuscolor='#c02020' align='left,venter' padding='8,0,0,0' />"  />
+						</TextList>
+					</VerticalLayout>
+                    <VerticalLayout  width="462">
+				        <HorizontalLayout width="462" height="40">
+				            <Label text="备份时间" font="12" textcolor="#191919" width="238" height="25" align="left,top" padding="21,6,0,0"/>
+    			    		<Label text="类型" font="12" textcolor="#191919"  width="100" height="25" align="left,top" padding="0,6,0,0"/>
+	    		    	</HorizontalLayout>
+		    	    	<HorizontalLayout width="462" height="1">
+                            <Control height="1" width="462" backgroundtransparent="true" backgroundimage="common/seperate_line.png" padding="0,0,0,0"/>
+                        </HorizontalLayout>
+				    	<RestoreList name="restore_list" itemheight="64" backgroundtransparent="true" padding="1,1,1,1" >
+				    		<Indicate value="<PlaceHolder width='1' height='1'/>" />
+				    		<Content value="<Layout defaultnodename='common_controls:restore_list_item' combineassingle='true' />" />
+				    	</RestoreList>
+                    </VerticalLayout>
+				</HorizontalLayout>
+				<HorizontalLayout height="1">
+                    <Control height="1" width="590" backgroundtransparent="true" backgroundimage="common/seperate_line.png" padding="0,0,0,0"/>
+                </HorizontalLayout>
+                <PlaceHolder height="8"/>
+				<HorizontalLayout height="52" align="near">
+                    <PlaceHolder />
+                    <Button name="restore_begin" text="开始还原"
+                        font="12" focusenable="false"
+                        textcolor="#fb5f45" texthotcolor="#fb5f45" textpushedcolor="#ffffff" textdisabledcolor="#CCCCCC"
+                        width="75" height="30" imagelist="common/red_btn_list.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<PlaceHolder width="5" />
+					<Button name="cancel_select_on_restore" text="取消" font="12" backgroundtransparent="true" textcolor="#656565" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+					<PlaceHolder width="18" />
+				</HorizontalLayout>
+			</VerticalLayout>
+            <VerticalLayout name="restore_progress" left="0" top="0" right="0" bottom="0" visible="false">
+                <VerticalLayout height="87" name="restore_progress_percent_vlayout" visible="false">
+                    <PlaceHolder height="32"/>
+                    <Label name="restore_progress_percent" width="300" height="43" oritext="%.1f%%" text="%100" textcolor="#6695eb" font="32" align="center"/>
+    			    <Layout width="240" height="6">
+                        <Control name="restore_progress_bg" width="240" height="6" backgroundimage="bro/progress_bg.png;;3,2,3,2" backgroundtransparent="true" />
+                        <Control name="restore_progress_m" width="1" height="6" backgroundimage="bro/progress_mark_blue.png;;3,2,3,2" backgroundtransparent="true" />
+                    </Layout>
+                </VerticalLayout>
+                <VerticalLayout height="87" name="restore_progress_complete_icon_vlayout" visible="false">
+                    <PlaceHolder height="30"/>
+                    <Control name="restore_complete_icon" backgroundtransparent="true" backgroundimage="bro/complete.png" left="0" top="0" width="43" height="43" />
+                </VerticalLayout>
+                <VerticalLayout height="87" name="restore_progress_error_icon_vlayout" visible="false">
+                    <PlaceHolder height="30"/>
+                    <Control name="restore_error_icon" backgroundtransparent="true" backgroundimage="bro/error.png" left="0" top="0" width="43" height="43" />
+                </VerticalLayout>
+                <VerticalLayout height="70">
+                    <Label name="restore_progress_title" height="25" text="系统还原中，请勿拔除设备" textcolor="#191919" font="18" align="center"/>
+                    <Label name="restore_progress_info" height="20" text="系统还原中，请勿拔除设备" textcolor="#656565" font="14" align="center"/>
+                </VerticalLayout>
+				<HorizontalLayout height="1">
+                    <PlaceHolder width="50"/>
+                    <Control height="1" width="492" backgroundtransparent="true" backgroundimage="common/seperate_line.png" padding="0,0,0,0"/>
+                </HorizontalLayout>
+				<RestoreProgressList name="restore_progress_list" width="492" height="140" itemheight="35" backgroundtransparent="true" >
+					<Indicate value="<PlaceHolder width='1' height='1'/>" />
+					<Content value="<Layout defaultnodename='common_controls:restore_progress_list_item' combineassingle='true' />" />
+				</RestoreProgressList>
+                <PlaceHolder height="36"/>
+                <Button name="restore_progress_done_btn" text="完成" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+            <VerticalLayout name="restore_app_collison" left="0" top="0" right="0" bottom="0" visible="false">
+                <Layout left="0" top="0" width="590" height="75">
+    		        <Control backgroundtransparent="true" backgroundimage="common_tips.png" left="138" top="18" width="38" height="38" />
+                    <Label left="186" top="17" width="300" height="20" text="下列待还原应用已在设备中安装" textcolor="#5992fb" font="14" />
+                    <Label left="186" top="37" width="300" height="20" text="还原会覆盖应用数据，请选择要覆盖的应用" textcolor="#5992fb" font="14" />
+                </Layout>
+				<HorizontalLayout height="1">
+                    <PlaceHolder width="40"/>
+                    <Control height="1" width="510" backgroundtransparent="true" backgroundimage="common/seperate_line.png" padding="0,0,0,0"/>
+                </HorizontalLayout>
+                <HorizontalLayout height="215">
+                    <PlaceHolder width="40"/>
+                    <VirtualIconsLayout name="restore_app_collison_icons_layout" left="0" width="510" backgroundcolor="#FCFCFC" backgroundtransparent="false"
+			    		item_width="100" item_height="100" title_height="10" item_perline="5" line_space="0" cols_space="0" header_height="0" footer_height="0"
+			    		item_desc="<Layout defaultnodename='common_controls:restore_collison_app_icon'/>"/>
+                </HorizontalLayout>
+				<HorizontalLayout height="1">
+                    <PlaceHolder width="40"/>
+                    <Control height="1" width="510" backgroundtransparent="true" backgroundimage="common/seperate_line.png" padding="0,0,0,0"/>
+                </HorizontalLayout>
+                <PlaceHolder height="8" />
+                <HorizontalLayout height="18">
+                    <PlaceHolder width="40"/>
+                    <CheckBox name="collision_app_list_all_check" text="全选" defaultnodename="common_controls:checkbox_style" width="75" />
+                    <Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+                    <HorizontalLayout width="243" height="18">
+                        <PlaceHolder width="5"/>
+                        <Label name="collision_app_sel_item_count" text="0" height="18" font="12" textcolor="#FB5A45" align="venter" autosize="true" />
+                        <Label text="/" height="18" font="12" textcolor="#191919" align="venter" autosize="true" />
+                        <Label name="collision_app_item_count" text="0" height="18" font="songti_12" textcolor="#191919" align="venter" autosize="true" />
+                        <Label text="已选中" height="18" font="songti_12" textcolor="#656565"  padding="0,1,0,0" align="venter, left" autosize="true"/>
+                    </HorizontalLayout>
+                </HorizontalLayout>
+                <PlaceHolder height="16" />
+                <Button name="restore_collision_app_btn" text="继续" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+		</Layout>
+	</Layout>
+</window>

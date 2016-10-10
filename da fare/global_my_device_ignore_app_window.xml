@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="download_window" size="500,350" type="window" borderwindow="dialog_border_skin.xml">
+    <Layout left="0" backgroundimage="download/dialog_bg.png;;2,34,2,2" right="0" bottom="0">
+		<Title left="0" right="0" top="0" height="30" padding="10,10,10,0" align="near">
+			<Label name="ignore_app_window_title" text="忽略升级的应用" font="songti_12" textcolor="#606060" align="left, top" />
+			<Button name="ignore_app_window_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,2,0,0"/>
+		</Title>
+        <layout left="1" top="30" right="1" bottom="51">
+            <VerticalLayout name="ignore_app_list_layout" right="0" bottom="0">
+                <AppIgnoredList name="ignored_applist" itemheight="63" backgroundtransparent="true" ratiowheeldelata="3">
+                    <Indicate value="<PlaceHolder width='1' height='1'/>" />
+                    <Content value="<AppIgnoredListItem defaultnodename='common_controls:ignored_app_list_item' combineassingle='false' />" />
+                </AppIgnoredList>
+            </VerticalLayout>
+            <layout name="show_empty_layout" right="0" bottom="0" visible="true">
+                <Control backgroundimage="common_disconnection_bk.png" left="195" top="90" width="106" height="106" backgroundtransparent="true" />
+                <Label name="show_empty_list_text" left="0" right="0" top="200" height="30" text="没有忽略的应用" font="20" align="center,venter" textcolor="#DFDFDF" backgroundtransparent="true" />
+            </layout>
+        </layout>
+        <HorizontalLayout name="ignore_app_window_bottom_layout" top="50, false" left="1" right="1" bottom="1" backgroundtransparent="true" padding="6,0,0,0" backgroundimage="media_status_bar.png;0,2,0,0">
+            <PlaceHolder width="25"/>
+            <CheckBox name="select_all_btn" text="全选" defaultnodename="common_controls:checkbox_style" width="85" />
+            <Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+          <PlaceHolder width="15"/>  
+          <HorizontalLayout width="260">
+              <Label name="select_item_count" text="0" height="16" font="16" textcolor="#FB5A45" align="venter,center" autosize="true" />
+              <Label text="已选中" height="16" width="60" font="12"  textcolor="#656565" padding="0,1,0,0" align="venter,right" backgroundtransparent="true" />
+			</HorizontalLayout>
+            <PlaceHolder />
+            <Button name="recover_select_btn" width="80" text="恢复所选" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" textcolor="#656565" align='center,venter' font="12" />
+            <PlaceHolder width="13"/>
+        </HorizontalLayout>
+	</Layout>
+</window>

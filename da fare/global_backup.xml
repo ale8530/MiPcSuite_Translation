@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window" size="592, 422" borderwindow="dialog_border_skin.xml">
+    <Layout name="backup_client_backup" left="0" right="0" bottom="0" backgroundimage="bro/bro_frame.png;;1,34,1,1">
+        <Title left="0" right="0" top="0" height="33" padding="10,9,10,0" align="near">
+			<Label name="backup_title" text="整机备份" font="12" textcolor="#656565" align="left, top" padding="0, 0, 0, 0" />
+			<Button name="backup_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,0,0,0"/>
+		</Title>
+        <Layout name="backup_main" left="0" top="40" right="0" bottom="0" >
+            <VerticalLayout name="backup_start" left="0" top="0" right="0" bottom="0">
+                <PlaceHolder height="10"/>
+                <HorizontalLayout height="25">
+                    <PlaceHolder/>
+                    <Label text="{f id:12}{a cmd:backup_device_mgr}{c #656565}设备管理{/c}{/a}{/f}" padding="0,0,10,0" width="120" showhtml="true" align="right,top"/>
+                </HorizontalLayout>
+                <PlaceHolder height="70"/>
+    		    <Control name="backup_start_icon" backgroundtransparent="true" backgroundimage="bro/backup_start.png" left="0" top="0" width="43" height="43" />
+                <PlaceHolder height="15"/>
+                <Label name="backup_start_title" height="25" text="此设备尚未备份" textcolor="#191919" font="18" align="center"/>
+                <Label name="backup_start_second_title" height="30" text="您的小米设备的完整备份将存储在这台电脑上" textcolor="#656565" font="14" align="center"/>
+                <PlaceHolder height="110"/>
+                <Button name="backup_start_btn" text="开始备份" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+                <Button name="backup_start_cancel_btn" text="取消" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+            <VerticalLayout name="backup_err" left="0" top="0" right="0" bottom="0" visible="false">
+                <PlaceHolder height="105"/>
+    		    <Control name="backup_err_icon" backgroundtransparent="true" backgroundimage="bro/error.png" left="0" top="0" width="43" height="43" />
+                <PlaceHolder height="15"/>
+    		    <Label name="backup_err_diskfull" height="30" text="{f id:18}{a cmd:show_log_directory}{c #fb5a45}磁盘已满，点击更换存储目录{/c}{/a}{/f}" showhtml="true" width="350" align="center"/>
+                <Label name="backup_err_msg" height="30" text="设备备份出错" textcolor="#fb5a45" font="18" align="center"/>
+                <PlaceHolder height="135" />
+                <Button name="backup_error_cancel_btn" text="确定" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+            <VerticalLayout name="backup_progress" left="0" top="0" right="0" bottom="0" visible="false">
+                <PlaceHolder height="120"/>
+                <Label name="backup_progress_percent" width="300" height="40" oritext="%.1f%%" text="100%" textcolor="#6695eb" font="32" align="center"/>
+    			<Layout width="240" height="6">
+                    <Control name="backup_progress_bg" width="240" height="6" backgroundimage="bro/progress_bg.png;;3,2,3,2" backgroundtransparent="true" />
+                    <Control name="backup_progress_m" width="1" height="6" backgroundimage="bro/progress_mark_blue.png;;3,2,3,2" 	backgroundtransparent="true" />
+    			</Layout>
+                <PlaceHolder height="15"/>
+                <Label name="backup_progress_title" height="30" text="正在备份中..." textcolor="#191919" font="18" align="left"/>
+                <PlaceHolder height="117"/>
+                <Button name="backup_progress_cancel_btn" text="取消" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+            <VerticalLayout name="backup_complete" left="0" top="0" right="0" bottom="0" visible="false">
+                <PlaceHolder height="104"/>
+    		    <Control name="backup_complete_icon" backgroundtransparent="true" backgroundimage="bro/complete.png" left="0" top="0" width="43" height="43" />
+                <PlaceHolder height="16"/>
+                <Label name="backup_complete_title" height="23" text="整机备份完成" textcolor="#191919" font="18" align="center"/>
+                <Label text="{f id:14}{a cmd:show_backup_directory}{c #656565}查看备份文件{/c}{/a}{/f}" showhtml="true" height="30" width="135" align="center" />
+                <PlaceHolder height="91" />
+                <CheckBox name="backup_complete_auto" height="14" width="370" imagewidth="14" text="设备连接后自动备份" textcolor="#656565" font="12" align="left,top" spacebetweenimageandtext="3" backgroundimage="common_checkbox_.png;0,0,14,14" backgroundnormalimage="common_checkbox_.png;0,0,14,14" backgroundhotimage="common_checkbox_.png;14,0,28,14"  backgroundpushedimage="common_checkbox_.png;14,0,28,14" backgrounddisabledimage="common_checkbox_.png;0,0,14,14" normalimage="common_checkbox_.png;28,0,42,14" hotimage="common_checkbox_.png;28,0,42,14" pushedimage="common_checkbox_.png;28,0,42,14" backgroundtransparent="true"/>
+                <PlaceHolder height="10" />
+                <Button name="backup_complete_btn" text="完成" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+            <VerticalLayout name="backup_setting" left="10" top="0" right="0" bottom="0" visible="false">
+                <PlaceHolder height="20"/>
+                <HorizontalLayout height="30" backgroundtransparent="true">
+                    <Label text="备份目录" textcolor="#191919" align="left,venter" width="80" height="30"/>
+                    <PlaceHolder width="25" />
+                    <HorizontalLayout width="300" height="30" backgroundtransparent="true" backgroundimage="输入框.png" >
+                        <RichEdit name="backup_setting_client_backup_fld" height="24" width="345" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" wanttab="true" wantreturn="false" wantctrlreturn="true" rich="false" font="arial_12" backgroundtransparent="true" visible="true" align='venter' textcolor="#a5a5a5" readonly="true" />
+                    </HorizontalLayout>
+                    <PlaceHolder width="5" />
+                    <Button name="backup_setting_client_backup_open_directory" text="打开" textcolor="#656565" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+                    <PlaceHolder width="5" />
+                    <Button name="backup_setting_client_backup_sel_fld" text="修改" textcolor="#656565" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+                </HorizontalLayout>
+                <PlaceHolder height="20" />
+                <HorizontalLayout >
+                    <Label font="14" text="已备份设备" width="95" textcolor="#191919" align='left,top' height="300"/>
+                    <VerticalLayout width="460" height="300" backgroundtransparent="true" align="top" backgroundimage="setting/backup_frame.png">
+                        <HorizontalLayout left="0" top="0" height="37">
+                            <PlaceHolder width="10" />
+                            <Label name="backup_setting_client_backup_device_title" width="190" text="设备" textcolor="#191919" font="14" />
+                            <PlaceHolder width="2"/>
+                            <Label name="backup_setting_client_backup_device_auto_backup_title" width="180" text="自动备份" textcolor="#191919" font="14"/>
+                        </HorizontalLayout>
+                        <CheckboxList name="backup_setting_client_device_list" itemheight="70" backgroundtransparent="true" padding="1,1,1,1">
+                            <Indicate value="<PlaceHolder width='1' height='1'/>" />
+                            <Content value="<Layout defaultnodename='common_controls:checked_list_item' combineassingle='true' />" />
+                        </CheckboxList>
+                    </VerticalLayout>
+                </HorizontalLayout>
+                <PlaceHolder height="79" />
+            </VerticalLayout>
+            <Layout name="backup_setting_bottom_buttons_layout" right="0" bottom="0" visible="false">
+                <Button name="backup_setting_btn_done" focusenable="false" text="确定" textcolor="#656565" texthotcolor="#c02020" textpushedcolor="#ffffff" font="12" left="108,false" top="24,false" width="75" height="30" imagelist="strong_btn.png" imagelistuistatus="disable" />
+                <Button name="backup_setting_btn_cancel" focusenable="false" text="返回" textcolor="#656565" font="12" left="29,false" top="24,false" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+            </Layout>
+        </Layout>
+    </Layout>
+</window>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="new_message_window" size="340,94" type="window" backgroundimage="sms/new_message_popup_window.png" translucent="true" alphaborders="12,12,12,12" >
+	<Layout left="0" top="0" right="0" bottom="0" backgroundtransparent="true" padding="10,10,10,10">
+		<Title left="0" right="0" top="0" height="10" padding="10,0,10,0">
+		</Title>
+        <HorizontalLayout name="nm_client" left="0" top="11" right="0" bottom="0" hittest="true">
+            <PlaceHolder width="10" />
+            <Layout width="40">
+                <Control name="icon" left="0" top="0" right="0" height="40" backgroundimage="common/account_icon.png" backgroundtransparent="true" hittest="false" />
+            </Layout>
+            <PlaceHolder width="5" />
+            <VerticalLayout>
+                <Label name="name" height="18" font="bold_12" />
+                <RichEdit name="body" height="40" font="12" vscrollbar="true" autovscroll="false" hscrollbar="false" autohscroll="false" multiline="true" backgroundtransparent="true" readonly="true" rich="false" padding="0,0,8,0"/>
+            </VerticalLayout>
+            <PlaceHolder width="10" />
+            <VerticalLayout width="65">
+                <Button name="nm_close" text="关闭" defaultnodename="common_controls:white_style_button" width="60" height="25" align='center,venter' font="12" />
+                <PlaceHolder height="5" />
+                <Button name="nm_reply" text="回复" defaultnodename="common_controls:white_style_button" width="60" height="25" align='center,venter' font="12" />
+            </VerticalLayout>
+        </HorizontalLayout>
+	</Layout>
+</window>

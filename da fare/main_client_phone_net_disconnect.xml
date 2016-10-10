@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+	<Layout name="main_client_app_nophone" left="0" top="0" right="0" bottom="0" align="near">
+		<Title backgroundtransparent="true" top="0" left="0" width="155" height="44" />
+		<Control left="0,false" top="0,false" width="500" height="600" backgroundtransparent="true" backgroundimage="没联网.png" hittest="false" />
+		<Label left="100" top="190" right="0" text="您似乎没有联网" textcolor="#505050" font="48" height="60" align="top,left" />
+		<Label left="100" top="256" right="0" text="您要访问的内容需要连接网络\n请连接网络后刷新试试" textcolor="#a6a6a6" font="14" height="60" align="top,left" />
+		<Button left="100" top="296" defaultnodename="common_controls:white_blue_style_button" name="refresh_web" text="刷新" textcolor="#666666" />
+	</Layout>
+</windowless>

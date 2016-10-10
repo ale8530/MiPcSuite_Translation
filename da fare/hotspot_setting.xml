@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="hotspot_setting_box" size="520,365" type="message_box" borderwindow="dialog_border_skin.xml">
+	<Layout left="0" top="0" right="0" bottom="0" backgroundimage="hotspot_setting_box.png">
+		<Title left="0" right="0" top="0" height="33" focusenable="false">
+			<PlaceHolder width="15" />
+			<Label name="dialog_title" text="WiFi热点设置" top="17" width="100" font="12" textcolor="#FFFFFF" align="left,venter" />
+			<PlaceHolder />
+			<Button name="hotspot_dialog_close" width="12" height="12" backgroundtransparent="true" backgroundimagelist="about/close.png" />
+			<PlaceHolder width="10" />
+		</Title>
+		
+		<Layout name = "hotspot_setting_client" left="0" top="65" right="0" bottom="0" visible="true" >
+			<VerticalLayout left="0" top="0" right="0" bottom="0">
+				<Layout height="90">
+					<Label text="小米手机变身WiFi热点" font="bold_24" textcolor="#FFFFFF" align="left,top" left="45" top="0" right="200" height="30" />
+					<Button name="hotspot_dialog_switch" text="变身WiFi热点" align="venter,center" backgroundtransparent="true" textcolor="#3d3d3d" left="45,false" bottom="48" width="120" height="33" imagelist="common_round_btn.png;;12,3,12,3" />
+					<Label name="hotspot_dialog_status" text="未开启" textcolor="#FFFFFF" align="left,top" left="45" top="40" right="200" height="30" />
+					<Label name="hotspot_dialog_connected_device_count" text=" 已连接%d台设备" textcolor="#FFFFFF" align="left,top" left="100" top="40" right="200" height="30" visible="false" />
+				</Layout>
+				
+				<PlaceHolder height="30" />
+				<VerticalLayout height="115">
+					<HorizontalLayout height="35" >
+						<PlaceHolder width="55" />
+						<Label width="70" text="WiFi名称" align="left,venter"/>
+						<Layout height="35" name="hotspot_wifi_ssid_layout" backgroundtransparent="true" backgroundimage="common_input_box_bg.png;;5,5,5,5">
+							<RichEdit name="hotspot_wifi_ssid" left="0" top="2" right="5" height="35" align="venter" font="12" backgroundtransparent="true" placestring="请输入WiFi名称" placetextcolor="#8d8d8d"　vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" textlimit="256" wanttab="false"  multiline="false" wantreturn="false" wantime="false" readonly="false"/>
+						</Layout>
+						<PlaceHolder width="55" />
+					</HorizontalLayout>
+					<PlaceHolder height="5" />
+					<HorizontalLayout height="35" >
+						<PlaceHolder width="55" />
+						<Label width="70" text="密码" align="left,venter"/>
+						<Layout height="35" name="hotspot_wifi_password_layout" backgroundtransparent="true" backgroundimage="common_input_box_bg.png;;5,5,5,5">
+							<RichEdit name="hotspot_wifi_password" left="0" top="2" right="24" height="35" align="venter" font="12" backgroundtransparent="true" password="false" placestring="请输入WiFi密码" placetextcolor="#8d8d8d" textlimit="12" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" textlimit="256" wanttab="false" multiline="false" wantreturn="false" wantime="false" readonly="false"/>
+							<CheckBox name="hotspot_wifi_show_password" top="12" height="12" width="20" left="10,false" imagewidth="20" imagelist="common_show_pass_checked.png" backgroundimagelist="common_show_pass_bk.png"/>
+						</Layout>
+						<PlaceHolder width="55" />
+					</HorizontalLayout>
+					<PlaceHolder height="5" />
+					<HorizontalLayout height="35" >
+						<PlaceHolder width="55" />
+						<Label width="70" text="加密方式" align="left,venter"/>
+						<Layout height="35" backgroundtransparent="true" backgroundimage="common_input_box_bg.png;;5,5,5,5">
+							<TextComboBox name="hotspot_wifi_security" defaultnodename="common_controls:wifi_security_combobox" left="0" top="7" right="0" height="35"/>
+						</Layout>
+						<PlaceHolder width="55" />
+					</HorizontalLayout>
+				</VerticalLayout>
+				<PlaceHolder height="15" />
+				<HorizontalLayout height="30">
+                    <placeHolder width="125" />
+                    <Label name="hotspot_dialog_message" backgroundtransparent="true" focusenable="false" textcolor="#FF0000" align="left,venter" width="150" font="bold_14" />
+					<placeHolder />
+					<Button name="hotspot_dialog_save" text="保存" backgroundtransparent="true" focusenable="false" textcolor="#6AB835" texthotcolor="#6AB835" textpushedcolor="#FFFFFF" textdisabledcolor="#D1EAC1" width="70" height="30" imagelist="common_btn_green.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<placeHolder width="3" />
+					<Button name="hotspot_dialog_cancel" text="取消" backgroundtransparent="true" textcolor="#3d3d3d" width="70" height="30" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<placeHolder width="55" />
+				</HorizontalLayout>
+			</VerticalLayout>
+		</Layout>
+		<Layout name = "hotspot_setting_net_disconnection" left="0" top="33" right="0" bottom="0" visible="false" >
+		</Layout>
+		<Layout name = "hotspot_setting_phone_disconnection" left="0" top="33" right="0" bottom="0" visible="false" >
+		</Layout>
+	</Layout>
+</window>

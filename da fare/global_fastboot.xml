@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window" size="592, 422" borderwindow="dialog_border_skin.xml">
+    <layout name="fastboot_client" backgroundimage="bro/bro_frame.png;;1,34,1,1" left="0" right="0" bottom="0" >
+        <Title left="0" right="0" top="0" height="33" padding="10,9,10,0" align="near">
+			<Label name="fastboot_title" text="设备刷机" font="12" textcolor="#606060" align="left, top" padding="0, 0, 0, 0" />
+			<Button name="fastboot_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,0,0,0"/>
+		</Title>
+        <layout name="fastboot_main" left="0" top="52" right="0" bottom="0" >
+            <VerticalLayout name="fastboot_checking" left="0" top="0" right="0" bottom="0">
+                <PlaceHolder height="59"/>
+                <ProgressBarCircle name="fastboot_checking_waiting" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+                <PlaceHolder height="16"/>
+                <Label name="fastboot_checking_title" height="30" text="正在查找设备..." textcolor="#191919" font="18" align="center" />
+                <PlaceHolder height="135" />
+                <Button name="fastboot_checking_cancel_btn" text="取消" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+			<VerticalLayout name="fastboot_verify_hm" left="0" top="0" right="0" bottom="0" visible="false">
+               <Label text="请选择机型"  textcolor="#41474d" font="14" align="left" width="460" height="20"/>
+				<PlaceHolder height="15"/>
+				<layout width="460" height="100" backgroundtransparent="true">
+					<Control left="0" top="0"  width="460" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+					<CheckBox name="hm1s_checkbox" optiongroup="rom_select" left="0" top="45" width="15" defaultnodename="common_controls:radiobox_style"/>
+					<Button name="hm1s_button" left="32" top="40" text="红米1s联通版/电信版" font="22" textcolor="#656565" width="300" height="28"  align="left"  backgroundtransparent="true" />
+				    <Button name="hm1s_button2" left="0" top="0" width="460"  height="100" backgroundtransparent="true"/>
+				</layout>
+				<layout  width="460" height="100" backgroundtransparent="true">
+					<Control   left="0" top="0"  width="460" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+					<CheckBox name="hmnote_checkbox" left="0" optiongroup="rom_select"  top="45" width="15" defaultnodename="common_controls:radiobox_style"/>
+					<Button  name="hmnote_button"  left="32" top="40" text="红米Note 4G" font="22" textcolor="#656565" width="460" height="28"  align="left"  backgroundtransparent="true"  />
+				    <Button name="hmnote_button2" left="0" top="0" width="460"  height="100" backgroundtransparent="true"/>
+				</layout>
+				<Control  width="460" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+				<PlaceHolder height="14"/>
+				<Label  width="460" height="25" text="暂不支持其他红米机型刷机" textcolor="#656565" font="14" align="center"/>
+				<PlaceHolder height="35"/>
+                <Button name="fastboot_verify_hm_btn" text="下一步" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </VerticalLayout>
+            <VerticalLayout name="fastboot_entrence" left="0" right="0" bottom="0" visible="false">
+                <PlaceHolder height="65"/>
+                <Label name="fastboot_entrence_title" height="25" text="刷机可能导致您的数据被清除，请谨慎操作!" textcolor="#fb5a45" font="18" align="center"/>
+                <PlaceHolder height="75"/>
+                <Control name="fastboot_entrence_image" backgroundtransparent="true" backgroundimage="bro/fastboot_help.png" left="0" top="0" width="456" height="69" />
+                <PlaceHolder height="17"/>
+                <Label name="fastboot_entrence_info1" height="48" width="420"  text="关机状态按住音量减键和电源键3秒，进入Fastboot模式，连接手机与电脑" textcolor="#656565" font="12" align="center"/>
+                <Label name="fastboot_entrence_info1" height="25" text="部分红米、红米Note暂不支持刷机" textcolor="#656565" font="12" align="center"/>
+            </VerticalLayout>
+            <VerticalLayout name="fastboot_verify" left="0" top="0" right="0" bottom="0" visible="false">
+                <Label text="请选择刷机包"  textcolor="#41474d" font="14" align="left" width="460" height="20"/>
+				<PlaceHolder height="15"/>
+				<layout name="fastboot_v1" width="460" height="101" backgroundtransparent="true">
+					<Control left="0" top="0"  width="460" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+					<CheckBox name="v1_checkbox" optiongroup="rom_select" left="0" top="45" width="15" defaultnodename="common_controls:radiobox_style"/>
+					<label left="32" top="25" text="稳定版" font="22" textcolor="#656565" width="200" height="28"  align="left" />
+					<Label name="fastboot_verify_info"  left="32" top="60" width="150" height="20" text="" textcolor="#656565" font="14" align="left" />
+					<Label   left="230" top="60"  name="romsize_label" width="100" height="20" text="" textcolor="#656565" font="14" align="left"/>
+					<Button name="radio_hide1" left="0" top="5" width="400"  height="100" backgroundtransparent="true"/>
+					<Button name="description_link" left="370" top="60" width="90"  height="20"  text="Change log" font="songti_underline_12" textcolor="#999999" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
+				</layout>
+				<layout name="fastboot_v2" width="460" height="101" backgroundtransparent="true">
+					<Control   left="0" top="0"  width="460" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+					<CheckBox name="v2_checkbox" left="0" optiongroup="rom_select"  top="45" width="15" defaultnodename="common_controls:radiobox_style" />
+					<label   left="32" top="25" text="开发版" font="22" textcolor="#656565" width="200" height="28"  align="left"  />
+					<Label   left="32" top="60"  name="fastboot_verify_devinfo" width="150" height="20" text="" textcolor="#656565" font="14" align="left" />
+				    <Label   left="230" top="60"  name="devsize_label" width="100" height="20" text="" textcolor="#656565" font="14" align="left" />
+					<Button name="radio_hide2" left="0" top="5" width="400"  height="100" backgroundtransparent="true"/>
+					<Button name="dev_link" left="370" top="60" width="90"  height="20" text="Change log"  texthotcolor="#656565" font="songti_underline_12" textcolor="#999999" align="right" backgroundtransparent="true"/>
+				</layout>
+				<Control  width="460" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+				<PlaceHolder />
+                <Button name="fastboot_verify_btn" text="一键刷机" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+				<PlaceHolder height="27"/>
+            </VerticalLayout>
+            <VerticalLayout name="fastboot_progress" left="0" top="0" right="0" bottom="0" visible="false">
+                <PlaceHolder height="70"/>
+				<Layout width="300" height="53">
+					<Label name="fastboot_progress_percent" left="92" top="0" width="80" height="53" oritext="%d" text="100" textcolor="#6695eb" font="46" align="right"/>
+					<Label name="fastboot_progress_percent_bg" left="163" top="10" width="50" height="25" text="%" textcolor="#6695eb" font="20" align="left"/>
+    			</Layout>
+				<Layout width="250" height="10">
+                    <Control name="fastboot_progress_bg" width="250" height="10" backgroundimage="common_progress_bk.png;;4,4,4,4" backgroundtransparent="true" />
+                    <Control name="fastboot_progress_m" width="1" height="10" backgroundimage="common_progress_deep_blue.png;;4,4,4,4" backgroundtransparent="true" />
+    			</Layout>
+                <PlaceHolder height="12"/>
+				<Label name="fastboot_progress_speed" height="20" text="" textcolor="#191919" font="12" align="center,top"/>
+                <Label name="fastboot_progress_title" height="30" text="正在刷机..." textcolor="#191919" font="18" align="left"/>
+                <PlaceHolder />
+    		    <Label text="刷机耗时较长，请耐心等待,过程中请不要拔除设备" height="20" width="400" align="center" font="12" textcolor="#41474d"/>
+				<PlaceHolder height="5"/>
+                <Button name="fastboot_progress_cancel_btn" text="取消" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+				<PlaceHolder height="27"/>
+            </VerticalLayout>
+            <VerticalLayout name="fastboot_complete" left="0" top="0" right="0" bottom="0" visible="false">
+                <PlaceHolder height="92"/>
+                <Control name="fastboot_complete_icon" backgroundtransparent="true" backgroundimage="bro/complete.png" width="43" height="43" />
+                <PlaceHolder height="16"/>
+                <Label name="fastboot_complete_title" height="25" text="刷机完成!" textcolor="#191919" font="18" align="center"/>
+                <Label name="fastboot_complete_info" width="300" height="20" text="您的小米设备已经满血复活" textcolor="#656565" font="14" align="center" />
+                <PlaceHolder />
+                <Button name="fastboot_complete_btn" text="完成" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+				<PlaceHolder height="27"/>
+            </VerticalLayout>
+            <VerticalLayout name="fastboot_err" left="0" top="0" right="0" bottom="0" visible="false">
+                <PlaceHolder height="150"/>
+				<Label name="fastboot_err_msg" width="400" height="30" text="" textcolor="#fb5a45" font="18" align="center"/>
+                <PlaceHolder height="100"/>
+                <HorizontalLayout width="260" height="30">
+					 <Control name="fastboot_err_icon" backgroundtransparent="true" backgroundimage="bro/error.png" width="18" height="18" />
+    		        <Label name="fastboot_err_diskfull" text="{f id:16}{a cmd:change_disk_path}{c #fb5a45}磁盘已满，点击更换存储目录{/c}{/a}{/f}" showhtml="true" height="20" width="260" align="right" padding="10,0,0,2"/>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </layout>
+    </layout>
+</window>

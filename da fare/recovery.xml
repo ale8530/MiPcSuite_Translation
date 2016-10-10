@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window" size="592, 422" borderwindow="dialog_border_skin.xml">
+  <layout backgroundimage="bro/bro_frame.png;;1,34,1,1" left="0" right="0" bottom="0" >
+    <Title left="0" height="422" top="0" width="592" align="center">
+      <VerticalLayout left="0" height="422" top="0" width="592">
+        <!--title-->
+        <HorizontalLayout height="33">
+          <PlaceHolder width="10"/>
+          <Label name="title_label" text="刷机" font="12" textcolor="#606060" align="left,venter" padding="0, 0, 0, 0" />
+          <Button name="window_close_btn" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,0,0,0"/>
+          <PlaceHolder width="10"/>
+        </HorizontalLayout>
+
+        <!--content-->
+        <VerticalLayout left="11" width="570">
+          <!--reading device basic info window.-->
+          <VerticalLayout name="reading_dev_lyt" visible="false">
+            <PlaceHolder height="120"/>
+            <ProgressBarCircle name="reading_dev_waiting_bar" visible="true" width="67" height="67" backgroundtransparent="true" backgroundimage="projection/wait_bg.png" progressimage="common_waiting_foreground.png" showidchand="false" align="center, venter" />
+            <PlaceHolder height="10"/>
+            <Label text="正在获取设备信息" font="12" align="center, venter" height="20" textcolor="#333333"/>
+            <PlaceHolder/>
+          </VerticalLayout>
+
+          <VerticalLayout name="re_read_dev_lyt" visible="false">
+            <PlaceHolder height="120"/>
+            <Control width="67" height="67" backgroundimage="bro/error.png" backgroundtransparent="true"/>
+            <PlaceHolder height="10"/>
+            <Label text="获取设备信息失败，请重试" font="14" align="center, venter" height="20" textcolor="#333333"/>
+            <PlaceHolder height="10"/>
+            <Button name="re_read_dev_btn" text="重新获取" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+            <PlaceHolder/>
+          </VerticalLayout>
+
+          <VerticalLayout name="read_dev_fail_lyt" visible="false">
+            <PlaceHolder height="120"/>
+            <Control width="67" height="67" backgroundimage="bro/error.png" backgroundtransparent="true"/>
+            <PlaceHolder height="10"/>
+            <Label text="失败次数过多，建议重启设备再试" font="14" align="center, venter" height="20" textcolor="#333333"/>
+            <PlaceHolder height="10"/>
+            <Button name="reboot_dev_btn" text="重启设备" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+            <PlaceHolder/>
+          </VerticalLayout>
+          
+          <!--恢复模式刷机-->
+          <VerticalLayout name="recovery_version_layout" visible="false">
+            <PlaceHolder height="80"/>
+            <Label name="r1_version_label" height="30" visible="false" oritext="发现新版本： %s" text="发现新版本： XXXXX" font="16" autosize="true" textcolor="#333333"/>
+            <Label name="r2_version_label" height="30" oritext="已是最新版本： %s" text="已是最新版本" font="16" autosize="true" textcolor="#333333"/>
+            <Button height="30" name="r1_version_log_btn" text="更新日志" font="underline_12" align="center,venter" autosize="true" backgroundtransparent="true" textcolor="#0088f0"/>
+            <PlaceHolder height="20"/>
+            <VerticalLayout name="rvl_net_select_layout" height="35" visible="false">
+              <Button name="r1_select_net_rom_btn" text="联网下载刷机包" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <PlaceHolder height="5"/>
+            </VerticalLayout>
+            <Button name="r1_select_local_rom_btn" text="选择本地刷机包" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            <PlaceHolder height="5"/>
+            <Button name="r1_erase_data_btn" text="清除数据" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            <PlaceHolder height="5"/>
+            <Button name="r1_reboot_device_btn" text="重启设备" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            <PlaceHolder/>
+          </VerticalLayout>
+
+          <VerticalLayout name="local_recovery_rom_layout" visible="false">
+            <PlaceHolder height="50"/>
+            <Label name="cur_device_version_label" height="30" oritext="当前版本： %s" text="当前版本：XXXX" font="16" autosize="true" textcolor="#333333"/>
+            <PlaceHolder height="5"/>
+            <Label name="local_recovery_rom_file_label" height="30" oritext="已选择安装包： %s" text="" font="12" autosize="true" textcolor="#333333"/>
+            <VerticalLayout name="lrr_checking_layout" height="102" visible="false">
+              <ProgressBarCircle name="llr_waiting_bar" visible="true" width="67" height="67" backgroundtransparent="true" backgroundimage="projection/wait_bg.png" progressimage="common_waiting_foreground.png" showidchand="false" align="center, venter" />
+              <PlaceHolder height="5"/>
+              <Label height="30" text="正在获取刷机包信息" font="12" autosize="true" textcolor="#333333"/>
+            </VerticalLayout>
+            <VerticalLayout name="lrr_check_exception_layout" height="137" visible="false">
+              <Control width="67" height="67" backgroundimage="bro/error.png" backgroundtransparent="true"/>
+              <PlaceHolder height="5"/>
+              <Label height="30" text="网络异常，请检查网络后再试" font="12" autosize="true" textcolor="#333333"/>
+              <PlaceHolder height="5"/>
+              <Button name="re_check_local_rom_btn" text="重试" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            </VerticalLayout>
+
+            <VerticalLayout name="lrr_valid_layout" height="60" visible="false">
+              <Label height="30" text="验证通过" font="14" autosize="true" textcolor="#008800"/>
+              <Button name="flash_local_zip_rom_btn" text="立即更新" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <PlaceHolder height="5"/>
+            </VerticalLayout>
+            <VerticalLayout name="lrr_invalid_layout" height="50" visible="true">
+              <Label name="lrr_check_fail_reason_lbl" height="50" text="验证失败" oritext="验证失败： [%d]%s" font="14" autosize="true" textcolor="#ff0000"/>
+            </VerticalLayout>
+            <PlaceHolder height="5"/>
+            <Button name="reselect_local_zip_rom_btn" text="重新选择刷机包" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            <PlaceHolder height="5"/>
+            <Button name="local_zip_rom_back_btn" text="上一步" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+          </VerticalLayout>
+
+          <!--ROM downloading layout-->
+          <VerticalLayout name="download_layout" visible="false">
+            <PlaceHolder height="70"/>
+            <Label name="download_percent_label" height="53" oritext="%d%%" text="0%" textcolor="#6695eb" font="46" align="centerc,venter"/>
+            <Label name="download_speed_label" height="20" text="" textcolor="#191919" font="12" align="center,venter"/>
+            <Layout width="250" height="10">
+              <Control name="download_progress_bg" width="250" height="10" backgroundimage="common_progress_bk.png;;4,4,4,4" backgroundtransparent="true" />
+              <Control name="download_progress_m" width="1" height="10" backgroundimage="common_progress_deep_blue.png;;4,4,4,4" backgroundtransparent="true" />
+            </Layout>
+            <PlaceHolder height="12"/>
+            <VerticalLayout name="downloading_op_layout" height="80" visible="false">
+              <Label name="download_title_label" height="30" text="正在下载..." oritext="正在下载： %s" textcolor="#191919" font="14" align="center,venter"/>
+              <PlaceHolder height="20"/>
+              <Button name="cancel_download_btn" text="取消下载" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            </VerticalLayout>
+            <VerticalLayout name="download_fail_layout" height="115" visible="true">
+              <Label height="30" text="下载失败，请重试" textcolor="#ff0000" font="14" align="center,venter"/>
+              <PlaceHolder height="20"/>
+              <Button name="redownload_btn" text="重新下载" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <PlaceHolder height="5"/>
+              <Button name="download_back_btn" text="上一步" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            </VerticalLayout>
+            <VerticalLayout name="download_success_layout" height="115" visible="false">
+              <Label height="30" text="下载完成，点击进行下一步"  font="14" align="center,venter"/>
+              <PlaceHolder height="20"/>
+              <Button name="download_next_btn" text="下一步" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            </VerticalLayout>
+            <PlaceHolder />
+          </VerticalLayout>
+
+          <!--ROM flashing layout-->
+          <VerticalLayout name="flash_layout" visible="false">
+            <PlaceHolder height="70"/>
+            <Label name="flash_percent_label" height="53" oritext="%d%%" text="0%" textcolor="#6695eb" font="46" align="centerc,venter"/>
+            <PlaceHolder height="20"/>
+            <Layout width="250" height="10">
+              <Control name="flash_progress_bg" width="250" height="10" backgroundimage="common_progress_bk.png;;4,4,4,4" backgroundtransparent="true" />
+              <Control name="flash_progress_m" width="1" height="10" backgroundimage="common_progress_deep_blue.png;;4,4,4,4" backgroundtransparent="true" />
+            </Layout>
+            <PlaceHolder height="12"/>
+            <VerticalLayout name="flashing_op_layout" height="30" visible="false">
+              <Label height="30" text="正在刷机，请勿断开连接" textcolor="#191919" font="14" align="center,venter"/>
+              <PlaceHolder height="20"/>
+            </VerticalLayout>
+            <VerticalLayout name="flash_fail_layout" height="120" visible="false">
+              <Label name="flash_fail_msg_lbl" height="30" text="刷机失败，请重试" textcolor="#ff0000" font="14" align="center,venter"/>
+              <PlaceHolder height="20"/>
+              <Button name="reflash_btn" text="重试" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <PlaceHolder height="10"/>
+              <Button name="cancel_flash_btn" text="取消" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            </VerticalLayout>
+
+            <VerticalLayout name="flash_finish_layout" height="80" visible="true">
+              <Label height="30" text="刷机完成" textcolor="#191919" font="14" align="center,venter"/>
+              <PlaceHolder height="20"/>
+              <Button name="flash_finish_btn" text="完成" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            </VerticalLayout>
+            <PlaceHolder />
+          </VerticalLayout>
+        </VerticalLayout>
+        <!--bottom-->
+        <VerticalLayout height="80">
+          <PlaceHolder/>
+            <PlaceHolder height="10"/>
+          <Label text="提示：刷机过程中请尽量临时关闭QQ以及其他手机助手类工具" font="12" align="center, venter" height="20"/>
+          <PlaceHolder height="20"/>
+        </VerticalLayout>
+      </VerticalLayout>
+    </Title>
+  </layout>
+</window>

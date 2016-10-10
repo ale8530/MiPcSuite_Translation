@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="conn_wizard_window" size="620,430" type="window" borderwindow="dialog_border_skin.xml">
+  <Layout backgroundimage="connwizard/bg.png;30, 15, 650,445;" backgroundtransparent="true" left="0" right="0" top="0" bottom="0">
+    <Title left="0" right="0" top="0" height="430" align="near">
+      <VerticalLayout >
+        <HorizontalLayout height="32">
+          <PlaceHolder width="5"/>
+          <Label name="window_title" text="" textcolor="#FFFFFF" font="bold_14" align="left,venter" width="200" height="32" />
+          <PlaceHolder/>
+          <Button name="close_box" width="32" heigth="32" backgroundtransparent="true" imagelist="projection/close_btns.png"/>
+        </HorizontalLayout>
+        <HorizontalLayout left="0" top="30" height="400" width="620">
+          <PlaceHolder width="20"/>
+          <!--USB连接指示-->
+          <VerticalLayout name="device_list_layout" visible="true" backgroundimage="connwizard/usb_connect_bg.png" imagepadding="42, -10, 42, -10" backgroundtransparent="true" align="center">
+            <PlaceHolder height="260"/>
+            <Label name="device_list_content_label" text="Use a USB cable to connect your device" top="305" height="30" textcolor="#FFFFFF" font="bold_16" align="center"/>
+            <PlaceHolder height="10"/>
+            <Button name="scan_device_btn" text="Try again" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            <Label name="device_list_content_label" text="Android 6 is not supported yet" top="305" height="30" textcolor="#FFFFFF" font="14" align="center"/>
+          </VerticalLayout>
+
+          <!--刷机引导-->
+          <VerticalLayout name="flash_help_layout" visible="false" imagepadding="42, -10, 42, -10" backgroundtransparent="true" align="center">
+            <PlaceHolder height="40"/>
+            <Label text="Brush may cause your data to be cleared, please exercise caution!" height="30" textcolor="#FFFFFF" font="bold_16" align="center"/>
+            <PlaceHolder height="20"/>
+            <Control backgroundtransparent="true" backgroundimage="bro/recovery_help.png" left="0" top="0" width="456" height="69" />
+            <Label text="Press and hold the volume key up and power button for 3 seconds to enter the Recovery mode" height="30" textcolor="#FFFFFF" font="16" align="center"/>
+            <PlaceHolder height="10"/>
+            
+            <Control backgroundtransparent="true" backgroundimage="bro/fastboot_help.png" left="0" top="0" width="456" height="69" />
+            <Label text="Press and hold the volume key down and power button for 3 seconds to enter the Fastboot mode" height="30" textcolor="#FFFFFF" font="16" align="center"/>
+            <PlaceHolder height="10"/>
+            <HorizontalLayout height="28" width="120">
+              <Button name="flash_help_close_btn" text="OK, I get it" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            </HorizontalLayout>
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+
+          <!--正在连接-->
+          <VerticalLayout name="connecting_layout" visible="false" backgroundimage="connwizard/connecting_bg.png" imagepadding="48,-100,50,-20" backgroundtransparent="true" align="center">
+            <PlaceHolder height="140"/>
+            <Layout height="10">
+              <Control name="connect_animate_1" visible="true" left="325" width="70" height="10" backgroundimage="connwizard/connecting_bg1.png" backgroundtransparent="true" />
+              <Control name="connect_animate_2" visible="false" left="325" width="70" height="10" backgroundimage="connwizard/connecting_bg2.png" backgroundtransparent="true" />
+              <Control name="connect_animate_3" visible="false" left="325" width="70" height="10" backgroundimage="connwizard/connecting_bg3.png" backgroundtransparent="true" />
+              <Control name="connect_animate_4" visible="false" left="325" width="70" height="10" backgroundimage="connwizard/connecting_bg4.png" backgroundtransparent="true" />
+            </Layout>
+            <PlaceHolder height="85"/>
+            <Label name="device_type_label" text="" height="30" font="bold_16" textcolor="#FFFFFF" align="center"/>
+            <Label text="请不要断开USB连接" height="25" font="bold_16" textcolor="#F3F3F3" align="center"/>
+            <PlaceHolder/>
+            <Layout height="30">
+              <Label name="connect_msg_label" text="正在读取手机基本信息..." left="5" top="0" width="500" height="18" font="12" textcolor="#E3E3E3" align="left"/>
+              <Control name="connect_progress_bg" left="5" width="575" height="5" top="20" backgroundimage="connwizard/progress_bg.png" backgroundtransparent="true" />
+              <Control name="connect_progress_m" left="5" width="575" height="5" top="20" backgroundimage="connwizard/progress_mark_white.png" backgroundtransparent="true" />
+            </Layout>
+            <PlaceHolder height="20"/>
+          </VerticalLayout>
+
+          <!--错误提示-->
+          <VerticalLayout name="connect_error_layout" visible="false" backgroundimage="connwizard/apply_for_admin_bg.png;-20,0,560,400" backgroundtransparent="true" align="center">
+            <PlaceHolder height="225"/>
+            <Label name="connect_error_title" text="" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <Label name="connect_error_title_1" text="" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <PlaceHolder height="8"/>
+            <Label name="uac_prompt_1" text="为了解决这一问题，需要获得系统管理员权限，请在" height="20" align="center" textcolor="#FEE1D6" font="12" />
+            <Label name="uac_prompt_2" text="即将弹出的系统对话框中点击确定按钮" height="20" align="center" textcolor="#FEE1D6" font="12" />
+            <Label name="connect_error_remarks" text="禁用后，我的电脑不再出现该设备，您可以到小米助手-设置中开启MTP进行恢复" height="20" align="center" textcolor="#FEE1D6" font="12" />
+            <PlaceHolder/>
+            <Button name="fix_connect_error_btn" text="好，我知道了" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+
+          <!--关掉三方进程-->
+          <VerticalLayout name="kill_other_process_layout" visible="false" backgroundimage="connwizard/kill_process_bg.png;-20,0,560,400" backgroundtransparent="true" align="center">
+            <PlaceHolder height="225"/>
+            <Label text="检测到您的USB端口被如下程序占用，" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <PlaceHolder height="2"/>
+            <Label text="需将之关闭才能连接手机" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <PlaceHolder height="8"/>
+            <Label name="other_process_name" text="other_process.exe" height="60" align="center" textcolor="#FEE1D6" font="12" />
+            <PlaceHolder/>
+            <HorizontalLayout height="28">
+              <PlaceHolder width="250"/>
+              <Button name="kill_process_btn" text="好，关掉它" width="120" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+              <PlaceHolder width="10"/>
+              <Button name="jump_miui_forum_btn"  width="400" text="若还是解决不了，看看这里" font="underline_12" textcolor="#FEE1D6" align="left,venter" autosize="true" backgroundtransparent="true" />
+              <PlaceHolder/>
+            </HorizontalLayout>
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+
+          <!--重新安装手机助手-->
+          <VerticalLayout name="retry_install_daemon_layout" visible="false" backgroundimage="connwizard/install_daemon_bg.png;-22,30,558,430" backgroundtransparent="true" align="center">
+            <PlaceHolder height="250"/>
+            <Label text="未能安装手机连接程序，请重试" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <PlaceHolder/>
+            <Button name="install_daemon_btn" text="重试" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+
+          <VerticalLayout name="retry_other_layout" visible="false" backgroundimage="connwizard/retry_other_bg.png" imagepadding="12,40,12,0" backgroundtransparent="true" align="center">
+            <PlaceHolder height="30" />
+            <Label height="30" text="无法连接您的小米设备，请尝试如下方法" textcolor="#FFFFFF" font="bold_16" align="center"/>
+            <PlaceHolder height="175"/>
+            <HorizontalLayout height="20">
+              <PlaceHolder width="100"/>
+              <Label width="150" text="重新插入USB线" textcolor="#FEE1D6" font="bold_14" align="center"/>
+              <PlaceHolder width="84"/>
+              <Label width="150" text="重启手机" textcolor="#FEE1D6" font="bold_14" align="center"/>
+              <PlaceHolder/>
+            </HorizontalLayout>
+            <PlaceHolder/>
+            <Button name="close_btn" text="好，试一试" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+
+           <!--提示用户在手机端做些事情-->
+          <VerticalLayout name="prompt_op_on_device_layout" visible="false" backgroundimage="connwizard/install_daemon_bg.png;-22,30,558,430" backgroundtransparent="true" align="center">
+            <PlaceHolder height="250"/>
+            <Label name="prompt_operate_on_device_title" text="" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <Label name="prompt_operate_on_device_title_1" text="" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <PlaceHolder/>
+            <Button name="hide_prompt_btn" text="好，我知道了" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+
+          <!--提示OTA升级-->
+          <VerticalLayout name="need_ota_layout" visible="false" backgroundimage="connwizard/install_daemon_bg.png;-22,30,558,430" backgroundtransparent="true" align="center">
+            <PlaceHolder height="250"/>
+            <Label name="need_ota_layout_title" text="" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <Label name="need_ota_layout_title_1" text="" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <PlaceHolder/>
+            <Button name="do_ota_btn" text="立即升级" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+
+          <PlaceHolder width="20"/>
+        </HorizontalLayout>
+
+      </VerticalLayout>
+    </Title>
+  </Layout>
+</window>
+
+

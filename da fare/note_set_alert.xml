@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="note_set_alert" size="306,400" type="message_box" borderwindow="note_set_alert_border.xml">
+    <VerticalLayout left="0" top="0" right="0" bottom="0" backgroundcolor="#FFFFFF" backgroundtransparent="false" >
+        <HorizontalLayout name="note_set_alert_title" backgroundcolor="#323436" height="36" backgroundtransparent="false" >
+            <PlaceHolder width="8" />
+            <Button backgroundimagelist="note_toolbar_set_alert.png" backgroundimagelistuistatus="disable" width="19" height="18" backgroundtransparent="true" hittest="false" />
+            <PlaceHolder width="8" />
+            <Label width="100" text="提醒时间:" textcolor="#FFFFFF" align="left,venter" />
+            <PlaceHolder />
+            <Label name="set_alert_alert_time" width="170" textcolor="#FFFFFF" align="right,venter" />
+            <PlaceHolder width="15" />
+        </HorizontalLayout>
+        <Layout name="note_set_alert_web_client_layout" height="325" >
+        </Layout>
+        <HorizontalLayout>
+            <placeHolder />
+            <Button name="note_set_alert_ok" text="确定" backgroundtransparent="true" focusenable="false" textcolor="#fb5f45" texthotcolor="#fb5f45"  textpushedcolor="#ffffff" textdisabledcolor="#CCCCCC" width="75" height="30" imagelist="common/red_btn_list.png;;'3,3,3,3'" imagelistuistatus="disable" />
+            <placeHolder width="5" />
+            <Button name="note_set_alert_del" text="删除提醒" backgroundtransparent="true" textcolor="#3d3d3d" width="75" height="30" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+            <placeHolder width="5" />
+            <Button name="note_set_alert_cancel" text="取消" backgroundtransparent="true" textcolor="#3d3d3d" width="75" height="30" imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" />
+            <placeHolder width="20" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</window>

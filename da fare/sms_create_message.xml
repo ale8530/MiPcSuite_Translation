@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<Layout name="sms_cm_client" left="0" top="0" right="0" bottom="0">
+<VerticalLayout name="sms_cm_layout" width="533" bottom="0">
+    <VerticalLayout height="441">
+        <VerticalLayout name="cm_title_layout" height="70" backgroundtransparent="true" backgroundimage="media_title_bar.png;;'0,0,0,2'">
+            <HorizontalLayout right="0" height="34">
+                <PlaceHolder width="235"/>
+                <Label name="cm_title" text="新信息" width="120" textcolor="#191919"/>
+                <PlaceHolder />
+                <Button name="cm_cancel" width="15" height="14" backgroundtransparent="true" imagelist="sms/close.png" imagelistuistatus="disable" />
+                <PlaceHolder width="12"/>
+            </HorizontalLayout>
+            <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+            <HorizontalLayout right="0" height="34" backgroundcolor="#F8F8F8" backgroundtransparent="false">
+                <PlaceHolder width="12"/>
+                <Control width="12" height="12" backgroundimage="sms/input_flag.png" backgroundtransparent="true"/>
+                <PlaceHolder width="5"/>
+                <RichEdit name="cm_recipient_input_box" font="arial_12" width="484" height="26" backgroundtransparent="true" placestring="输入收信人" placetextcolor="#8d8d8d" multiline="false" textlimit="100" wanttab="false" multiline="false" wantreturn="false" autohscroll="true" padding="0,5,5,0" />
+                <Control width="8" height="8" backgroundimage="sms/return.png" backgroundtransparent="true"/>
+                <PlaceHolder width="12"/>
+            </HorizontalLayout>
+            <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+        </VerticalLayout>
+        <SmsRecipientList name="cm_recipient_list" width="533" height="0" item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient'/>" input_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient_input'/>" delelable_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient_deletable'/>" hittest="true"/>
+    </VerticalLayout>
+    <PlaceHolder height="5"/>
+    <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+    <HorizontalLayout height="28" backgroundtransparent="false" backgroundcolor="#FFFFFF">
+        <PlaceHolder width="5" />
+        <Label name="cm_input_count_info" text="已输入0个字，0条短信" oritext="已输入%d个字，%d条短信" width="160" height="18" font="12" textcolor="#8d8d8d" />
+        <HorizontalLayout name="cm_net_message_layout" width="200" height="20" visible="false" >
+            <Control backgroundimage="sms/net_message_icon.png" width="19" height="17" backgroundtransparent="true"/>
+            <PlaceHolder width="5" />
+            <Label text="免费网络短信" width="160" height="18" font="12" textcolor="#8d8d8d" />
+        </HorizontalLayout>
+        <PlaceHolder />
+        <HorizontalLayout name="cm_sim_list" width="50" defaultnodename="common_controls:sim_list_layout" visible="false" />
+        <PlaceHolder width="10" />
+        <Label name="cm_send_prompt" text="按Ctrl+回车键发送" autosize="true" maxwidth="200" height="18" font="12" textcolor="#fc5946" />
+        <!--PlaceHolder width="10" /-->
+        <Button name="cm_send" text="发送" defaultnodename="common_controls:white_red_style_button" width="70" height="30" align='center,venter' enabled="false" visible="false"/>
+        <PlaceHolder width="10" />
+    </HorizontalLayout>
+    <RichEdit name="cm_message_input" height="80" font="12" vscrollbar="true" autovscroll="true" hscrollbar="false" autohscroll="false" multiline="true" wanttab="false" wantreturn="false" wantctrlreturn="true" rich="false" backgroundtransparent="false" backgroundcolor="#FFFFFF" visible="true" align='venter' readonly="false" textlimit="1000" placestring="" placetextcolor="#8d8d8d" padding="5,5,5,5"/>
+</VerticalLayout>
+</Layout>
+</windowless>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<Layout name="sms_client" left="0" top="0" right="0" bottom="0">
+    <Layout name="sms_client_layout" left="0" top="0" right="0" bottom="0">
+        <VerticalLayout left="0" top="0" width="300" height="555">
+            <Layout name="sms_bar_container" height="35">
+            </Layout>
+            <Layout height="518">
+                <!--Control left="0" top="0" width="320" height="29" backgroundimage="app_search_bg.png"  backgroundtransparent="true"/-->
+                <Layout left="0" top="0" width="300" height="35" backgroundcolor="#F8F8F8" backgroundtransparent="false">
+                    <RichEdit name="search_msg_richedit" left="42" top="6" font="arial_12" width="300" height="34" backgroundtransparent="true" placestring="  搜索短信" placetextcolor="#8d8d8d" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false" />
+                    <Button name="search_msg_btn" left="20" top="11" width="15" height="15"  backgroundtransparent="true" backgroundimage="app_search_btn_1.png" backgroundhotimage="app_search_btn_2.png"/>
+                </Layout>
+                <Control left="0" top="34" right="0" height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+                <MsgRecordList name="user_msg_list" top="35" width="300" height="480" itemheight="60" backgroundtransparent="true" visible="true" supportkey="true"	ratiowheeldelata="10">
+                    <Indicate value="<PlaceHolder width='1' height='1'/>" />
+                    <Content value="<MsgRecordListItem defaultnodename='common_controls:msg_re_list_item' combineassingle='false' />" />
+                </MsgRecordList>
+                <MsgRecordList name="search_msg_list" visible="false" top="35" width="300" height="470" itemheight="60" backgroundtransparent="true" supportkey="true"	ratiowheeldelata="10">
+                    <Indicate value="<PlaceHolder width='1' height='1'/>" />
+                    <Content value="<MsgRecordListItem defaultnodename='common_controls:msg_re_list_item' combineassingle='false' />" />
+                </MsgRecordList>
+            </Layout>
+        </VerticalLayout>
+        <Control left="300" top="0" width="1" height="555" backgroundimage="common/vert_seperate_line.png" backgroundtransparent="true" />
+        <VerticalLayout name="sms_dialogue_layout" left="301" top="0" width="533" height="555">
+            <Layout height="70">
+                <SmsRecipientList name="sms_recipient_list" width="533" height="69" item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient'/>" input_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient_input'/>" delelable_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient_deletable'/>" hittest="true"/>
+                <Layout name="sms_mass_text_recipient_list" width="533" height="69" defaultnodename="common_controls:mass_text_recipient_list" visible="false">
+                    <Control name="icon" backgroundimage="common/multi_accounts_icon.png" backgroundtransparent="true" />
+                </Layout>
+                <Control height="1" backgroundimage="common/seperate_line.png" right="0" top="0,false" backgroundtransparent="true" />
+            </Layout>
+            <SmsDialogueLayout name="sms_dialogue_control" send_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_send_item'/>" receive_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_receive_item'/>" title_desc="<Layout defaultnodename='common_controls:sms_dialogue_title'/>">
+            </SmsDialogueLayout>
+            <PlaceHolder height="5"/>
+            <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+            <HorizontalLayout height="28" backgroundtransparent="false" backgroundcolor="#FFFFFF">
+                <PlaceHolder width="5" />
+                <Label name="sms_input_count_info" text="已输入0个字，0条短信" oritext="已输入%d个字，%d条短信" width="160" height="18" font="12" textcolor="#8d8d8d" />
+                <HorizontalLayout name="sms_net_message_layout" width="200" height="20" visible="false" >
+                    <Control backgroundimage="sms/net_message_icon.png" width="19" height="17" backgroundtransparent="true"/>
+                    <PlaceHolder width="5" />
+                    <Label text="免费网络短信" width="160" height="18" font="12" textcolor="#8d8d8d" />
+                </HorizontalLayout>
+                <PlaceHolder />
+                <HorizontalLayout name="sms_sim_list" width="50" defaultnodename="common_controls:sim_list_layout" visible="false" />
+                <PlaceHolder width="10" />
+                <Label name="sms_send_prompt" text="按Ctrl+回车键发送" autosize="true" maxwidth="120" height="18" font="12" textcolor="#fc5946" />
+                <!--PlaceHolder width="10" /-->
+                <Button name="sms_send" text="发送" defaultnodename="common_controls:white_red_style_button" width="70" height="30" align='center,venter' enabled="false" visible="false"/>
+                <PlaceHolder width="10" />
+            </HorizontalLayout>
+            <RichEdit name="message_input" height="80" font="12" vscrollbar="true" autovscroll="true" hscrollbar="false" autohscroll="false" multiline="true" wanttab="false" wantreturn="false" wantctrlreturn="true" rich="false" backgroundtransparent="false" backgroundcolor="#FFFFFF" visible="true" align='venter' readonly="false" textlimit="1000" placestring="" placetextcolor="#8d8d8d" padding="5,5,5,5"/>
+        </VerticalLayout>
+        <HorizontalLayout left="0" top="50,false" right="0" bottom="0" backgroundimage="media_status_bar.png;'0,2,0,0'" backgroundtransparent="true">
+            <PlaceHolder width="20" />
+            <CheckBox name="sms_select_all" text="全选" defaultnodename="common_controls:checkbox_style" width="60" />
+            <Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+            <HorizontalLayout width="230" height="18">
+                <Label text="已选中" height="18" width="50" font="12"  textcolor="#656565" padding="0,1,0,0" align="venter,right" backgroundtransparent="true" />
+                <Label name="sms_sel_item_count"  text="0" height="18" font="16" textcolor="#FB5A45" align="venter,center" autosize="true" />
+                <Label text="个会话" height="18" width="43" font="12" textcolor="#656565"  padding="0,1,0,0" align="venter, left"/>
+                <Label name="sms_sel_message_item_count"  text="0" height="18" font="16" textcolor="#FB5A45" align="venter,center" autosize="true" />
+                <Label text="条短信" height="18" width="50" font="12" textcolor="#656565"  padding="0,1,0,0" align="venter, left"/>
+            </HorizontalLayout>
+            <PlaceHolder />
+            <Button name="sms_create" text="新建短信" font="12" width="95" height="30"
+                    imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+            <PlaceHolder width="5"/>
+            <Button name="sms_import" text="导入短信" font="12" width="95" height="30"
+                    imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+            <PlaceHolder width="5"/>
+            <Button name="sms_export" text="导出所选" font="12" width="95" height="30"
+                    imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+            <PlaceHolder width="5"/>
+            <Button name="sms_delete_select" text="删除所选" font="12" width="95" height="30"
+                    imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+            <PlaceHolder width="10"/>
+        </HorizontalLayout>
+    </Layout>
+    <HorizontalLayout name="sms_client_create_message_layout" right="0" bottom="0" visible="false" >
+        <Layout name="cm_select_recipient_layout" width="320">
+        <!-- 联系人列表 -->
+        </Layout>
+        <Control width="1" backgroundimage="common/vert_seperate_line.png" backgroundtransparent="true" />
+        <Layout name="cm_create_message_layout" width="533">
+        <!-- 发送短信界面 -->
+        </Layout>
+    </HorizontalLayout>
+    <Layout name="sms_client_waiting" left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC" backgroundtransparent="true" visible="false">
+		<ProgressBarCircle name="sms_waiting" left="110" top="267" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+	</Layout>
+    <Layout name="sms_client_no_data" left="301" top="0" width="533" height="555" visible="false">
+		<Control left="0" top="35" right="0" bottom="50" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="sms/no_message.png" left="213" top="210" width="106" height="106" backgroundtransparent="true" />
+		<Label name="prompt" left="0" right="0" top="345" height="30" text="当前未选中短信" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+	<Layout name="sms_client_disconnection" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="sms_disconnection_hint" left="0" right="0" top="345" height="30" text="您还没有连接设备，请连接" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+</Layout>
+</windowless>

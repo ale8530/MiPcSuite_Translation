@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<Layout name="audio_client" left="0" top="0" right="0" bottom="0">
+	<VerticalLayout name="audio_client_layout" left="0" top="0" right="0" bottom="0" align="near">
+		<Layout height="35">
+			<HorizontalLayout name="audio_client_title" left="0" top="0" right="0" bottom="0" backgroundimage="media_title_bar.png">
+				<PlaceHolder width="25" />
+				<PlaceHolder name="audio_client_title_music_playing_place" width="10" visible="true"/>
+				<DecorateButton name="audio_client_title_music" optiongroup="audio_client_title_group" width="100" height="35" backgroundtransparent="true">
+					<ImageViewer name="audio_client_title_music_playing" contentimage="audio_playing%1d.png;;" imageidbegin="1" imageidend="5" interval="300" left="0" top="13" width="8" height="10" backgroundtransparent="true" visible="true"/>
+					<Label text="音乐" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter"
+						backgroundtransparent="true" width="35" height="35" left="10" focuspriority="true"/>
+					<Label name="audio_client_title_music_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left, venter"
+						left="40" autosize="true" width="65" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder width="10" />
+				<PlaceHolder name="audio_client_title_ring_playing_place" width="10" visible="false"/>
+				<DecorateButton name="audio_client_title_ring" optiongroup="audio_client_title_group" width="100" height="35" backgroundtransparent="true">
+					<ImageViewer name="audio_client_title_ring_playing" contentimage="audio_playing%1d.png;;" imageidbegin="1" imageidend="5" interval="300" left="0" top="13" width="10" height="10" backgroundtransparent="true" visible="false"/>
+					<Label text="铃声" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45"  align="left,venter"
+						backgroundtransparent="true" width="35" height="35" left="10" focuspriority="true"/>
+					<Label name="audio_client_title_ring_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left, venter"
+						left="40" autosize="true" width="65" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder width="10" />
+				<PlaceHolder name="audio_client_title_other_playing_place" width="10" visible="false"/>
+				<DecorateButton name="audio_client_title_other" optiongroup="audio_client_title_group" width="100" height="35" backgroundtransparent="true">
+					<ImageViewer name="audio_client_title_other_playing" contentimage="audio_playing%1d.png;;" imageidbegin="1" imageidend="5" interval="300" left="0" top="13" width="10" height="10" backgroundtransparent="true" visible="false"/>
+					<Label text="其它" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45"  align="left,venter"
+						backgroundtransparent="true" width="35" height="35" left="10" focuspriority="true"/>
+					<Label name="audio_client_title_other_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left, venter"
+						left="40" autosize="true" width="65" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder />
+				<Button name="audio_refresh" font="12" top="7" width="15" height="14"
+					imagelist="common_btn_refresh.png;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+				<PlaceHolder width="20"/>
+				<!--<HorizontalLayout name="audio_title_player" width="200" visible="false" >
+					<Label width="1" height="10" backgroundimage="common_line_vertical.png" hittest="false"/>
+					<PlaceHolder width="15"/>
+					<Checkbox name="audio_title_player_play" height="20" width="150" spacebetweenimageandtext="5" align="left,top" endellipsis="true" backgroundimagelist="common_play.png" imagepadding="0,2,0,2" backgroundtransparent="true" />
+					<PlaceHolder width="5"/>
+					<Checkbox name="audio_title_player_show_panel" height="5" imagewidth="10" width="10" spacebetweenimageandtext="0" backgroundimagelist="common_arrow_down.png" backgroundtransparent="true" />
+					<PlaceHolder width="5"/>
+				</HorizontalLayout>-->
+			</HorizontalLayout>
+			<Layout left="0" top="33" right="0" height="2">
+				<SliderIndicator name="audio_client_top_sliderIndicator" backgroundimage="common_indicator_horizontal.png" sliderorign="horizontal" backgroundtransparent="false" left="0" height="2" right="0" />
+			</Layout>
+		</Layout>
+		<Layout name="audio_client_player" height="110" visible="true" >
+			<RotateImageControl name="audio_client_player_conver" left="26" top="16" height="187" width="187" backgroundimage="audio_player_def_album.png" />
+			<Button left="0" top="0" right="0" bottom="0" backgroundimage="audio_player_bg.png" imagepadding="0,0,1,0" showidchand="false" backgroundtransparent="true" />
+			<HorizontalLayout left="250" top="27" width="300" height="33">
+				<Button name="audio_client_player_displayname" autosize="true" align="left,venter" endellipsis="true" font="bold_16" textcolor="#FFFFFF" showidchand="false" backgroundtransparent="true"/>
+				<PlaceHolder width="10" />
+				<Button name="audio_client_player_artist" align="left,venter" endellipsis="true" autosize="true" font="16" textcolor="#B2B1B3" showidchand="false" backgroundtransparent="true"/>
+			</HorizontalLayout>
+			<Button name="audio_client_player_volume" left="578" top="38" width="18" height="18" backgroundimagelist="audio_player_volum.png" backgroundtransparent="true"/>
+			<Button name="audio_client_player_play_model" left="620" top="38" width="18" height="18" backgroundimagelist="audio_player_model_loop.png" backgroundtransparent="true" />
+
+			<Label name="audio_client_player_pos_string" left="250" top="73" width="63" height="26" text="00:00" align="left,top" font="songti_12" textcolor="#BCBCBC" />
+			<TrackBar name="audio_player_track_bar" defaultnodename="common_controls:player_track_bar" left="290" top="73" width="310" height="10" />
+			<Label name="audio_client_player_duration_string" left="605" top="73" width="63" height="26" text="00:00" align="left,top" font="songti_12" textcolor="#BCBCBC" />
+
+			<Button name="audio_client_player_previous" left="665" top="40" width="40" height="40" backgroundimagelist="audio_player_previous.png" backgroundtransparent="true" />
+			<Button name="audio_client_player_play" left="710" top="33" width="58" imagewidth="58" height="58" backgroundimagelist="audio_player_play.png" backgroundtransparent="true" />
+			<Button name="audio_client_player_pause" left="710" top="33" width="58" imagewidth="58" height="58" backgroundimagelist="audio_player_pause.png" backgroundtransparent="true" visible="false" />
+			<Button name="audio_client_player_next" left="773" top="40" width="40" height="40" backgroundimagelist="audio_player_next.png" backgroundtransparent="true" />
+		</Layout>
+		<Layout name="media_audio_title" left="0" right="0" height="30">
+			<HorizontalLayout left="30" top="0" right="0" bottom="0">
+				<PlaceHolder width="20" />
+				<Button name="media_audio_title_title" width="50" height="30" focusenable="false" text="名称" font="12" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" backgroundtransparent="true" align="left,venter"
+					imagepadding="30,10,10,10" supportcheckedstatus="true"/>
+				<Placeholder width="234" />
+				<Button name="media_audio_title_artist" width="50" height="30" focusenable="false" text="歌手" font="12" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" backgroundtransparent="true" align="left,venter"
+					imagepadding="30,10,10,10" supportcheckedstatus="true"/>
+				<PlaceHolder width="80" />
+				<Button name="media_audio_title_album" width="50" height="30" focusenable="false" text="专辑" font="12" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" backgroundtransparent="true" align="left,venter"
+					imagepadding="30,10,10,10" supportcheckedstatus="true"/>
+				<PlaceHolder width="110" />
+				<Button name="media_audio_title_duration" width="50" height="30" focusenable="false" text="时长" font="12" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" backgroundtransparent="true" align="left,venter"
+					imagepadding="30,10,10,10" supportcheckedstatus="true"/>
+				<PlaceHolder width="25" />
+				<Button name="media_audio_title_mime_type" width="50" height="30" focusenable="false" text="格式" font="12" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" backgroundtransparent="true" align="left,venter"
+					imagepadding="30,10,10,10" supportcheckedstatus="true"/>
+				<PlaceHolder width="7" />
+				<Button name="media_audio_title_size" width="50" height="30" focusenable="false" text="大小" font="12" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" backgroundtransparent="true" align="left,venter"
+					imagepadding="30,10,10,10" supportcheckedstatus="true"/>
+			</HorizontalLayout>
+			<Control left="25" right="10" top="29" height="1" backgroundimage="common_line_horizontal.png" backgroundtransparent="true" imagepadding="0,0,20,0" />
+		</Layout>
+
+		<Layout name="audio_List_layout" backgroundtransparent="true">
+			<VirtualIconsLayout name="AudioVirtualIconsLayout" backgroundcolor="#FCFCFC" backgroundtransparent="false" left="0" right="0" top="0" bottom="0"
+					item_width="0" item_height="40" title_height="0" item_perline="1" line_space="0" cols_space="0" header_height="0" footer_height="10"
+					item_desc="<MediaAudioListLayout defaultnodename='common_controls:media_audio_list'/>" />
+
+			<Layout name="audio_client_item_toolbar" left="250" top="0" height="40" width="75" visible="false" >
+				<Button name="audio_client_item_toolbar_play" left="0" top="12" width="16" height="16" backgroundimagelist="common_play.png" backgroundtransparent="true" hittest="true" focusenable="false"/>
+				<Button name="audio_client_item_toolbar_set_ring" left="28" top="7" width="46" height="25" imagelist="media_audio_setring.png" backgroundtransparent="true" hittest="true" focusenable="false"/>
+			</Layout>
+		</Layout>
+		<HorizontalLayout height="50" backgroundimage="media_status_bar.png;'0,2,0,0'" backgroundtransparent="true">
+			<PlaceHolder width="25" />
+			<CheckBox name="audio_sel_all" text="全选" defaultnodename="common_controls:checkbox_style" width="60"/>
+			<Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+			<Label text="已选中" height="18" width="50" font="12" textcolor="#656565" padding="0,1,0,0" align="venter,right"/>
+			<Label name="audio_sel_item_count" text="10" height="18" font="16" textcolor="#FB5A45" align="venter,center" autosize="true"/>
+			<Label text="首音乐" height="18" width="50" font="12" textcolor="#656565" padding="0,1,0,0" align="venter, left"/>
+			<PlaceHolder />
+			<Button name="audio_add" text="添加本地音乐" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter' />
+			<PlaceHolder width="3" />
+			<Button name="audio_export" text="导出" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+			<PlaceHolder width="3" />
+			<Button name="audio_del" text="删除" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+			<PlaceHolder width="10" />
+		</HorizontalLayout>
+	</VerticalLayout>
+	<Layout name="audio_client_waiting" left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC" backgroundtransparent="true" visible="false">
+		<Control left="0" right="0" top="0" bottom="0" backgroundtransparent="true"/>
+		<Control left="0" right="0" top="35" bottom="50" backgroundcolor="#FCFCFC" />
+		<ProgressBarCircle name="audio_waiting" left="373" top="267" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+	</Layout>
+	<Layout name="audio_client_disconnection" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="disconnection_hint" left="0" right="0" top="345" height="30" text="您还没有连接设备，请连接" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+	<Layout name="audio_client_no_data" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="35" right="0" bottom="50" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="XX_hint" left="0" right="0" top="345" height="30" text="这里还没有音乐哟" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+	<Layout name="audio_client_player_volume_panel" left="575" top="10" width="25" height="67" visible="false">
+		<Control left="0" top="0" right="0" bottom="0" backgroundimage="audio_volume_bg.png" backgroundtransparent="true" />
+		<TrackBar name="audio_player_volume_track_bar" defaultnodename="common_controls:player_volume_track_bar" left="9" top="8" width="6" height="45" />
+	</Layout>
+</Layout>
+</windowless>

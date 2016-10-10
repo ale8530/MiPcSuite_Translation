@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="kill_assistant_window" size="550,390" type="window" borderwindow="dialog_border_skin.xml">
+    <Layout left="0" backgroundimage="download/dialog_bg.png;;2,34,2,2" right="0" bottom="0">
+		<Title left="0" right="0" top="0" height="30" padding="10,10,10,0" align="near">
+			<Label name="kill_assistant_title" text="提示" font="12" textcolor="#656565" align="left, top" />
+			<Button name="kill_assistant_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,2,0,0"/>
+		</Title>
+        <VerticalLayout left="0" top="31" right="0" bottom="0" backgroundtransparent="true" align="center">
+            <PlaceHolder height="20"/>
+            <Control backgroundimage="main/connect_fail.png" width="150" height="150" backgroundtransparent="true" />
+            <PlaceHolder height="20"/>
+            <Label height="20" autosize="true" textcolor="#7C7C7C" text="检测到某些程序可能导致设备无法连接，需关闭才能连接成功" />
+            <PlaceHolder height="10"/>
+            <Label height="20" autosize="true" font="bold_16" textcolor="#2A2A2A" text="需要关闭的程序：" />
+            <PlaceHolder height="10"/>
+            <Label name="process_name_list" height="50" font="14" textcolor="#FF6D00" align="center,top" />
+            <PlaceHolder />
+            <Button name="btn_kill" text="好，关掉它" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" />
+            <PlaceHolder height="30"/>
+        </VerticalLayout>
+	</Layout>
+</window>

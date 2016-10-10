@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="note_fld_edit_window" size="300,330" type="modal_dialog" borderwindow="dialog_border_skin.xml">
+    <VerticalLayout name="note_fld_edit" left="0" top="0" right="0" bottom="0" backgroundimage="bro/bro_frame.png;;1,34,1,1" >
+        <Title height="33" padding="10,9,10,0" align="near">
+            <Label text="移至便签夹" font="12" textcolor="#656565" align="left, top" padding="0, 0, 0, 0" />
+        </Title>
+        <NoteFldEditLayout name="note_fld_edit_container_layout" height="240"
+           item_type_0="<Layout defaultnodename='common_controls:note_fld_layout'/>"
+           item_type_1="<Layout defaultnodename='common_controls:note_fld_edit_layout'/>"
+        />
+        <Layout name="note_fld_edit_bottom_btns_layout" height="50" >
+           <Button name="note_fld_edit_btn_done" focusenable="false" text="确定" textcolor="#fb5f45" texthotcolor="#fb5f45" textpushedcolor="#ffffff" font="12" left="90,false" top="14,false" width="75" height="30" imagelist="strong_btn.png" imagelistuistatus="disable" />
+           <Button name="note_fld_edit_btn_cancel" focusenable="false" text="取消" textcolor="#656565" font="12" left="10,false" top="14,false" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+        </Layout>
+    </VerticalLayout>
+</window>

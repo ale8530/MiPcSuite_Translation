@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="clipboard_window" size="581,497" type="window" borderwindow="dialog_border_skin.xml">
+    <Layout left="0" right="0" bottom="0" backgroundimage="clipboard/dialog_bg.png" >
+		<Title left="10" right="10" top="0" height="41">
+			<Label name="ignore_app_window_title" text="传送门" font="14" textcolor="#606060" align="left,venter" width="100" height="40"/>
+			<PlaceHolder/>
+			<Control name="no_connect_icon" backgroundtransparent="true" backgroundimage="clipboard/no_connect.png" width="22" height="24"/>
+			<Label name="no_connect_label" text="设备未连接" font="14" textcolor="#606060" width="100" height="24" align="left,venter"/>
+			<PlaceHolder width="13"/>
+			<Button name="clipboard_window_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14"/>
+		</Title>
+        <layout left="1" top="41" right="1" bottom="51">
+            <layout name="clipboard_layout" right="0" bottom="7" visible="false">
+				<Control top="15" left="15" backgroundimage="clipboard/pc.png" width="42" height="42" backgroundtransparent="true" />
+                <ClipBoardList top="15" left="67" right="0" bottom="0" name="clipboard_list" itemheight="85" backgroundtransparent="true" ratiowheeldelata="3">
+                    <Indicate value="<PlaceHolder width='1' height='10'/>" />
+                    <Content value="<ClipBoardListItem defaultnodename='common_controls:clipboard_list_item' combineassingle='false' />" />
+                </ClipBoardList>
+            </layout>
+            <layout name="show_empty_layout" right="0" bottom="60" visible="true">
+                <Control top="52" left="215" backgroundimage="clipboard_guide.png" width="154" height="178" backgroundtransparent="true" />
+				<Control left="180"  top="268" width="5" height="5"  backgroundimage="clipboard/point.png" backgroundtransparent="true" />
+                <Label left="190" right="0" top="250" height="30" text="拖文件到这里，直接发送至手机" font="14" align="left,bottom" textcolor="#646464" backgroundtransparent="true"/>
+				<Button name="open_portal_btn" left="190" right="0" top="283" height="30"  text="{f id:14}{c #646464}请在手机{/c} {c #58ba4a}文件管理-传送门{/c} {c #646464}中查看{/c}{/f}" font="16" align="left,venter" showhtml="true" textcolor="#656565" backgroundtransparent="true"/>
+				<Control left="190"  top="313" height="1" backgroundimage="clipboard/seperate_line.png" width="215" height="1" backgroundtransparent="true" />
+				<Control left="180"  top="334" width="5" height="5"  backgroundimage="clipboard/point.png" backgroundtransparent="true" />
+				<Label left="190" right="0" top="316" height="30" text="粘贴文本，直接发送至手机剪贴板" font="14" align="left,bottom" textcolor="#646464" backgroundtransparent="true"/>
+            </layout>
+        </layout>
+        <layout name="clipboard_bottom_layout" top="60, false" left="1" right="1" bottom="1" backgroundtransparent="true">
+			<Control backgroundtransparent="true" left="13" top="12" width="343" height="35" backgroundimage="输入框.png;;2,2,2,2"/>
+			<RichEdit name="clipboad_richedit" left="15"  top="20" placestring="输入文本/网址" height="25" width="338" font="12" vscrollbar="false" autovscroll="true" hscrollbar="false" autohscroll="false" wantctrlreturn="true" multiline="true" wanttab="false" wantreturn="false"  rich="false" backgroundtransparent="true" visible="true" align='venter' readonly="false" textlimit="1000" placetextcolor="#8d8d8d" padding="5,0,5,5"/>
+			<Button name="clipboad_send_btn" text="发送至手机剪贴板" left="364" top="16" defaultnodename="common_controls:white_red_style_button" width="123" height="28" align='center,venter'/>
+			<Button name="clipboard_choose_floder_btn" text="选择文件" left="493" top="16" defaultnodename="common_controls:white_style_button" width="76" height="28" align='center,venter'/>
+        </layout>
+	</Layout>
+</window>

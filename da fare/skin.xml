@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalRes>
+<!--
+	<Font name="宋体" size="12" id="12" />
+	<Font name="宋体" size="12" id="bold_12" bold="true" />
+	<Font name="宋体" size="12" id="underline_12" underline="true"/>
+	<Font name="宋体" size="14" id="default" default="true" />
+	<Font name="宋体" size="14" id="bold_14" bold="true" />
+	<Font name="宋体" size="16" id="16" />
+	<Font name="宋体" size="16" id="bold_16" bold="true" />
+	<Font name="宋体" size="16" id="underline_16" underline="true"/>
+	<Font name="宋体" size="18" id="18" />
+	<Font name="宋体" size="18" id="bold_18" bold="true" />
+	<Font name="宋体" size="20" id="20" />
+	<Font name="宋体" size="22" id="22" />
+	<Font name="宋体" size="24" id="24" />
+	<Font name="宋体" size="32" id="32" bold="true" />
+	<Font name="宋体" size="36" id="36" bold="true" />
+	<Font name="宋体" size="46" id="46" />
+	<Font name="宋体" size="48" id="48" />
+	<Font name="宋体" size="48" id="bold_48" bold="true" />
+	<Font name="宋体" size="12" id="songti_12" />
+	<Font name="宋体" size="12" id="songti_bold_12" bold="true"/>
+	<Font name="宋体" size="12" id="songti_underline_12" underline="true"/>
+	<Font name="arial" size="12" id="arial_12" />-->
+
+	<Font name="微软雅黑" size="12" id="12" />
+	<Font name="微软雅黑" size="12" id="bold_12" bold="true" />
+	<Font name="微软雅黑" size="12" id="underline_12" underline="true"/>
+	<Font name="微软雅黑" size="12" id="strikeout_12" strikeout="true"/>
+	<Font name="微软雅黑" size="14" id="default" default="true" />
+	<Font name="微软雅黑" size="14" id="bold_14" bold="true" />
+  <Font name="微软雅黑" size="14" id="underline_14" underline="true" />
+	<Font name="微软雅黑" size="16" id="16" />
+	<Font name="微软雅黑" size="16" id="bold_16" bold="true" />
+  <Font name="微软雅黑" size="16" id="underline_bold_16" bold="true" underline="true"/>
+	<Font name="微软雅黑" size="16" id="underline_16" underline="true"/>
+	<Font name="微软雅黑" size="18" id="18" />
+	<Font name="微软雅黑" size="18" id="bold_18" bold="true" />
+	<Font name="微软雅黑" size="20" id="20" />
+	<Font name="微软雅黑" size="22" id="22" />
+	<Font name="微软雅黑" size="24" id="24" />
+	<Font name="微软雅黑" size="24" id="bold_24" bold="true" />
+	<Font name="微软雅黑" size="32" id="32" bold="true" />
+	<Font name="微软雅黑" size="36" id="36" bold="true" />
+	<Font name="微软雅黑" size="46" id="46" />
+	<Font name="微软雅黑" size="48" id="48" />
+	<Font name="微软雅黑" size="48" id="bold_48" bold="true" />
+	<Font name="宋体" size="12" id="songti_12" />
+	<Font name="宋体" size="12" id="songti_underline_12" underline="true"/>
+	<Font name="宋体" size="12" id="songti_bold_12" bold="true"/>
+	<Font name="arial" size="12" id="arial_12" />
+	<Font name="arial" size="16" id="arial_blod_16" bold="true"/>
+
+  
+	<Default name="VScrollBar" value="thumbnormalimage='滚动条.png;;0,4,0,4' width='8' horizontal='false'" />
+	<Default name="HScrollBar" value="thumbnormalimage='滚动条.png;;0,4,0,4' height='8' horizontal='true'" />
+</GlobalRes>
+<window name="main_wnd" type="window" size="992,722" mainwindow="true" >
+<Layout name="bg" left="0" top="0" right="0" bottom="0" align="near" backgroundtransparent="true" backgroundimage="main/bg.png;;10,100,10,10" padding="1,1,1,1">
+	<Layout right="0" bottom="0">
+		<Title name="titlebar_layout" padding="120,0,0,0" left="0" top="0" right="0" height="80" visible="true" focusenable="false" align="near">
+			<PlaceHolder />
+			<DecorateButton name="setting_box" width="31" height="34" backgroundtransparent="true">
+				<Button left="0" top="2" width="31" height="29" imagelist="main/more.png" backgroundtransparent="true" />
+			</DecorateButton>
+			<DecorateButton name="min_box" width="31" height="34" backgroundtransparent="true">
+				<Button left="0" top="2" width="31" height="29" imagelist="main/min.png" backgroundtransparent="true" />
+			</DecorateButton>
+			<DecorateButton name="close_box" width="31" height="34" backgroundtransparent="true">
+				<Button left="0" top="2" width="31" height="29" imagelist="main/close.png" backgroundtransparent="true" />
+			</DecorateButton>
+			<PlaceHolder width="2" />
+		</Title>
+		
+		<DecorateButton name="main_left_login_button" left="10,false" top="40" defaultnodename="common_controls:login_button" combineassingle="true" visible="false" />
+		
+		<HorizontalLayout name="status_bar" left="0" top="35,false" right="0" bottom="0">
+            <PlaceHolder width="10" />
+            <Label name="version_info" text="" font="songti_12" textcolor="#999999" align="left, venter" autosize="true" />
+			<DecorateButton name="update_notify" visible="false" width="25" height="34" backgroundtransparent="true">
+	    		<ImageViewer name="image_viewer" contentimage="update/upt_%1d.png;;" imageidbegin="1" imageidend="6" interval="100" left="4" top="10" width="14" height="14" backgroundtransparent="true" />
+			</DecorateButton>
+			<PlaceHolder width="10" />
+			<Button name="main_feedback" text="意见反馈" font="songti_underline_12" textcolor="#999999" align="left, venter" autosize="true" backgroundtransparent="true"/>
+			<PlaceHolder />
+            <DecorateButton name="status_bar_download_indicate_button" defaultnodename="common_controls:main_download_indicate_button" combineassingle="true" backgroundtransparent="true" width="310">
+                <Control name="dl_icon" backgroundimage="download/notask.png" />
+                <Label name="content" text="暂无任务" />
+                <Label name="status" text=" " />
+                <label name="title" text="任务中心" visible="false" />
+            </DecorateButton>
+			<PlaceHolder width="10" />
+		</HorizontalLayout>
+	</Layout>
+	<Layout name="top_buttons" left="0" top="0" right="0" height="80">
+		<TopPanelHorizontalLayout name="TopPanelVerticalLayout" right="0" bottom="0" combineassingle="true">
+			<HorizontalLayout name="left_panel_nav" width="850" bottom="0">
+				<Layout width="156">
+                    <DecorateButton name="main_left_homepage" right="0" bottom="0" defaultnodename="common_controls:main_mihome_button" combineassingle="true" optiongroup="left_panel">
+                        <Button name="button" imagelist="main/mihome_btn_list.png" imagelistuistatus="focus" />
+                        <Label name="text" text="无设备"/>
+                    </DecorateButton>
+                    <Button name="select_phone_button" left="100" top="47" width="11" height="11" focusenable="false" backgroundtransparent="true" backgroundimage="首页/topbar/向下.png" backgroundpushedimage="首页/topbar/向下2.png" backgroundhotimage="首页/topbar/向下2.png" visible="false"/>
+				</Layout>
+				<DecorateButton name="main_left_mydev" defaultnodename="common_controls:main_left_button" combineassingle="true">
+					<Button name="but_old" imagelist="main/my_device_btn_list.png" imagelistuistatus="focus" />
+					<Label name="but" text="我的设备" />
+				</DecorateButton>
+			</HorizontalLayout>
+		</TopPanelHorizontalLayout>
+
+		<!--SliderIndicator name="main_left_sliderArrow" backgroundimage="首页/小三角.png" sliderorign="horizontal" backgroundtransparent="false" left="0" top="0,false" height="8" right="0"/-->
+        <!-- 使标题栏顶部可以拖动 -->
+        <Control backgroundtransparent="true" right="120" height="20" />
+	</Layout>
+	<Layout right="0" bottom="0">
+		<Layout name="main_client_3" left="0" top="0" right="0" bottom="35" visible="true">
+			<Layout name="main_client_2" left="0" top="80" right="0" bottom="0">
+				<Layout name="main_client" left="0" top="0" right="0" bottom="0" />
+				<Layout name="web_tools_bar" visible="false" left="0" top="0" right="0" height="41" backgroundtransparent="true" >
+					<Control left="0" top="0" bottom="0" width="156" backgroundimage="dev_left_bar.png" backgroundtransparent="true"/>
+					<!--Label  left="26" top="0" bottom="0" width="100" text="应用分类" textcolor="#999999" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true"/-->
+					<Layout left="0" top="0" right="0" bottom="0" backgroundtransparent="true" backgroundimage="media_title_bar.png">
+						<Button name="back_to_device_btn"  visible="false" imagepadding="0,0,26,2" left="30" top="13" width="40" height="16" text="返回" font="12"  backgroundtransparent="true" imagelist="web_tool_bar/back_to_device.png" imagelistuistatus="disable"  textcolor="#656565" texthotcolor="#191919"  textdisabledcolor="#CCCCCC" align='right,venter'/>
+						<Layout name="web_tools_bar_ex" left="0" top="0" right="0" bottom="0">
+							<Button name="web_back_btn"  left="30" top="13" width="14" height="14" backgroundtransparent="true" imagelist="web_tool_bar/web_back_btn.png" imagelistuistatus="disable"/>
+							<Button name="web_forward_btn"  left="55" top="13" width="14" height="14" backgroundtransparent="true" imagelist="web_tool_bar/web_forward_btn.png" imagelistuistatus="disable"/>
+							<Button name="web_refresh_btn" left="80" top="13" width="14" height="14" imagelist="web_tool_bar/web_refresh_btn.png" imagelistuistatus="disable"/>
+							<Button name="web_homepage_btn" left="105" top="13" width="14" height="14" backgroundtransparent="true" imagelist="web_tool_bar/web_homepage_btn.png" imagelistuistatus="disable"/>
+						</Layout>
+                        <Layout name="web_sub_tab_list" left="156" top="0" right="200" bottom="0" defaultnodename="common_controls:web_tab_list">
+                        </Layout>
+						<Layout name="search_richeidt_layout" left="788" top="6" width="195" height="35">
+							<Control left="0" top="0" width="195" height="29" backgroundimage="app_search_bg.png"  backgroundtransparent="true"/>
+							<RichEdit name="search_app_richedit" left="7" top="3" font="arial_12" width="165" height="35" backgroundtransparent="true" placestring="搜索应用和游戏" placetextcolor="#8d8d8d" multiline="false" textlimit="20" wanttab="false"  multiline="false" wantreturn="false"/>
+							<Button name="search_app_btn" left="175" top="7" width="15" height="15"  backgroundtransparent="true" backgroundimage="app_search_btn_1.png" backgroundhotimage="app_search_btn_2.png"/>
+						</Layout>
+					</Layout>
+				</Layout>
+			</Layout>
+		</Layout>
+	</Layout>
+
+	<Layout left="0" top="80" bottom="25" width="156" name="main_left_nav" backgroundimage="首页/通知栏bg.png" visible="false">
+	</Layout>
+
+</Layout>
+</window>

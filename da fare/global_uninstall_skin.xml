@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GlobalRes>
+	<Font name="Tahoma" size="14" id="default" default="true"/>
+	<Font name="Tahoma" size="12" id="12" />
+	<Font name="Tahoma" size="36" id="36" bold="true" />
+	<Font name="Tahoma" size="20" id="20" />
+	<Font name="Tahoma" size="24" id="24" />
+	<Font name="Tahoma" size="48" id="48" />
+	<Font name="Tahoma" size="12" id="songti_12" />
+	<Font name="arial" size="12" id="arial_12" />
+	<Font name="arial" size="14" id="arial_14" />
+	<Default name="VScrollBar" value="thumbnormalimage='滚动条.png;;0,4,0,4' thumblength='35' width='7'"/>
+</GlobalRes>
+<window name="main_wnd" type="window" size="590,410" mainwindow="true">
+<Title name="bg" left="0" top="0" right="0" bottom="0" align="near">
+	<Layout width="590">
+		<Layout right="0" bottom="0" backgroundimage="setup/bg.png;;1,1,2,2" ackgroundtransparent="true">
+            <Layout top="145" width="590" height="117">
+			    <Control left="245" width="100" height="100" backgroundtransparent="true" backgroundimage="setup/mi_logo.png"/>
+                <Label top="50" width="590" height="40" text="Mi PC Suite" textcolor="#ffffff" font="24" align="center"/>
+            </Layout>
+            <Button name="uninstall" left="225" top="332" text="Uninstall" textcolor="#fb5a45" padding="0,1,0,0" width="140" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable" focusenable="false"/>
+			<CheckBox name="reserve_data" font="songti_12" textcolor="#ffc7a8" text="Keep backups, photos, music, messages and other userdata." left="10" top="10,false" width="560" height="14" align="left" imagewidth="14" spacebetweenimageandtext="4" backgroundimage="box.png" image="对号_uninstall.png" backgroundtransparent="true" />
+			<Label name="uninstall_info" left="30" top="10,false" right="30" height="20" align="right" font="songti_12" textcolor="#ffc7a8" text="Uninstalling..." visible="false" />
+		</Layout>
+		<Button name="close_box" left="10,false" top="13" width="12" height="12" backgroundimage="setup/close_1.png" backgroundhotimage="setup/close_2.png" backgroundpushedimage="setup/close_2.png" backgroundtransparent="true"/>
+	</Layout>
+</Title>
+</window>

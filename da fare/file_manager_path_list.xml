@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="drop_down_window" size="230,286" type="menu_window" backgroundimage="app_menu_bg.png;;12,12,12,16" translucent="true" alphaborders="1,1,10,10">
+	<Layout left="2" top="1" right="2" bottom="1">
+	    <PathList name="path_pulldown_list" right="0" bottom="0" itemheight="30" backgroundtransparent="true" ratiowheeldelata="10">
+            <Indicate value="<PlaceHolder width='1' height='1'/>" />
+            <Content value="<DecorateButton defaultnodename='common_controls:path_navigate_pulldown_list_item' />" />
+        </PathList>
+	</Layout>
+</window>

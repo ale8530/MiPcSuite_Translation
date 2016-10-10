@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+  <HorizontalLayout name="main_client_app" left="66" top="0" right="0" bottom="0" align="near">
+    <Layout width="311">
+      <VerticalLayout name="phone_view" top="20" right="0" bottom="0">
+        <VerticalLayout name="device_screen_block" height="524">
+          <Layout name="device_screen_bg"  backgroundtransparent="true"  hittest="true" backgroundimage="common_m4_bg.png" width="312">
+            <Control name="device_screen" backgroundtransparent="true" left="54" top="89" right="48" bottom="65" hittest="false"/>
+            <Control name="move_rect" backgroundtransparent="true" left="30" top="40" right="30" bottom="10" hittest="true" focusenable="false"/>
+            <VerticalLayout name="device_phone_conver" backgroundtransparent="true" visible="false" hittest="false"  backgroundimage="main/phone_cover.png"  left="54" top="89" right="48" bottom="65" >
+              <PlaceHolder />
+              <HorizontalLayout height="18" width="210" >
+                <PlaceHolder width="10"  hittest="false" />
+                <HorizontalLayout width="48">
+                  <Button name="capture_screen" align="center,venter"  focusenable="false" width="35" text="截屏" font="14" textcolor="#d2d3d4" textnormalcolor="#d2d3d4" texthotcolor="#ffffff" textpushedcolor="#ff6c03" backgroundtransparent="true" />
+                  <PlaceHolder width="3"   hittest="false" />
+                  <Button name="capture_screen_pulldown" width="10" height="12" focusenable="false" backgroundtransparent="true" imagelist="main/phone_tips_button.png"/>
+                </HorizontalLayout>
+                <PlaceHolder   hittest="false" />
+                <Button name="play_screen" align="center,venter" width="35" focusenable="false" text="演示" font="14" textcolor="#d2d3d4" textnormalcolor="#d2d3d4" texthotcolor="#ffffff" textpushedcolor="#ff6c03" textdisabledcolor="#cccccc" backgroundtransparent="true"/>
+                <PlaceHolder width="38"  hittest="false" />
+                <Button name="refresh_screen" align="center,venter" width="35" focusenable="false" text="刷新" font="14" textcolor="#d2d3d4" textnormalcolor="#d2d3d4" texthotcolor="#ffffff" textpushedcolor="#ff6c03" textdisabledcolor="#cccccc" backgroundtransparent="true" />
+                <PlaceHolder  width="10" hittest="false" />
+              </HorizontalLayout>
+              <PlaceHolder height="10"/>
+            </VerticalLayout>
+          </Layout>
+        </VerticalLayout>
+      </VerticalLayout>
+      <VerticalLayout name="phone_view_disconn" top="20" right="0" bottom="150" visible="false">
+        <PlaceHolder height="210" />
+        <Control backgroundtransparent="true" backgroundimage="common_usb.png" width="31" height="67" />
+        <Label backgroundtransparent="true" height="40" text="Use a USB cable to connect" textcolor="#656565" align="center,venter" font="16" />
+      </VerticalLayout>
+      <VerticalLayout name="phone_view_conning" top="20" right="0" bottom="150" visible="false">
+        <PlaceHolder height="200" />
+        <ProgressBarCircle name="phone_view_conning_waiting" width="76" height="76" backgroundtransparent="true" backgroundimage="projection/wait_bg.png" progressimage="common_waiting_foreground.png"/>
+        <Label backgroundtransparent="true" height="40" text="正在连接设备..." textcolor="#656565" align="center,venter" font="14" />
+      </VerticalLayout>
+    </Layout>
+    <PlaceHolder width="53" />
+    <VerticalLayout name="phone_main" width="540" align="near">
+      <!--PlaceHolder height="45" /-->
+      <Layout name="device" top="0" left="0" right="0" height="135" >
+        <Layout name="connecting_status_layout" top="0" bottom="0" left="0" right="0" >
+          <!--安装驱动-->
+          <Layout name="device_install_driver" visible="false" left="0" top="85" right="0" height="115">
+            <Label name="device_install_driver_title" text="正在安装驱动..." left="0" top="0" width="240" height="18" font="14" textcolor="#333333" />
+            <ProgressBarSalon name="device_driver_salon_progress" left="0" top="20" height="6" width="180" backgroundimage="common/salon_bar_bg.png;;3,0,3,0" aniimage="common/salon_bar.png" backgroundtransparent="true" />
+          </Layout>
+          <!--未连接device_connecting-->
+          <VerticalLayout name="device_not_connected" visible="false" left="100,false" top="25" height="115" width="115">
+            <PlaceHolder height="58" />
+            <Button name="show_connect_wizard_btn" text="点击连接设备" width="115" left="0" height="36" font="bold_12" textcolor="#ffffff" backgroundtransparent="true" imagelist="common_round_btn3.png;;20,3,20,3" />
+          </VerticalLayout>
+          <!--连接中-->
+          <VerticalLayout name="device_connecting" visible="false" left="100,flse" top="25" height="115" width="115">
+            <PlaceHolder height="58" />
+            <Layout height="36">
+              <Button name="show_connect_wizard_btn" text="正在连接设备..." align="left, venter" left="0" top="0" width="142" height="36" padding="40,0,0,0" font="bold_12" textcolor="#ffffff" backgroundtransparent="true" imagelist="common_round_btn3.png;;20,3,20,3" />
+              <Control name="usb_connect_animate_1" visible="true" left="0" top="14" width="33" height="9" backgroundimage="connwizard/usb_animate_1.png" backgroundtransparent="true" />
+              <Control name="usb_connect_animate_2" visible="false" left="0" top="14" width="33" height="9" backgroundimage="connwizard/usb_animate_2.png" backgroundtransparent="true" />
+              <Control name="usb_connect_animate_3" visible="false" left="0" top="14" width="33" height="9" backgroundimage="connwizard/usb_animate_3.png" backgroundtransparent="true" />
+              <Control name="usb_connect_animate_4" visible="false" left="0" top="14" width="33" height="9" backgroundimage="connwizard/usb_animate_4.png" backgroundtransparent="true" />
+            </Layout>
+          </VerticalLayout>
+
+          <VerticalLayout name="device_netshare_close" visible="false" left="100,false" top="83" height="115" width="115">
+            <Button name="device_netshare_close_btn" text="关闭共享上网" width="115" left="0" height="36" font="bold_12" textcolor="#565656" backgroundtransparent="true" imagelist="common_round_btn2.png;;20,3,20,3" />
+          </VerticalLayout>
+
+          <VerticalLayout name="device_netshare_open" visible="false" left="100,false" top="83" height="115" width="115">
+            <Button name="device_netshare_open_btn" text="一键开启" width="115" left="0" height="36" font="bold_12" textcolor="#ffffff" backgroundtransparent="true" imagelist="common_round_btn3.png;;'20,3,20,3'" />
+          </VerticalLayout>
+
+          <VerticalLayout name="device_hotspot_open" visible="false" left="100,false" top="83" height="115" width="144">
+            <Button name="device_hotspot_open_btn" text="变身WiFi热点" width="144" left="0" height="36" font="bold_12" textcolor="#ffffff"
+                backgroundtransparent="true" backgroundimagelist="open_hotspot_btn.png" padding="34,0,0,0" />
+          </VerticalLayout>
+
+          <VerticalLayout name="device_hotspot_close" visible="false" left="100,false" top="83" height="115" width="115">
+            <Button name="device_hotspot_close_btn" text="关闭WiFi热点" width="115" left="0" height="36" font="bold_12" textcolor="#565656" backgroundtransparent="true" imagelist="common_round_btn2.png;;20,3,20,3" />
+          </VerticalLayout>
+
+          <HorizontalLayout name="device_connected" visible="false" left="0" top="35" right="0" height="115">
+            <Button	name="net_share_button" width="43" imagepadding="0,47,8,33" visible="false" backgroundtransparent="true" />
+            <VerticalLayout height="50" width="240" >
+              <PlaceHolder height="12" />
+              <Label name="net_share_status" height="23" font="14" align="left,bottom" textcolor="#191919" />
+              <Label name="net_share_conn_status" text="已通过电脑连接网络" left="0" top="0" height="24" bottom="0" align="left,top" font="songti_12" textcolor="#909090" visible="true" showhtml="true" padding="3,0,0,0" />
+            </VerticalLayout>
+            <PlaceHolder width="30" />
+          </HorizontalLayout>
+        </Layout>
+        <Control backgroundtransparent="true" backgroundimage="common_line_horizontal.png" top="132" height="1" left="0" right="100" hittest="false" />
+      </Layout>
+      <!--Label name="phone_number" text="未知" height="24" font="12" textcolor="#9C9C9C" /-->
+
+      <Layout width="540" height="460">
+        <VerticalLayout name="phone_main_normal" left="0" top="0" right="100" bottom="111" visible="true">
+          <HorizontalLayout width="440" height="130">
+            <InflateDecorateButton name="main_device_file_manager" defaultnodename="common_controls:main_client_function_nav_button_left" width="106" height="95">
+              <InflateControl name="icon" backgroundimage="main/dev_file_manager.png" animateimage="main/dev_file_manager_big.png" />
+              <Label name="text" text="文件管理" />
+            </InflateDecorateButton>
+            <InflateDecorateButton name="main_device_app" defaultnodename="common_controls:main_client_function_nav_button" width="114" height="95">
+              <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+              <Label name="text" text="应用游戏" />
+            </InflateDecorateButton>
+            <InflateDecorateButton name="main_device_video" defaultnodename="common_controls:main_client_function_nav_button" width="114" height="95">
+              <InflateControl name="icon" backgroundimage="main/dev_video.png" animateimage="main/dev_video_big.png" />
+              <Label name="text" text="视频" />
+            </InflateDecorateButton>
+            <InflateDecorateButton name="main_device_photo" defaultnodename="common_controls:main_client_function_nav_button_right" width="106" height="95">
+              <InflateControl name="icon" backgroundimage="main/dev_photo.png" animateimage="main/dev_photo_big.png" />
+              <Label name="text" text="图库" />
+            </InflateDecorateButton>
+          </HorizontalLayout>
+          <HorizontalLayout width="440" height="130">
+            <InflateDecorateButton name="main_device_audio" defaultnodename="common_controls:main_client_function_nav_button_left" width="106" height="95">
+              <InflateControl name="icon" backgroundimage="main/dev_music.png" animateimage="main/dev_music_big.png" />
+              <Label name="text" text="音乐" />
+            </InflateDecorateButton>
+            <InflateDecorateButton name="main_device_note" defaultnodename="common_controls:main_client_function_nav_button" width="114" height="95">
+              <InflateControl name="icon" backgroundimage="main/dev_tips.png" animateimage="main/dev_tips_big.png" />
+              <Label name="text" text="便签" />
+            </InflateDecorateButton>
+            <InflateDecorateButton name="main_device_sms" defaultnodename="common_controls:main_client_function_nav_button" width="114" height="95">
+              <InflateControl name="icon" backgroundimage="main/dev_sms.png" animateimage="main/dev_sms_big.png" />
+              <Label name="text" text="短信" />
+            </InflateDecorateButton>
+            <InflateDecorateButton name="main_device_contact" defaultnodename="common_controls:main_client_function_nav_button_right" width="106" height="95">
+              <InflateControl name="icon" backgroundimage="main/dev_pb.png" animateimage="main/dev_pb_big.png" />
+              <Label name="text" text="联系人" />
+            </InflateDecorateButton>
+          </HorizontalLayout>
+          <PlaceHolder height="5" />
+          <Control backgroundtransparent="true" backgroundimage="common_line_horizontal.png" top="0" height="1" hittest="false" />
+          <PlaceHolder height="5" />
+          <HorizontalLayout name="storage_info_frame" width="450" height="70">
+            <DecorateButton name="phone_memory_device_button_one" defaultnodename="common_controls:device_space_button_ex" visible="false">
+              <Label name="text" text="内存设备" />
+            </DecorateButton>
+            <DecorateButton name="system_memory_button" defaultnodename="common_controls:device_space_button" visible="true">
+              <Label name="text" text="系统存储" />
+            </DecorateButton>
+            <DecorateButton name="phone_memory_device_button" defaultnodename="common_controls:device_space_button" visible="true">
+              <Label name="text" text="内存设备" textcolor="#46BBF1" />
+              <Control name="space_m" backgroundimage="common_progress_blue.png;;4,4,4,4" backgroundtransparent="true" />
+            </DecorateButton>
+            <DecorateButton name="phone_sdcard_space_button" defaultnodename="common_controls:device_space_button" visible="false">
+              <Label name="text" text="SD卡" textcolor="#81C057" />
+              <Control name="space_m" backgroundimage="common_progress_green.png;;4,4,4,4" backgroundtransparent="true" />
+            </DecorateButton>
+          </HorizontalLayout>
+        </VerticalLayout>
+        <Layout name="function_panel" left="0" top="340" right="100" bottom="0" visible="true">
+          <Layout name="function_panel_auto_backup_progress_layout" left="0" top="38" width="76" height="16" visible="false">
+            <Label name="function_panel_auto_backup_progress_bg" width="50" height="2" top="6" backgroundimage="bro/auto_backup_progress_bg.png" backgroundtransparent="true" />
+            <Layout name="function_panel_auto_backup_progress" width="50" height="2" left="0" top="6">
+              <Label name="function_panel_auto_backup_progress_m" left="0" top="0" width="50" height="2" imagepadding="0,0,47,0" backgroundimage="bro/auto_backup_progress.png" backgroundtransparent="true" />
+            </Layout>
+            <Button name="function_panel_auto_backup_cancel_btn" focusenable="false" left="53" top="0" width="14" height="14" backgroundtransparent="true" imagelist="bro/auto_backup_close_min.png"/>
+          </Layout>
+          <Control backgroundtransparent="true" backgroundimage="common_line_horizontal.png" top="0" right="0" height="1" hittest="false" />
+          <HorizontalLayout name="function_panel_btns" left="0" top="11" right="0" height="30" visible="true">
+            <DecorateButton name="backup_function" defaultnodename="common_controls:main_client_function_button" width="64" height="28" combineassingle="true">
+              <Button name="button" backgroundimagelist="backup_btn.png" backgroundimagelistuistatus="disable" />
+              <Label name="text" text="备份" font="12" textcolor="#656565" textnormalcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" textdisabledcolor="#cccccc"/>
+            </DecorateButton>
+            <PlaceHolder width="7" />
+            <Control backgroundtransparent="true" backgroundimage="I.png" width="1" imagepadding="0,9,0,9" hittest="false" />
+            <PlaceHolder width="23" />
+            <DecorateButton name="restore_function" defaultnodename="common_controls:main_client_function_button" width="64" height="28" combineassingle="true">
+              <Button name="button" backgroundimagelist="restore_btn.png" backgroundimagelistuistatus="disable" />
+              <Label name="text" text="还原" font="12" textcolor="#656565" textnormalcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" textdisabledcolor="#cccccc"/>
+            </DecorateButton>
+            <PlaceHolder width="7" />
+            <Control backgroundtransparent="true" backgroundimage="I.png" width="1" imagepadding="0,9,0,9" hittest="false" />
+            <PlaceHolder width="23" />
+            <DecorateButton name="upgrade_function" defaultnodename="common_controls:main_client_function_button_ota_upprade" width="64" height="28" combineassingle="true">
+              <Button name="button" backgroundimagelist="upgrade_btn.png" backgroundimagelistuistatus="disable" />
+              <Label name="text" text="升级" font="12" textcolor="#4e4e4e" textnormalcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" textdisabledcolor="#cccccc"/>
+            </DecorateButton>
+            <PlaceHolder width="5" />
+            <Control backgroundtransparent="true" backgroundimage="I.png" width="1" imagepadding="0,9,0,9" hittest="false" />
+            <PlaceHolder width="20" />
+            <DecorateButton name="main_device_clipboard" defaultnodename="common_controls:main_client_function_button" width="70" height="28" combineassingle="true">
+              <Button name="button" backgroundimagelist="clipboard_btn.png" backgroundimagelistuistatus="disable"/>
+              <Label name="text" text="传送门" font="12" textcolor="#4e4e4e" textnormalcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" textdisabledcolor="#cccccc" align="left,venter" />
+            </DecorateButton>
+            <PlaceHolder width="7" />
+            <Control backgroundtransparent="true" backgroundimage="I.png" width="1" imagepadding="0,9,0,9" hittest="false" />
+            <PlaceHolder width="23" />
+            <DecorateButton name="flash_function" defaultnodename="common_controls:main_client_function_button" width="64" height="28" combineassingle="true">
+              <Button name="button" backgroundimagelist="fastboot_btn.png" backgroundimagelistuistatus="disable" />
+              <Label name="text" text="刷机" font="12" textcolor="#656565" textnormalcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" textdisabledcolor="#cccccc"/>
+            </DecorateButton>
+          </HorizontalLayout>
+        </Layout>
+        <VerticalLayout name="phone_main_coming_soon" left="0" top="0" right="100" bottom="120" visible="false">
+          <PlaceHolder height="55" />
+          <Control width="96" height="70" backgroundimage="common_coming_soon.png" backgroundtransparent="true"/>
+          <PlaceHolder height="20" />
+          <Label text="暂无系统更新，无法升级" align="center" height="20" font="14" textcolor="#656565"/>
+          <Label text="敬请期待" align="center" height="20" font="14" textcolor="#656565" />
+        </VerticalLayout>
+        <VerticalLayout name="phone_main_upgrade" left="0" top="0" right="100" bottom="120" visible="false">
+          <PlaceHolder height="53" />
+          <Control width="43" height="43" backgroundimage="bro/ota_start.png" backgroundtransparent="true"/>
+          <PlaceHolder height="24" />
+          <Label text="设备系统版本过低，新功能暂时无法使用" align="center" height="20" font="14" textcolor="#656565"/>
+          <PlaceHolder height="6" />
+          <Button name="phone_main_upgrade_btn" text="立即升级" width="154" height="32" textcolor="#4e4e4e" imagelist="common_round_big_btn.png" imagelistuistatus="disable" backgroundtransparent="true"/>
+        </VerticalLayout>
+        <Layout name="fileclipboard_tips" visible="false" left="250" top="380" width="182" height="78" backgroundimage="clipboard/clipboard_tips.png" backgroundtransparent="true" hittest="true">
+          <Button name="fileclipboard_tips_close" left="166" top="15" width="9" height="9"  backgroundimage="about/close.png;0,0,11,11" backgroundhotimage="about/close.png;11,0,22,11" backgroundpushedimage="about/close.png;22,0,33,11" backgroundtransparent="true"/>
+        </Layout>
+      </Layout>
+    </VerticalLayout>
+  </HorizontalLayout>
+</windowless>

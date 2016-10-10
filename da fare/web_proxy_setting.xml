@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window" size="622,498" translucent="true" alphaborders="11,12,13,14">
+  <Layout right="0" bottom="0" backgroundimage="setting/device_frame.png;;10,40,10,10">
+    <VerticalLayout left="0" top="0" right="0" bottom="0">
+      <!--标题栏!-->
+      <Title height="40" focusenable="false">
+        <PlaceHolder width="10" />
+        <Label name="dialog_title" text="代理设置" width="135" font="12" textcolor="#606060" align="left, venter" />
+        <PlaceHolder />
+        <Button name="dialog_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,2,0,0" />
+        <PlaceHolder width="10" />
+      </Title>
+
+      <!--Disable proxy-->
+      <PlaceHolder height="25" />
+      <HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="30" />
+        <CheckBox name="btn_disable_proxy" defaultnodename="common_controls:radiobox_style" left="30" text="不使用代理" font="14" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" />
+        <PlaceHolder/>
+      </HorizontalLayout>
+
+      <!--seperate line-->
+      <PlaceHolder height="18" />
+      <HorizontalLayout height="1" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="30" />
+        <Control width="530" height="1" backgroundtransparent="true" backgroundimage="common/seperate_line.png" />
+      </HorizontalLayout>
+
+      <!--use IE proxy-->
+      <PlaceHolder height="18" />
+      <HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="30" />
+        <CheckBox name="btn_use_ie_proxy" defaultnodename="common_controls:radiobox_style" left="30" width="400" text="使用IE浏览器代理设置（推荐）" font="bold_14" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" />
+      </HorizontalLayout>
+
+      <!--seperate line-->
+      <PlaceHolder height="18" />
+      <HorizontalLayout height="1" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="30" />
+        <Control width="530" height="1" backgroundtransparent="true" backgroundimage="common/seperate_line.png" />
+      </HorizontalLayout>
+
+      <!--enable custom proxy-->
+      <PlaceHolder height="18" />
+      <HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="30" />
+        <CheckBox name="btn_custom_proxy" defaultnodename="common_controls:radiobox_style" left="30" width="400" text="自定义代理设置" font="14" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" />
+      </HorizontalLayout>
+
+      <!--custom proxy settings selection-->
+      <PlaceHolder height="20" />
+      <HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="60" />
+        <Label text="代理类型" font="12" textcolor="#3d3d3d" width="60" height="18" align='left,center'/>
+        <PlaceHolder width="15" />
+        <CheckBox name="btn_use_http_proxy" defaultnodename="common_controls:checkbox_style" width="84" text="HTTP" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" />
+        <PlaceHolder width="2" />
+        <CheckBox name="btn_use_socks_proxy" defaultnodename="common_controls:checkbox_style" width="84" text="SOCKS" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" />
+      </HorizontalLayout>
+
+      <!--custom proxy settings[ip:port]-->
+      <PlaceHolder height="15" />
+      <HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="60" />
+        <Label text="服 务 器" font="12" textcolor="#3d3d3d" width="60" height="18" align='left,center'/>
+        <PlaceHolder width="15" />
+        <RichEdit name="proxy_server_ip" left="7" top="2" font="12" width="156" backgroundtransparent="true" backgroundimage="输入框.png" placetextcolor="#8d8d8d" multiline="false" textlimit="20" wanttab="false"  multiline="false" wantreturn="false"/>
+        <PlaceHolder width="45" />
+        <Label text="端    口" font="12" textcolor="#3d3d3d" width="60" height="18" align='left,center'/>
+        <RichEdit name="proxy_server_port" left="7" top="2" font="12" width="156" backgroundtransparent="true" backgroundimage="输入框.png" placetextcolor="#8d8d8d" multiline="false" textlimit="5" wanttab="false"  multiline="false" wantreturn="false"/>
+      </HorizontalLayout>
+
+      <!--custom proxy settings[user:pwd]-->
+      <PlaceHolder height="15" />
+      <HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="60" />
+        <Label text="用 户 名" font="12" textcolor="#3d3d3d" width="60" height="18" align='left,center'/>
+        <PlaceHolder width="15" />
+        <RichEdit name="proxy_auth_user" left="7" top="2" font="12" width="156" backgroundtransparent="true" backgroundimage="输入框.png" placetextcolor="#8d8d8d" multiline="false" wanttab="false"  multiline="false" wantreturn="false"/>
+        <PlaceHolder width="45" />
+        <Label text="密    码" font="12" textcolor="#3d3d3d" width="60" height="18" align='left,center'/>
+        <RichEdit name="proxy_auth_password" left="7" top="2" font="12" width="156" backgroundtransparent="true" backgroundimage="输入框.png" placetextcolor="#8d8d8d" multiline="false" password="true" wanttab="false"  multiline="false" wantreturn="false"/>
+      </HorizontalLayout>
+
+      <!--custom proxy settings[domain]-->
+      <PlaceHolder height="15" />
+      <HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="60" />
+        <Label text="域" font="12" textcolor="#3d3d3d" width="30" height="18" align='left,center'/>
+        <PlaceHolder width="45" />
+        <RichEdit name="proxy_domain" left="7" top="2" font="12" width="156" backgroundtransparent="true" backgroundimage="输入框.png" placetextcolor="#8d8d8d" multiline="false" textlimit="20" wanttab="false"  multiline="false" wantreturn="false"/>
+      </HorizontalLayout>
+
+      <!--button operation area-->
+      <PlaceHolder/>
+      <HorizontalLayout height="28" backgroundtransparent="true" padding="6,0,0,0">
+        <PlaceHolder width="30" />
+        <Button name="btn_test" text="测试" width="98" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png" imagelistuistatus="disable" />
+        <PlaceHolder/>
+        <Button name="btn_ok" text="确定" width="98" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png" imagelistuistatus="disable" />
+        <PlaceHolder width="10"/>
+        <Button name="btn_cancel" text="取消" width="98" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png" imagelistuistatus="disable" />
+        <PlaceHolder width="30"/>
+      </HorizontalLayout>
+
+      <PlaceHolder height="15" />
+    </VerticalLayout>
+  </Layout>
+</window>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window" size="878, 598" backgroundimage="setting/setting.png" translucent="true" alphaborders="11,12,13,14">
+	<VerticalLayout name="main_client_phone_setting" right="0" bottom="0">
+        <Title name="setting_title" height="40" padding="20,15,20,0" focusenable="false" align="near">
+            <Label text="设置" width="80" height="30" align='left,top' textcolor="#656565"/>
+            <PlaceHolder />
+            <HorizontalLayout width="14" height="26">
+                <Button name="setting_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14"/>
+            </HorizontalLayout>
+        </Title>
+		<PlaceHolder height="1"/>
+		<HorizontalLayout name="setting_client" left="0" height="490" visible="true">
+			<PlaceHolder width="17" />
+			<VerticalLayout width="158" align='near'>
+				<PlaceHolder height="23"/>
+				<TextList name="setting_client_left_list" itemheight="34" backgroundtransparent="true">
+					<Indicate value="<PlaceHolder width='1' height='1'/>" />
+					<Content value="<Button font='16' textcolor='#585858' textfocuscolor='#e24f1b' align='left,venter' padding='37,0,0,0' backgroundtransparent='true' />" />
+				</TextList>
+				<Label name="software_ver" textcolor="#848484" font="songti_12" height="15" align='left,top' padding="18,0,0,0" visible="false"/>
+				<!--Label text="{f id:songti_12}{a cmd:show_log_directory}{c #ff6911}打开日志目录{/c}{/a}{/f}" showhtml="true" height="20" width="100" align='left,top' padding="20,0,0,0"/-->
+				<PlaceHolder height="15" />
+			</VerticalLayout>
+			<Layout name="setting_client_right" left="171" top="2" width="705" visible="true">
+				<VerticalLayout name="setting_client_general" left="0" right="0" bottom="0" padding="20,29,54,0" visible="false" align="near" >
+                    <Label textcolor="#848484" height="30" font="18" text="常规设置"/>
+                    <PlaceHolder height="10" />
+                    <Control width="680" height="2" backgroundtransparent="true" backgroundimage="common/seperate_line.png" />
+                    <PlaceHolder height="30" />
+					<HorizontalLayout height="18" backgroundtransparent="true" padding="6,0,0,0">
+						<Label text="自动启动" textcolor="#3d3d3d" width="105" height="18" align='left,bottom'/>
+						<PlaceHolder width="10" />
+						<CheckBox name="setting_general_conn_autorun" defaultnodename="common_controls:checkbox_style" width="400" text="设备连接时自动启动" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" />
+					</HorizontalLayout>
+					<PlaceHolder height="30" />
+					<HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+						<Label text="共享上网" textcolor="#3d3d3d" width="105" height="18" align='left,bottom'/>
+						<PlaceHolder width="10" />
+						<CheckBox name="setting_general_share_network" defaultnodename="common_controls:checkbox_style" width="400" text="设备连接时自动开启共享网络(仅电脑宽带连接状态下有效)" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" />
+					</HorizontalLayout>
+					<PlaceHolder height="30" />
+					<HorizontalLayout height="30" backgroundtransparent="true" padding="6,0,0,0">
+						<Label text="关闭设置" textcolor="#3d3d3d" width="105" height="18" align='left,bottom'/>
+						<PlaceHolder width="10" />
+						<CheckBox name="setting_general_close_action_totray" defaultnodename="common_controls:radiobox_style" width="160" text="最小化到托盘" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" font="12" />
+					</HorizontalLayout>
+					<PlaceHolder height="7" />
+					<HorizontalLayout height="18" backgroundtransparent="true" padding="6,0,0,0" visible="true">
+						<PlaceHolder width="115" />
+						<CheckBox name="setting_general_close_action_quit" defaultnodename="common_controls:radiobox_style" width="160" text="退出软件" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" font="12" />
+					</HorizontalLayout>
+					<PlaceHolder height="15" />
+					<HorizontalLayout height="18" backgroundtransparent="true" padding="6,0,0,0" visible="false">
+						<PlaceHolder width="115" />
+						<CheckBox name="setting_general_close_action_ask" defaultnodename="common_controls:radiobox_style" width="160" text="每次询问" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" font="12" />
+					</HorizontalLayout>
+          <PlaceHolder height="30" />
+          <HorizontalLayout visible="true" height="30" backgroundtransparent="true" padding="6,0,0,0" align='left,bottom'>
+            <Label text="网络代理" textcolor="#3d3d3d" width="105" height="18" align='left,top'/>
+            <PlaceHolder width="10" />
+	    <Button name="setting_general_shange_netproxy"  text="修改代理设置" defaultnodename="common_controls:white_style_button" width="160" height="28" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" font="12" />
+            <Label text="使用系统代理设置访问网络" width ="300" align="left,venter" padding="0,8,0,0" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" font="12"/>            <PlaceHolder/>
+          </HorizontalLayout>
+          <PlaceHolder height="30" />
+          <HorizontalLayout name="setting_general_mtp_switch_layout" visible="false" height="30" backgroundtransparent="true" padding="6,0,0,0">
+            <Label text="启用MTP" textcolor="#3d3d3d" width="105" height="18" align='left,bottom'/>
+            <PlaceHolder width="10" />
+            <Button name="setting_general_enable_mtp_btn" defaultnodename="common_controls:white_style_button" width="100" text="启用" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" />
+            <PlaceHolder width="5" />
+            <Label text="如果启用MTP，可能会延迟手机连接耗时" width ="400" align="left,top" padding="0,8,0,0" textcolor="#656565" texthotcolor="#656565" textpushedcolor="#656565" font="12"/>
+          </HorizontalLayout>
+				</VerticalLayout>
+                <VerticalLayout name="setting_client_storage_path" left="0" right="0" bottom="0" padding="20,29,53,0" visible="false" align="near" >
+                    <Label textcolor="#848484" height="30" font="18" text="存储设置"/>
+                    <PlaceHolder height="10" />
+                    <Control width="680" height="2" backgroundtransparent="true" backgroundimage="common/seperate_line.png" />
+                    <PlaceHolder height="30" />
+                    <HorizontalLayout height="30" backgroundtransparent="true">
+                        <Label text="下载目录" textcolor="#3d3d3d" align="left,venter" width="130" height="18"/>
+                        <HorizontalLayout width="350" backgroundtransparent="true" backgroundimage="输入框.png" >
+                            <RichEdit name="setting_client_download_directory_path" height="24" width="315" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" wanttab="true" wantreturn="false" wantctrlreturn="true" rich="false" font="arial_12" backgroundtransparent="true" align='venter' textcolor="#a5a5a5" readonly="true" />
+						</HorizontalLayout>
+                        <PlaceHolder width="5" />
+						<Button name="setting_client_download_open_directory" defaultnodename="common_controls:white_style_button" height="30" width="70" text="打开" />
+                        <PlaceHolder width="5" />
+                        <Button name="setting_client_download_modify_directory_path" defaultnodename="common_controls:white_style_button" height="30" width="70" text="修改" />
+                    </HorizontalLayout>
+                    <PlaceHolder height="20" />
+                    <HorizontalLayout height="30" backgroundtransparent="true">
+                        <Label text="备份目录" textcolor="#3d3d3d" align="left,venter" width="130" height="18"/>
+                        <HorizontalLayout width="350" backgroundtransparent="true" backgroundimage="输入框.png" >
+                            <RichEdit name="setting_client_backup_directory_path" height="24" width="315" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" wanttab="true" wantreturn="false" wantctrlreturn="true" rich="false" font="arial_12" backgroundtransparent="true" align='venter' textcolor="#a5a5a5" readonly="true" />
+						</HorizontalLayout>
+                        <PlaceHolder width="5" />
+						<Button name="setting_client_backup_open_directory" defaultnodename="common_controls:white_style_button" height="30" width="70" text="打开" />
+                        <PlaceHolder width="5" />
+                        <Button name="setting_client_backup_modify_directory_path" defaultnodename="common_controls:white_style_button" height="30" width="70" text="修改" />
+                    </HorizontalLayout>
+                </VerticalLayout>
+				<VerticalLayout name="setting_client_backup" left="0" right="0" bottom="0" padding="20,29,53,0" visible="false" align="near" >
+					<HorizontalLayout height="30" backgroundtransparent="true">
+						<Label text="备份目录" textcolor="#3d3d3d" align="left,venter" width="130" height="30"/>
+						<PlaceHolder width="25" />
+						<HorizontalLayout width="270" height="30" backgroundtransparent="true" backgroundimage="输入框.png" >
+								<RichEdit name="setting_client_backup_fld" height="24" width="235" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" wanttab="true" wantreturn="false" wantctrlreturn="true" rich="false" font="arial_12" backgroundtransparent="true" visible="true" align='venter' textcolor="#a5a5a5" readonly="true" />
+						</HorizontalLayout>
+						<PlaceHolder width="5" />
+						<Button name="setting_client_backup_open_directory" defaultnodename="common_controls:white_style_button" height="30" width="70" text="打开" />
+                        <PlaceHolder width="5" />
+                        <Button name="setting_client_backup_sel_fld" defaultnodename="common_controls:white_style_button" height="30" width="70" text="修改" />
+					</HorizontalLayout>
+					<PlaceHolder height="10" />
+                    <Label font="14" text="备份列表" textcolor="#3d3d3d" height="30" align='left,venter'/>
+					<PlaceHolder height="10" />
+					<HorizontalLayout>
+                        <VerticalLayout width="160" height="255" backgroundtransparent="true" backgroundimage="setting/backup_frame.png">
+                            <HorizontalLayout left="0" top="10" height="42">
+                                <PlaceHolder width="10" />
+								<Label name="setting_client_backup_device_title" width="50" text="设备" textcolor="#3d3d3d" font="14" />
+                                <PlaceHolder width="10" />
+								<Label name="setting_client_backup_device_auto_backup_title" width="100" text="自动备份" textcolor="#3d3d3d" font="14"/>
+						    </HorizontalLayout>
+                            <CheckboxList name="setting_client_device_list" itemheight="70" backgroundtransparent="true" padding="1,1,1,1">
+									<Indicate value="<PlaceHolder width='1' height='1'/>" />
+									<Content value="<Layout defaultnodename='common_controls:checked_list_item' combineassingle='true' />" />
+								</CheckboxList>
+                        </VerticalLayout>
+						<VerticalLayout width="413" height="255" backgroundtransparent="true" backgroundimage="setting/backup_frame.png">
+							<HorizontalLayout left="0" top="10" height="42">
+                                <PlaceHolder width="10" />
+								<CheckBox name="setting_client_backup_selectall" defaultnodename="common_controls:checkbox_style" width="60" height="16" text="全选" textcolor="#3d3d3d" font="14" />
+                                <PlaceHolder width="10" />
+								<Button name="setting_client_backup_delete_selected" width="100" text="删除备份" backgroundtransparent="true"  textcolor="#3d3d3d" font="14"/>
+						    </HorizontalLayout>
+							<Layout>
+								<VerticalLayout left="0" right="0" bottom="0" visible="true">
+									<BackupList name="setting_client_backup_list" itemheight="70" backgroundtransparent="true" padding="0,1,0,1">
+										<Indicate value="<PlaceHolder width='1' height='1'/>" />
+										<Content value="<Layout defaultnodename='common_controls:backup_list_item' combineassingle='true' />" />
+									</BackupList>
+								</VerticalLayout>
+							</Layout>
+						</VerticalLayout>
+					</HorizontalLayout>
+				</VerticalLayout>
+			</Layout>
+		</HorizontalLayout>
+    <HorizontalLayout name="setting_bottom_buttons_layout" height="60" padding="0,0,20,0" >
+        <PlaceHolder />
+        <Button name="setting_title_done" text="确定" width="85" height="30" backgroundtransparent="true"
+                defaultnodename="common_controls:white_red_style_button" align='center,venter' />
+        <PlaceHolder width="10" />
+        <Button name="setting_button_cancel" text="取消" width="85" height="30" backgroundtransparent="true"
+                defaultnodename="common_controls:white_style_button" align='center,venter' />
+    </HorizontalLayout>
+	</VerticalLayout>
+</window>

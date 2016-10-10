@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<Layout name="image_client" left="0" top="0" right="0" bottom="0">
+	<VerticalLayout name="image_client_layout" left="0" top="1" right="0" bottom="0" visible="true">
+		<Layout name="image_client_title_layout" height="35">
+			<HorizontalLayout name="image_client_title" left="0" top="0" right="0" height="35" backgroundimage="media_title_bar.png">
+				<PlaceHolder width="25" />
+				<DecorateButton name="image_client_title_photo" optiongroup="image_client_title_group" width="100" height="35" backgroundtransparent="true">
+					<Label text="相机" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter"
+						backgroundtransparent="true" width="35" height="35" left="0" focuspriority="true"/>
+					<Label name="image_client_title_photo_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter" left="30" autosize="true" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder width="20" />
+				<DecorateButton name="image_client_title_screenshots" optiongroup="image_client_title_group" width="100" height="35" backgroundtransparent="true">
+					<Label text="截屏" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter"
+						backgroundtransparent="true" width="35" height="35" left="0" focuspriority="true"/>
+					<Label name="image_client_title_screenshots_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter" left="30" autosize="true" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder width="20" />
+				<DecorateButton name="image_client_title_wallpapers" optiongroup="image_client_title_group" width="100" height="35" backgroundtransparent="true">
+					<Label text="壁纸" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter"
+						backgroundtransparent="true" width="35" height="35" left="0" focuspriority="true"/>
+					<Label name="image_client_title_wallpapers_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter" left="30" autosize="true" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder width="20" />
+				<DecorateButton name="image_client_title_other" optiongroup="image_client_title_group" width="100" height="35" backgroundtransparent="true">
+					<Label text="其它" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter"
+						backgroundtransparent="true" width="35" height="35" left="0" focuspriority="true"/>
+					<Label name="image_client_title_other_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter" left="30" autosize="true" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder />
+				<Button name="image_refresh" font="12" top="7" width="15" height="14"
+					imagelist="common_btn_refresh.png;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+				<PlaceHolder width="20"/>
+			</HorizontalLayout>
+			<Layout left="0" top="33" right="0" height="2">
+				<SliderIndicator name="image_client_top_sliderIndicator" backgroundimage="common_indicator_horizontal.png" sliderorign="horizontal" backgroundtransparent="false" left="0" height="2" right="0" />
+			</Layout>
+            <Layout left="0" top="35" right="0" height="34">
+                <HorizontalLayout name="image_client_title_similar_show_layout" left="0" top="0" right="0" bottom="1" visible="true" backgroundcolor="#FCFCFC" backgroundtransparent="false">
+                    <PlaceHolder width="25" />
+					<Control backgroundimage="media_image_similar.png" width="16" height="16" backgroundtransparent="true"/>
+					<PlaceHolder width="6" />
+                    <Label name="image_client_title_similar_show_count" text="发现0张相似图片" textcolor="#262626" align="left,venter" backgroundtransparent="true" width="130" autosize="true" />
+                    <Button name="image_client_title_similar_show" text="查看" align="left,venter" left="130" width="50" textcolor="#FF6A30" texthotcolor="#FF4800" textpushedcolor="#CA2B06" backgroundtransparent="true" />
+                </HorizontalLayout>
+                <HorizontalLayout name="image_client_title_similar_return_layout" left="0" top="0" right="0" bottom="1" visible="false" backgroundcolor="#FCFCFC" backgroundtransparent="false">
+                    <PlaceHolder width="25" />
+                    <Button name="image_client_title_similar_return" imagelist="media_image_similar_reutrn.png" imagepadding="0,10,37,9"
+                        padding="6,0,0,0" text="返回" align="center,venter" width="45" textcolor="#4C4C4C" texthotcolor="#0D0D0D" textpushedcolor="#F85319" backgroundtransparent="true" />
+                    <Label name="image_client_title_similar_return_count" text="发现0张相似图片" textcolor="#262626" align="left,venter" backgroundtransparent="true" left= "75" width="130" autosize="true" />
+					<Button name="image_client_title_similar_refresh" text="发现新的相似图片点击刷新" align="left,venter" width="50" textcolor="#FF6A30" texthotcolor="#FF4800" textpushedcolor="#CA2B06" backgroundtransparent="true" autosize="true" visible="false" />
+                </HorizontalLayout>
+                <Control left="0" right="0" top="33" height="1" hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+			</Layout>
+		</Layout>
+		<Layout name="image_List_layout" backgroundtransparent="true">
+			<VirtualIconsLayout name="ImageVirtualIconsLayout" left="0" top="0" bottom="0" width="835" backgroundcolor="#FCFCFC" backgroundtransparent="false"
+					item_width="110" item_height="110" title_height="45" item_perline="6" line_space="20" cols_space="24" header_height="0" footer_height="0"
+					item_desc="<Layout defaultnodename='common_controls:media_image_icon'/>"
+					title_desc="<Layout defaultnodename='common_controls:media_title'/>" />
+		</Layout>
+		<HorizontalLayout height="50" backgroundimage="media_status_bar.png;'0,2,0,0'" backgroundtransparent="true">
+			<PlaceHolder width="25" />
+			<CheckBox name="image_sel_all" text="全选" defaultnodename="common_controls:checkbox_style" width="60"/>
+			<Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+			<Label text="已选中" height="18" width="50" font="12" textcolor="#656565" padding="0,1,0,0" align="venter,right" backgroundtransparent="true" />
+			<Label name="image_sel_item_count" text="10" height="18" font="16" textcolor="#FB5A45" align="venter,center" autosize="true" />
+			<Label text="张图片" height="18" width="50" font="12" textcolor="#656565" padding="0,1,0,0" align="venter, left"/>
+			<PlaceHolder />
+			<Button name="image_add" text="添加本地图片" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+			<PlaceHolder width="3" />
+			<Button name="image_export" text="导出" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+			<PlaceHolder width="3" />
+			<Button name="image_del" text="删除" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+			<PlaceHolder width="10" />
+		</HorizontalLayout>
+	</VerticalLayout>
+	<Layout name="image_client_preview_layout" left="0" top="0" right="0" bottom="0" backgroundimage="image_preview_bk.png" backgroundtransparent="true" visible="false">
+		<VerticalLayout left="0" top="0" right="0" bottom="0">
+			<Layout height="557" left="0" right="0" backgroundtransparent="true">
+				<Layout name="image_preview_container" left="0" width="835" height="557" right="0" top="0" bottom="0">
+					<ImageView name="image_preview" left="0" right="0" top="0" bottom="0" width="835" height="557" imagepadding="62,10,62,10" maintainaspectratio="true" backgroundtransparent="true"/>
+				</Layout>
+				<Layout left="15" top="255" height="47" width="47">
+					<Button name="image_preview_previous" imagelist="common_btn_previous.png" height="47" width="47" backgroundtransparent="true"/>
+				</Layout>
+				<Layout left="15,false" top="255" height="47" width="47">
+					<Button name="image_preview_next" imagelist="common_btn_next.png" height="47" width="47" backgroundtransparent="true"/>
+				</Layout>
+				<Label name="image_preview_hint" left="350" top="260" width="135" height="37" font="songti_12" textcolor="#CCCCCC" visible="false" autosize="true" />
+			</Layout>
+			<VerticalLayout height="50" backgroundimage="media_status_bar.png;'0,2,0,0'">
+				<HorizontalLayout name="image_preview_tools" width="674">
+					<Button name="image_preview_tools_zoom_out" height="17" width="17" imagelist="common_tools_zoom_out.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="20" />
+					<Button name="image_preview_tools_zoom_in" height="17" width="17" imagelist="common_tools_zoom_in.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="20" />
+					<CheckBox name="image_preview_tools_original_size" height="17" width="17" imagelist="common_tools_best_size.png" imagelistuistatus="disable"
+						backgroundimagelist="common_tools_original_size.png" backgroundimagelistuistatus="disable"/>
+					<PlaceHolder width="20" />
+					<Button name="image_preview_tools_set_desktop_wallpaper" height="17" width="17" imagelist="common_tools_set_wallpaper.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="20" />
+					<Button name="image_preview_tools_set_lockscreen_wallpaper" height="17" width="17" imagelist="common_tools_set_lockscreen_wallpaper.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="20" />
+					<Control height="17" width="1" backgroundimage="common_line_vertical.png" />
+					<PlaceHolder width="5" />
+					<Button name="image_preview_tools_previous" height="17" width="17" imagelist="common_tools_previous.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="10" />
+					<Button name="image_preview_tools_preview1" optiongroup="image_preview_tools_group" height="44" width="49" imagepadding="0,0,5,0"
+						backgroundimage="media_image_def_thumb.png" hotimage="image_preview_sel_overlay.png" focusimage="image_preview_sel_overlay.png" backgroundtransparent="true"/>
+					<Button name="image_preview_tools_preview2" optiongroup="image_preview_tools_group" height="44" width="49" imagepadding="0,0,5,0"
+						backgroundimage="media_image_def_thumb.png" hotimage="image_preview_sel_overlay.png" focusimage="image_preview_sel_overlay.png" backgroundtransparent="true"/>
+					<Button name="image_preview_tools_preview3" optiongroup="image_preview_tools_group" height="44" width="49" imagepadding="0,0,5,0"
+						backgroundimage="media_image_def_thumb.png" hotimage="image_preview_sel_overlay.png" focusimage="image_preview_sel_overlay.png" backgroundtransparent="true"/>
+					<Button name="image_preview_tools_preview4" optiongroup="image_preview_tools_group" height="44" width="49" imagepadding="0,0,5,0"
+						backgroundimage="media_image_def_thumb.png" hotimage="image_preview_sel_overlay.png" focusimage="image_preview_sel_overlay.png" backgroundtransparent="true"/>
+					<Button name="image_preview_tools_preview5" optiongroup="image_preview_tools_group" height="44" width="49" imagepadding="0,0,5,0"
+						backgroundimage="media_image_def_thumb.png" hotimage="image_preview_sel_overlay.png" focusimage="image_preview_sel_overlay.png" backgroundtransparent="true"/>
+					<PlaceHolder width="5" />
+					<Button name="image_preview_tools_next" height="17" width="17" imagelist="common_tools_next.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="5" />
+					<Control height="17" width="1" backgroundimage="common_line_vertical.png" />
+					<PlaceHolder width="20" />
+					<Button name="image_preview_tools_rotate_aw" height="17" width="17" imagelist="common_tools_rotate_aw.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="20" />
+					<Button name="image_preview_tools_rotate_cw" height="17" width="17" imagelist="common_tools_rotate_cw.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="20" />
+					<Button name="image_preview_tools_del" height="17" width="17" imagelist="common_tools_del.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="20" />
+					<Button name="image_preview_tools_export" height="17" width="17" imagelist="common_tools_export.png" imagelistuistatus="disable"/>
+					<PlaceHolder width="37" />
+				</HorizontalLayout>
+			</VerticalLayout>
+		</VerticalLayout>
+		<Label name="image_preview_progress" top="0,false" left="20,false" width="100" height="46" align="right,venter" backgroundtransparent="true" />
+		<Button name="image_preview_close" top="10" right="0" left="10,false" width="29" height="29" imagelist="common_btn_close.png" backgroundtransparent="true" />
+	</Layout>
+	<Layout name="image_client_waiting" left="0" top="0" right="0" bottom="0" backgroundtransparent="true" visible="false">
+		<Button left="0" right="0" top="39" bottom="0" backgroundtransparent="true"/>
+		<Control name="image_client_waiting_bk" left="0" right="0" top="36" bottom="50" backgroundcolor="#FCFCFC" />
+		<ProgressBarCircle name="image_waiting" left="373" top="267" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+	</Layout>
+	<Layout name="image_client_disconnection" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="disconnection_hint" left="0" right="0" top="345" height="30" text="您还没有连接设备，请连接" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+
+	<Layout name="image_client_no_data" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="76" right="0" bottom="50" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="XX_hint" left="0" right="0" top="345" height="30" text="这里还没有图片哟" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+</Layout>
+</windowless>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="my_note_list_menu" size="150,186" type="menu_window"  backgroundimage="app_menu_bg.png;;12,12,12,16" translucent="true" alphaborders="1,1,10,10">
+	<Layout left="1" top="1" right="1" bottom="1">
+		<VerticalLayout name="my_note_list_menu_layout" left="1" top="1" right="1" bottom="1">
+			<Button name="menu_note_stick" padding="10,0,0,5" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" left="0" right="0" height="29" backgroundtransparent="true"
+				textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="置顶" font="songti_12" align='left,bottom'/>
+			<Button name="menu_note_cancel_stick" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="10,0,0,5" left="0" right="0" height="29" backgroundtransparent="true"
+				textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="取消置顶" font="songti_12" align='left,bottom'/>
+			<Control left="0" right="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+			<Button name="menu_note_chg_fld" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="10,0,0,5" left="0" right="0" height="29" backgroundtransparent="true"
+				textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="移至便签夹" font="songti_12" align='left,bottom'/>
+			<Control left="0" right="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+			<Button name="menu_media_del" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="10,0,0,5" right="0" height="29" backgroundtransparent="true"
+				textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="删除" font="songti_12" align='left,bottom'/>
+			<Control left="0" right="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+			<Button name="menu_media_sel_all"   backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="10,0,0,5" left="0" right="0" height="29" backgroundtransparent="true"
+				textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="全选" font="songti_12" align='left,bottom'/>
+			<Button name="menu_media_clear_sel"   backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="10,0,0,5" left="0" right="0" height="29" backgroundtransparent="true"
+				textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="全不选" font="songti_12" align='left,bottom'/>
+	   </VerticalLayout>
+	</Layout>
+</window>

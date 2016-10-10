@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="my_audio_list_menu" size="155,155" type="menu_window"  backgroundimage="app_menu_bg.png;;12,12,12,16" translucent="true" alphaborders="1,1,10,10">
+	<Layout left="1" top="1" right="1" bottom="1">
+		<VerticalLayout name="audio_set_ring" left="1" top="1" right="1" bottom="1">
+			<DecorateButton name="audio_set_ring_call" height="29" backgroundtransparent="true">
+				<Button name="audio_set_ring_call" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="27,0,0,5" left="0" right="0" top="0" bottom="0"
+					backgroundtransparent="true" textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="来电铃声" font="songti_12" align='left,bottom'/>
+				<Control backgroundtransparent="true" backgroundimage="audio_ring_call.png" left="7" top="6" height="17" width="17" backgroundtransparent="true" />
+			</DecorateButton>
+			<Control left="0" right="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+			<DecorateButton name="audio_set_ring_sms" height="29" backgroundtransparent="true">
+				<Button name="audio_set_ring_call" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="27,0,0,5" left="0" right="0" top="0" bottom="0"
+					backgroundtransparent="true" textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="短信铃声" font="songti_12" align='left,bottom'/>
+				<Control backgroundtransparent="true" backgroundimage="audio_ring_sms.png" left="7" top="5" height="17" width="17" backgroundtransparent="true" />
+			</DecorateButton>
+			<Control left="0" right="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+			<DecorateButton name="audio_set_ring_sms_received" height="29" backgroundtransparent="true">
+				<Button name="audio_set_ring_call" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="27,0,0,5" left="0" right="0" top="0" bottom="0"
+					backgroundtransparent="true" textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="短信送达铃声" font="songti_12" align='left,bottom'/>
+				<Control backgroundtransparent="true" backgroundimage="audio_ring_sms_reveived.png" left="7" top="5" height="17" width="17" backgroundtransparent="true" />
+			</DecorateButton>
+			<Control left="0" right="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+			<DecorateButton name="audio_set_ring_sms_notification" height="29" backgroundtransparent="true">
+				<Button name="audio_set_ring_call" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="27,0,0,5" left="0" right="0" top="0" bottom="0"
+					backgroundtransparent="true" textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="通知铃声" font="songti_12" align='left,bottom'/>
+				<Control backgroundtransparent="true" backgroundimage="audio_ring_notification.png" left="7" top="5" height="17" width="17" backgroundtransparent="true" />
+			</DecorateButton>
+			<Control left="0" right="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+			<DecorateButton name="audio_set_ring_alarm" height="29" backgroundtransparent="true">
+				<Button name="audio_set_ring_call" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" padding="27,0,0,5" left="0" right="0" top="0" bottom="0"
+					backgroundtransparent="true" textcolor="#656565" texthotcolor="#191919" textdisabledcolor="#cccccc" text="闹铃铃声" font="songti_12" align='left,bottom'/>
+				<Control backgroundtransparent="true" backgroundimage="audio_ring_alarm.png" left="7" top="5" height="17" width="17" backgroundtransparent="true" />
+			</DecorateButton>
+	   </VerticalLayout>
+	</Layout>
+</window>

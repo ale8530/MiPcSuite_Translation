@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="account_info_window" size="680,500" type="window" borderwindow="dialog_border_skin.xml">
+    <Layout left="0" backgroundimage="bro/bro_frame.png;;1,34,1,1" right="0" bottom="0">
+		<Title left="0" right="0" top="0" height="30" padding="10,10,10,0" align="near">
+			<Label name="account_info_window_title" text="Mi Account" font="12" textcolor="#656565" align="left, top" />
+			<Button name="account_info_window_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,2,0,0"/>
+		</Title>
+        <VerticalLayout left="0" top="30" right="0" bottom="0" align="center">
+            <PlaceHolder height="40" />
+            <HorizontalLayout width="500" height="30">
+                <Control name="account_info_icon" width="25" height="25" backgroundtransparent="true" backgroundimage="common/account_icon.png"/>
+                <PlaceHolder width="10" />
+                <Label name="account_info_label" font="12" autosize="true" height="20" />
+                <PlaceHolder width="30" />
+                <Button name="account_info_logout_button" text="Exit the current account" textcolor="#656565" width="120" height="28" backgroundtransparent="true" imagelist="common/round_red_btn_list_.png;;12,0,12,0" imagelistuistatus="disable"/>
+            </HorizontalLayout>
+            <PlaceHolder height="45" />
+            <HorizontalLayout width="500" height="120">
+                <InflateDecorateButton name="account_info_btn_account" defaultnodename="common_controls:main_client_function_nav_button" width="110" height="95">
+                    <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+                    <Label name="text" text="Mi Account" />
+                </InflateDecorateButton>
+                <InflateDecorateButton name="account_info_btn_miclound" defaultnodename="common_controls:main_client_function_nav_button" width="110" height="95">
+                    <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+                    <Label name="text" text="云服务" />
+                </InflateDecorateButton>
+                <InflateDecorateButton name="account_info_btn_coin" defaultnodename="common_controls:main_client_function_nav_button" width="110" height="95">
+                    <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+                    <Label name="text" text="米币" />
+                </InflateDecorateButton>
+                <InflateDecorateButton name="account_info_btn_xiaomi" defaultnodename="common_controls:main_client_function_nav_button" width="110" height="95">
+                    <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+                    <Label name="text" text="小米网" />
+                </InflateDecorateButton>
+            </HorizontalLayout>
+            <PlaceHolder height="45" />
+            <HorizontalLayout width="500" height="120">
+                <InflateDecorateButton name="account_info_btn_miuibbs" defaultnodename="common_controls:main_client_function_nav_button" width="110" height="95">
+                    <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+                    <Label name="text" text="MIUI论坛" />
+                </InflateDecorateButton>
+                <InflateDecorateButton name="account_info_btn_duokan" defaultnodename="common_controls:main_client_function_nav_button" width="110" height="95">
+                    <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+                    <Label name="text" text="多看阅读" />
+                </InflateDecorateButton>
+                <InflateDecorateButton name="account_info_btn_theme" defaultnodename="common_controls:main_client_function_nav_button" width="110" height="95">
+                    <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+                    <Label name="text" text="主题" />
+                </InflateDecorateButton>
+                <InflateDecorateButton name="account_info_btn_mitalk" defaultnodename="common_controls:main_client_function_nav_button" width="110" height="95">
+                    <InflateControl name="icon" backgroundimage="main/dev_app.png" animateimage="main/dev_app_big.png" />
+                    <Label name="text" text="米聊" />
+                </InflateDecorateButton>
+            </HorizontalLayout>
+        </VerticalLayout>
+	</Layout>
+</window>

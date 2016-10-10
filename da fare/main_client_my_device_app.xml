@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<Layout name="app_client" left="0" top="0" right="0" bottom="0">
+	<HorizontalLayout left="0" top="0" right="0" bottom="0" align="near">
+		<Layout name="my_app_lsit_layout"	width="835" backgroundtransparent="true">
+			<Layout name="list_bar_layout" visible="false" left="0" right="0" top="0" height="35" backgroundimage="media_title_bar.png" backgroundtransparent="true">
+				<Button name="app_back_btn"  visible="false" imagepadding="0,0,72,2" left="27" top="11" width="86" height="16" text="已安装的应用" font="12"  backgroundtransparent="true" imagelist="web_tool_bar/back_to_device.png" imagelistuistatus="disable"  textcolor="#656565" texthotcolor="#191919"  textdisabledcolor="#CCCCCC" align='right,venter'/>
+				<HorizontalLayout name="all_app_type_title" left="0" top="0" width="400" height="35">
+					<PlaceHolder width="25"/>
+					<DecorateButton name="all_app_list_btn" optiongroup="app_client_title_group" width="85" height="35" backgroundtransparent="true">
+						<Label name="all_app_list_label" text="已安装" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="center,venter"
+							left="0" width="85" height="35" backgroundtransparent="true" focuspriority="true"/>
+					</DecorateButton>
+					<PlaceHolder width="20"/>
+					<DecorateButton name="update_app_list_btn" optiongroup="app_client_title_group" width="85" height="35" backgroundtransparent="true">
+						<Label name="update_app_list_label" text="可升级" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="center,venter"
+							left="0" width="85" height="35" backgroundtransparent="true" focuspriority="true"/>
+					</DecorateButton>
+					<PlaceHolder width="20"/>
+					<DecorateButton name="system_app_list_btn" optiongroup="app_client_title_group"  width="70" height="35" backgroundtransparent="true" >
+						<Label name="system_app_list_label" text="系统" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="center,venter"
+							left="0" width="70" height="35" backgroundtransparent="true" focuspriority="true"/>
+					</DecorateButton>
+					<PlaceHolder />
+				</HorizontalLayout>
+				<Layout name="app_edit_layout" left="614" top="0" width="210"  height="35" backgroundtransparent="true">
+					<Control left="0" top="5" width="210" height="25" backgroundimage="app_search_bg.png"	backgroundtransparent="true"/>
+					<RichEdit name="find_local_app_edit" left="5" top="6" font="arial_12" width="180" height="30" backgroundtransparent="true" placestring="搜索已安装的应用" placetextcolor="#CCCCCC" multiline="false" textlimit="18" wanttab="false"  wantreturn="false"/>
+					<Button name="find_local_app_btn" left="180" top="10" width="15" height="15"	backgroundtransparent="true" backgroundimage="app_search_btn_1.png" backgroundhotimage="app_search_btn_2.png"/>
+				</Layout>		
+			</Layout>
+			<Layout left="0" top="33" right="0" height="2">
+			 <SliderIndicator name="app_client_top_sliderIndicator" backgroundimage="common_indicator_horizontal.png" sliderorign="horizontal" backgroundtransparent="false" left="0" height="2" right="0" />
+			</Layout>
+			<Layout name="list_title" visible="false" left="0" top="35" height="40" width="601">
+				<Control left="25" right="22" top="39" height="1" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+				<HorizontalLayout left="0" top="0" width="601" height="40">
+				<PlaceHolder width="25"/>
+				<Button name="sort_by_name_btn" width="50" height="40" focusenable="false" text="名称" font="12" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" backgroundtransparent="true" align="left,venter"
+				imagepadding="30,14,10,16" backgroundnormalimage="app_sort_rank_btn.png;0,0,10,10" backgroundhotimage="app_sort_rank_btn.png;10,0,20,10" backgroundpushedimage="app_sort_rank_btn.png;10,0,20,10" supportcheckedstatus="true"/>
+				<PlaceHolder width="245"/>
+				<Button name="sort_by_size_btn" width="80" height="40" focusenable="false" text="文件大小" font="12" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" backgroundtransparent="true" align="left,venter"
+				imagepadding="55,14,15,16" supportcheckedstatus="true"/>
+				<PlaceHolder width="75"/>
+				<Label text="操作" font="12"	texthotcolor="#1919191" width="95" height="40" textcolor="#656565" backgroundtransparent="true" align="center,venter"/>
+				</HorizontalLayout>
+			</Layout>
+			<Layout left="0" top="75"	width="605" height="532" align="near">
+				<AppList name="all_app_list" width="604" height="482" itemheight="63" backgroundtransparent="true" visible="true" supportkey="true"	ratiowheeldelata="10">
+					<Indicate value="<PlaceHolder width='1' height='1'/>" />
+					<Content value="<AppListItem defaultnodename='common_controls:app_list_item' combineassingle='false' />" />
+				</AppList>
+				<AppList name="update_app_list" width="604" height="482" itemheight="63" backgroundtransparent="true" visible="false" supportkey="true"	ratiowheeldelata="10">
+					<Indicate value="<PlaceHolder width='1' height='1'/>" />
+					<Content value="<AppListItem defaultnodename='common_controls:app_list_item' combineassingle='false' />" />
+				</AppList>
+				<AppList name="system_app_list" width="604" height="532" itemheight="63" backgroundtransparent="true" visible="false" supportkey="true"	ratiowheeldelata="10">
+					<Indicate value="<PlaceHolder width='1' height='1'/>" />
+					<Content value="<AppListItem defaultnodename='common_controls:app_list_item' combineassingle='false' />" />
+				</AppList>
+				<AppList name="search_app_list" width="604" height="482" itemheight="63" backgroundtransparent="true" visible="false" supportkey="true"	ratiowheeldelata="10">
+					<Indicate value="<PlaceHolder width='1' height='1'/>" />
+					<Content value="<AppListItem defaultnodename='common_controls:app_list_item' combineassingle='false' />" />
+				</AppList>			
+			</Layout>
+			<HorizontalLayout name="control_applist_layout" left="0" top="555" right="0" height="50" backgroundimage="media_status_bar.png;'0,2,0,0'" backgroundtransparent="true">
+			<PlaceHolder width="25" />
+			<CheckBox name="app_list_all_check" text="全选" defaultnodename="common_controls:checkbox_style" width="60" />
+			<Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+			<HorizontalLayout width="214"  height="18">
+				<Label text="已选中" height="18" width="50" font="12"  textcolor="#656565" padding="0,1,0,0" align="venter,right" backgroundtransparent="true" />
+				<Label name="app_sel_item_count"  text="0" height="18" font="16" textcolor="#FB5A45" align="venter,center" autosize="true" />
+				<Label text="个应用" height="18" font="12" textcolor="#656565"  padding="0,1,0,0" align="venter, left"/>
+			</HorizontalLayout>
+			<PlaceHolder />
+			<Layout width="95" height="30">
+				<Button name="install_local_app_btn" text="安装本地应用" font="12" width="95" height="30"
+					imagelist="common/red_btn_list.png;;'3,3,3,3'" textcolor="#fb5f45" 
+					texthotcolor="#fb5f45"  textpushedcolor="#ffffff" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+				<Button name="ignore_list_show_btn" visible="false" text="已忽略的应用" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+
+			</Layout>
+			<PlaceHolder width="5"/>
+			<Layout width="95" height="30">
+				<Button name="ignore_app_btn"  visible="false" text="忽略所选应用" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+				<Button name="export_app_btn"	text="导出" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+			</Layout>
+			<PlaceHolder width="5"/>
+			<Layout width="95" height="30">
+				<Button name="update_app_btn" visible="false" text="升级所选应用" font="12" width="95" height="30"
+					imagelist="common/red_btn_list.png;;'3,3,3,3'" textcolor="#fb5f45" texthotcolor="#fb5f45" textpushedcolor="#ffffff"  textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+				<Button name="uninit_app_btn"	text="卸载" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+			</Layout>
+			<PlaceHolder width="240"/>
+			</HorizontalLayout>
+			<HorizontalLayout name="show_ignore_layout" visible="false" left="0" top="555" right="0" height="50" backgroundimage="media_status_bar.png;'0,2,0,0'" backgroundtransparent="true">
+			<PlaceHolder width="250"/>
+				<HorizontalLayout width="250"  height="26">
+					<Label text="有" height="18" width="50" font="12"  textcolor="#656565" padding="0,1,0,0" align="venter,right" backgroundtransparent="true" />
+					<Label name="ignore_item_count"  text="0" height="18" font="16" textcolor="#FB5A45" align="venter,center" autosize="true" />
+					<Label text="个已忽略的升级" height="18" font="12" textcolor="#656565"  padding="0,1,0,0" align="venter, left"/>
+					<PlaceHolder width="15"/>
+					<Button name="ignore_wnd_show_btn" text="查看" font="12" width="65" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+				</HorizontalLayout>
+				<PlaceHolder />
+			</HorizontalLayout>
+			<Layout name="device_app_right_layout" left="603" top="35" width="231" height="600" visible="false" backgroundimage="app_right_bg.png" backgroundtransparent="true">
+				<Layout name="device_app_info_layout" width="210" height="270" left="10" top="10" backgroundimage="app_info_bg.png" backgroundtransparent="true">
+					<Control name="app_info_icon" width="60" height="60" top="15" left="15"	backgroundtransparent="true" backgroundimage="首页/软件设计.png"/>
+					<Control name="app_info_icon_conver" width="60" height="60" top="15" left="15"	backgroundtransparent="true" backgroundimage="app_info_icon_cover.png"/>
+					<Label name="app_info_name" width="112" height="30" left="82" top="17" align="left,venter" text="新浪客户端"  font="default"/>
+					<ScoreControl name="app_info_score_control" left="85" top="50" width="80" height="12" backgroundtransparent="true" defaultnodename="common_controls:star_score_control"/>
+					<Control width="183" height="1" left="15" top="100" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+					<VerticalLayout left="0" width="200" top="101" height="170">
+						<Layout visible="false" name="aotu_layout" width="200" height="38">
+							<Control width="183" height="1" left="15" top="37" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+							<Control name="app_aotu_open_icon" left ="15" top="13" width="10" height="10" backgroundimage="app_point_icon.png;10,0,20,10" backgroundtransparent="true"/>
+							<Control name="app_aotu_close_icon" left ="15" top="13" width="10" height="10" backgroundimage="app_point_icon.png;0,0,10,10" backgroundtransparent="true" visible="false"/>
+							<Label name="app_auto_check_text" left="30" top="3" width="100" height="30" align="left,venter" text="自启动" textcolor="#999999" font="songti_12"/>
+							<Button name="app_auto_check" left="150" top="7" width="48" height="22" backgroundtransparent="true" defaultnodename="common_controls:white_style_small_button" supportcheckedstatus="true" align="center,venter" />
+						</Layout>
+						<Layout name="3g_layout" width="200" height="38">
+							<Control width="183" height="1" left="15" top="37" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+							<Control name="app_3g_open_icon" left ="15" top="13" width="10" height="10" backgroundimage="app_point_icon.png;10,0,20,10" backgroundtransparent="true"/>
+							<Control name="app_3g_close_icon" left ="15" top="13" width="10" height="10" backgroundimage="app_point_icon.png;0,0,10,10" backgroundtransparent="true" visible="false"/>
+							<Label name="app_3g_check_text" left="30" top="3" width="100" height="30" align="left,venter" text="2G/3G联网" textcolor="#999999" font="songti_12"/>
+							<Button name="app_3g_check" left="150" top="7" width="48" height="22"	backgroundtransparent="true" defaultnodename="common_controls:white_style_small_button" supportcheckedstatus="true"	align="center,venter" />
+						</Layout>
+						<Layout name="wifi_layout" width="200" height="38">
+							<Control width="183" height="1" left="15" top="37" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+							<Control name="app_wifi_open_icon"	left ="15" top="13" width="10" height="10" backgroundimage="app_point_icon.png;10,0,20,10" backgroundtransparent="true"/>
+							<Control name="app_wifi_close_icon"	left ="15" top="13" width="10" height="10" backgroundimage="app_point_icon.png;0,0,10,10" backgroundtransparent="true" visible="false"/>
+							<Label name="app_info_wifi_text" left="30" top="3" width="100" height="30" align="left,venter" text="WIFI联网" textcolor="#999999" font="songti_12"/>	
+							<Button name="app_wifi_check" left="150" top="7" width="48" height="22"	backgroundtransparent="true" defaultnodename="common_controls:white_style_small_button" supportcheckedstatus="true"	align="center,venter"/>
+						</Layout>
+						<Layout width="200" height="80">
+							<Label name="app_info_install_date" left="25" top="15" width="170" height="30" align="center,veter"  textcolor="#999999"  text="安装日期:2013-08-23" font="songti_12"/>
+							<Button name="app_info_btn" left="31" top="40" width="154" height="32" font="default" text="应用详情" backgroundtransparent="true" imagelist="common_round_big_btn.png" imagelistuistatus="disable"/>
+						</Layout>
+					</VerticalLayout>
+				</Layout>
+				<Layout name="web_app_layout" width="210" height="280" left="10" top="302"  backgroundtransparent="true">
+					<Label left="0" top="0" width="170" height="15" align="left,venter"  textcolor="#999999"  text="相关应用" font="songti_12"/>
+					<Control width="210" height="1" top="21" left="0" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+					<AppRelatedList left="0" top="28" name="relate_applist" width="210" height="240" itemheight="58" backgroundtransparent="true">
+						<Content value="<AppRelatedListItem defaultnodename='common_controls:ra_list_item' combineassingle='false' />" />
+					</AppRelatedList>
+				</Layout>
+			</Layout>
+			<Layout name="right_appsel_layout" left="603" top="35" width="231" height="570" visible="false" backgroundimage="app_right_bg.png" backgroundtransparent="true">
+				<Label left="12" top="15" width="170" height="15" align="left,venter"  textcolor="#999999"  text="已选应用" font="songti_12"/>
+				<Control width="208" height="1" top="35" left="12" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+				<AppSelectList left="0" top="36" name="select_applist" width="231" height="536" itemheight="58" backgroundtransparent="true">
+					<Content value="<AppSelectListItem defaultnodename='common_controls:asel_list_item' combineassingle='false' />" />
+				</AppSelectList>
+			</Layout>
+			<Layout name="right_classic_layout" left="603" top="35" width="231" height="570" visible="false" backgroundimage="app_right_bg.png" backgroundtransparent="true">
+				<Label left="12" top="15" width="170" height="15" align="left,venter"  textcolor="#999999"  text="精品推荐" font="songti_12"/>
+				<Control width="210" height="1" top="35" left="12" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+				<AppRelatedList left="12" top="36" name="classic_applist" width="210" height="536" itemheight="58" backgroundtransparent="true">
+					<Content value="<AppRelatedListItem defaultnodename='common_controls:ra_list_item' combineassingle='false' />" />
+				</AppRelatedList>
+			</Layout>
+		</Layout>
+	</HorizontalLayout>
+	<Layout name="app_client_waiting" left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC" backgroundtransparent="true" visible="false">
+		<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true"/>
+		<ProgressBarCircle name="app_waiting" left="273" top="267" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+	</Layout>
+	<Layout name="app_client_disconnection" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="disconnection_hint" left="0" right="0" top="345" height="30" text="您还没有连接设备，请连接" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+	<Layout name="app_client_no_data" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="35" right="0" bottom="0" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="XX_hint" left="0" right="0" top="345" height="30" text="这里还没有应用哟" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+	<Layout name="app_update_ok" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="35" right="0" bottom="50" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="ok.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="disconnection_hint" left="0" right="0" top="345" height="30" text="您的所有应用都是最新版！" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+</Layout>
+</windowless>

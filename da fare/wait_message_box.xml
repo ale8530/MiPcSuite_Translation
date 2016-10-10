@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="common_message_box" size="349,221" type="wait_message_box_with_checkbox" backgroundimage="bro/bro_frame.png;;10,50,10,10" translucent="true" alphaborders="5,0,5,10">
+	<Layout right="0" bottom="0" padding="5,0,5,10">
+		<VerticalLayout left="0" top="0" right="0" bottom="0">
+			<Title height="33" focusenable="false">
+				<PlaceHolder width="5" />
+				<Label name="dialog_title" top ="17" width="200" font="12" textcolor="#606060" align="left,venter"/>
+				<PlaceHolder />
+				<Button name="dialog_close" width="14" height="14" backgroundtransparent="true" backgroundimage="messagebox_close.png" backgroundhotimage="messagebox_close2.png" backgroundpushedimage="messagebox_close3.png" />
+				<PlaceHolder width="5" />
+			</Title>
+			<PlaceHolder height="23" />
+      <Layout height="90">
+				<Control name="message_box_icon_waring" left="20" top="0" width="16" height="16" backgroundimage="common_icon_waring.png" backgroundtransparent="true" visible="false" />
+				<Control name="message_box_icon_info" left="20" top="0" width="16" height="16" backgroundimage="common_icon_info.png" backgroundtransparent="true" visible="false" />
+				<Label name="dialog_text" left="40" top="0" right="0" height="90" font="14" textcolor="#3d3d3d" align="left,venter_multiline" backgroundtransparent="true" />
+			</Layout>
+			<PlaceHolder height="15" />
+			<Layout width="340" height="60">
+        <CheckBox name="messagebox_check" left="20" top="30" height="14" width="140" imagewidth="14" textcolor="#656565" font="12" align="left,top" spacebetweenimageandtext="3" backgroundimage="common_checkbox_.png;0,0,14,14" backgroundnormalimage="common_checkbox_.png;0,0,14,14" backgroundhotimage="common_checkbox_.png;14,0,28,14"  backgroundpushedimage="common_checkbox_.png;14,0,28,14" backgrounddisabledimage="common_checkbox_.png;0,0,14,14" normalimage="common_checkbox_.png;28,0,42,14" hotimage="common_checkbox_.png;28,0,42,14" pushedimage="common_checkbox_.png;28,0,42,14" backgroundtransparent="true" visible="false"/>
+				<HorizontalLayout left="20" top="20" width="320" height="30" bottom="20" name="dialog_button_one" visible="true">
+					<PlaceHolder />
+					<Button name="dialog_button_1" backgroundtransparent="true" width="80" defaultnodename="common_controls:white_style_button" />
+					<PlaceHolder width="15" />
+				</HorizontalLayout>
+				<HorizontalLayout left="20" top="20" width="320" height="30" bottom="20" name="dialog_button_two" visible="false">
+					<PlaceHolder />
+          <Button name="dialog_button_1" focusenable="false" textcolor="#fb5f45" texthotcolor="#fb5f45" textpushedcolor="#ffffff" textdisabledcolor="#CCCCCC" width="80" imagelist="common/red_btn_list.png;;'3,3,3,3'" imagelistuistatus="disable" />
+					<PlaceHolder width="5" />
+					<Button name="dialog_button_2" backgroundtransparent="true" width="80" defaultnodename="common_controls:white_style_button" />
+					<PlaceHolder width="15" />
+				</HorizontalLayout>
+				<HorizontalLayout left="20" top="20" width="320" height="30" bottom="20" name="dialog_button_three"  visible="false">
+					<PlaceHolder />
+					<Button name="dialog_button_1" backgroundtransparent="true" width="80" defaultnodename="common_controls:white_style_button" />
+					<PlaceHolder width="5" />
+					<Button name="dialog_button_2" backgroundtransparent="true" width="80" defaultnodename="common_controls:white_style_button" />
+					<PlaceHolder width="5" />
+					<Button name="dialog_button_3" backgroundtransparent="true" width="80" defaultnodename="common_controls:white_style_button" />
+					<PlaceHolder width="15" />
+				</HorizontalLayout>
+			</Layout>
+		</VerticalLayout>
+	</Layout>
+</window>

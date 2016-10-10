@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window" size="510,318" backgroundimage="projection/projection_wizard_bg.png" translucent="true" alphaborders="11,12,13,14">
+  <Layout right="0" bottom="0">
+    <Title name="bg" left="0" width="510" top="0" height="318" visible="true"/>
+    <Button name="btn_close" left="475" width="29" top ="5" height="29" imagelist="common_btn_close.png" visible="true" backgroundtransparent="true"/>
+    <Layout name="first_page" left="0" width="510" top ="0" height="318"  visible="true">
+      <Label left="0" width="510" top="40" height="50" text="鼠标键盘也能玩手机" textcolor="#6c6c6c" align="center,venter" font="bold_16" backgroundtransparent="true" visible="true" />
+      <Control left="40" width="330" top="86" height="161" backgroundimage="projection/keyboard.png" backgroundtransparent="true" visible="true" />
+      <Control left="373" width="104" top="86" height="161"  backgroundimage="projection/mouse.png" backgroundtransparent="true" visible="true" />
+      <Button left="203" width="98" top="265" height="28" name="btn_next" text="下一步" font="bold_14" textcolor="#6c6c6c" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png" imagelistuistatus="disable" />
+    </Layout>
+    <Layout name="second_page" left="0" width="510" top ="0" height="318" visible="false">
+      <Label left="186" width="150" top="43" height="30" text="Home键与纵向滑屏" textcolor="#6c6c6c" align="center,venter" font="bold_14" backgroundtransparent="true" visible="true" />
+      <Label left="62" width="150" top="105" height="30" text="模拟触摸操作" textcolor="#6c6c6c" align="center,venter" font="bold_14" backgroundtransparent="true" visible="true" />
+      <Label left="290" width="150" top="105" height="30" text="手机返回键" textcolor="#6c6c6c" align="center,venter" font="bold_14" backgroundtransparent="true" visible="true" />
+      <Control left="200" width="104" top="86" height="161"  backgroundimage="projection/mouse.png" backgroundtransparent="true" visible="true" />
+      <Control left="247" width="10" top="70" height="50" backgroundimage="projection/pointer_down.png" backgroundtransparent="true" visible="true" />
+      <Control left="186" width="50" top="114" height="10" backgroundimage="projection/pointer_right.png" backgroundtransparent="true" visible="true" />
+      <Control left="270" width="50" top="114" height="10" backgroundimage="projection/pointer_left.png" backgroundtransparent="true" visible="true" />
+      <Button name="btn_experience" left="203" width="98" top="265" height="28"  text="立即体验" font="bold_14" textcolor="#fa5d3e" backgroundtransparent="true" imagelist="common/round_red_btn_list_.png" imagelistuistatus="disable" />
+    </Layout>
+  </Layout>
+</window>

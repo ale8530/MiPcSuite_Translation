@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="remote_desktop_wnd" type="window" size="364,680" mainwindow="false" >
+  <Layout name="bg" left="0" right="0" top="0" bottom="0" align="near">
+
+    <!--竖屏窗口模式!-->
+    <Title name="portrait_layout"  left="0" top="0" width="330" height="603" visible="true" padding="0,0,0,0" focusenable="false">
+      <Layout  width="330" height="603" left="0" right="0" top="0" bottom="0" backgroundtransparent="true" backgroundimage="projection/m4_v_bg.png">
+        <!--手机右侧按键区域（全屏和退出 音量大小 和电源键）-->
+        <VerticalLayout name="tool_bar" left="298" top="0" width="32" height="614" backgroundtransparent="false" backgroundcolor="#000000">
+          <Button name="btn_close" height="32" backgroundtransparent="true" imagelist="projection/close_btns.png"/>
+          <Button name="btn_fullscreen" height="32" backgroundtransparent="true" imagelist="projection/fullscreen_btns.png"/>
+          <PlaceHolder height="32" />
+          <Button name="btn_volume_up" height="32" backgroundtransparent="true" imagelist="projection/volume_up_s.png"/>
+          <PlaceHolder height="2" />
+          <Button name="btn_volume_down" height="32" backgroundtransparent="true" imagelist="projection/volume_down_s.png"/>
+          <PlaceHolder height="2" />
+          <Button name="btn_power" height="32" backgroundtransparent="true" imagelist="projection/power_btns.png"/>
+        </VerticalLayout>
+        <!--手机底部的菜单，HOME和回退键-->
+        <HorizontalLayout name="bottom_btns" left="16" top="554" width="270" height="32" backgroundtransparent="true" visible="true">
+          <PlaceHolder width="21" />
+          <Button name="btn_menu" width="32" backgroundtransparent="true" imagelist="projection/menu_btns.png"/>
+          <PlaceHolder width="65" />
+          <Button name="btn_home" width="32" backgroundtransparent="true" imagelist="projection/home_btns.png"/>
+          <PlaceHolder width="65" />
+          <Button name="btn_back" width="32" backgroundtransparent="true" imagelist="projection/back_btns.png"/>
+          <PlaceHolder width="21"/>
+        </HorizontalLayout>
+        <!--手机屏幕绘制区 -->
+        <UITouchScreen name="display_area" left="15" top="59" width="270" height="480" visible="false" focusenable="true"/>
+      </Layout>
+    </Title>
+
+    <!--横屏窗口模式!-->
+    <Title name="landscape_layout" left="0" top="0" width="603" height="330" visible="false" padding="0,0,0,0" focusenable="false">
+      <Layout width="603" height="330" visibile="false" left="0" right="0" top="0" bottom="0" backgroundtransparent="false" backgroundimage="projection/m4_h_bg.png">
+        <HorizontalLayout name="tool_bar" left="0" top="0" height="32" width="614" backgroundtransparent="false" backgroundcolor="#000000">
+          <PlaceHolder width="90" />
+          <Button name="btn_volume_up" width="32" backgroundtransparent="true" imagelist="projection/volume_up_s.png"/>
+          <PlaceHolder width="2" />
+          <Button name="btn_volume_down" width="32" backgroundtransparent="true" imagelist="projection/volume_down_s.png"/>
+          <PlaceHolder width="2" />
+          <Button name="btn_power" width="32" backgroundtransparent="true" imagelist="projection/power_btns.png"/>
+          <PlaceHolder width="355" />
+          <Button name="btn_fullscreen" width="32" backgroundtransparent="true" imagelist="projection/fullscreen_btns.png"/>
+          <Button name="btn_close" width="32" backgroundtransparent="true" imagelist="projection/close_btns.png"/>
+        </HorizontalLayout>
+
+        <VerticalLayout name="bottom_btns" left="550" top="45" width="32" height="270" backgroundtransparent="true" visible="true">
+          <PlaceHolder height="21" />
+          <Button name="btn_back" height="32" backgroundtransparent="true" imagelist="projection/back_btns.png"/>
+          <PlaceHolder height="65" />
+          <Button name="btn_home" height="32" backgroundtransparent="true" imagelist="projection/home_btns.png"/>
+          <PlaceHolder height="65" />
+          <Button name="btn_menu" height="32" backgroundtransparent="true" imagelist="projection/menu_btns.png"/>
+          <PlaceHolder height="21" />
+        </VerticalLayout>
+        <UITouchScreen name="display_area" left="59" width="480" top="44" height="270" visible="false" focusenable="true"/>
+      </Layout>
+    </Title>
+
+    <!--全屏模式!-->
+    <Layout name="fullscreen_layout" left="0" right="0" top="0" bottom="0" visibile="false" backgroundtransparent="false" backgroundcolor="#000000">
+      <Button name="btn_normal_screen" visible="true" left="1342" width="19" top="5" height="19" backgroundtransparent="true" imagelist="projection/exit_fullscreen.png" />
+      <UITouchScreen name="display_area" left="0" width="1366" top="0" height="700" visible="false" focusenable="true" backgroundtransparent="false" backgroundcolor="#000000"/>
+      <HorizontalLayout name="bottom_btns" left="16" top="597" width="270" height="32" backgroundtransparent="true" visible="true">
+        <PlaceHolder width="24" />
+        <Button name="btn_menu" width="32" backgroundtransparent="true" imagelist="projection/menu_btns.png"/>
+        <PlaceHolder width="66" />
+        <Button name="btn_home" width="32" backgroundtransparent="true" imagelist="projection/home_btns.png"/>
+        <PlaceHolder width="66" />
+        <Button name="btn_back" width="32" backgroundtransparent="true" imagelist="projection/back_btns.png"/>
+        <PlaceHolder width="18"/>
+      </HorizontalLayout>
+      <HorizontalLayout name="tool_bar" width="114"  height="32" visible="true" backgroundtransparent="true" backgroundimage="projection/all_btns_bg.png">
+        <Button name="btn_volume_down" width="32" backgroundtransparent="true" visible="true" imagelist="projection/volume_down.png"/>
+        <PlaceHolder width="9" />
+        <Button name="btn_volume_up" width="32" backgroundtransparent="true" visible="true" imagelist="projection/volume_up.png"/>
+        <PlaceHolder width="9" />
+        <Button name="btn_power" width="32" backgroundtransparent="true" visible="true" imagelist="projection/full_power_btns.png"/>
+      </HorizontalLayout>
+    </Layout>
+    <!--等待框!-->
+    <ProgressBarCircle name="waiting_bar" visible="false" left="113" top="296" width="76" height="76" backgroundtransparent="true" backgroundimage="projection/wait_bg.png" progressimage="common_waiting_foreground.png" showidchand="false"/>
+    <Label name="waiting_label" visible="false" left="113" top="296" width="270" backgroundtransparent="true" height="40" text="正在准备数据，请稍候..." textcolor="#656565" align="center,venter" font="16"/>
+  </Layout>
+</window>

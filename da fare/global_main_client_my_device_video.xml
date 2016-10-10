@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<Layout left="0" top="0" right="0" bottom="0">
+	<VerticalLayout name="video_client_layout" left="0" top="0" right="0" bottom="0" align="near">
+		<Layout height="35">
+			<HorizontalLayout name="video_client_title" left="0" top="0" right="0" bottom="0" backgroundimage="media_title_bar.png">
+				<PlaceHolder width="25" />
+				<DecorateButton name="video_client_title_owner" optiongroup="video_client_title_group" width="110" height="35" backgroundtransparent="true">
+					<Label text="拍摄" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left,venter"
+						backgroundtransparent="true" width="60" height="35" left="0" focuspriority="true"/>
+					<Label name="video_client_title_owner_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left, venter"
+						left="53" autosize="true" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder width="20" />
+				<DecorateButton name="video_client_title_other" optiongroup="video_client_title_group" width="110" height="35" backgroundtransparent="true">
+					<Label text="其它" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45"  align="left,venter"
+						backgroundtransparent="true" width="50" height="35" left="0" focuspriority="true"/>
+					<Label name="video_client_title_other_count" text="0" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left, venter"
+						left="43" autosize="true" width="60" height="35" backgroundtransparent="true" focuspriority="true"/>
+				</DecorateButton>
+				<PlaceHolder />
+				<Button name="video_refresh" font="12" top="7" width="15" height="14"
+					imagelist="common_btn_refresh.png;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+				<PlaceHolder width="20"/>
+			</HorizontalLayout>
+			<Layout left="0" top="33" right="0" height="2">
+				<SliderIndicator name="video_client_top_sliderIndicator" backgroundimage="common_indicator_horizontal.png" sliderorign="horizontal" backgroundtransparent="false" left="0" height="2" right="0" />
+			</Layout>
+		</Layout>
+		<HorizontalLayout name="video_List_layout" left="5" backgroundtransparent="true">
+			<VirtualIconsLayout name="VideoVirtualIconsLayout" width="835" backgroundcolor="#FCFCFC" backgroundtransparent="false"
+					item_width="181" item_height="162" title_height="50" item_perline="4" line_space="20" cols_space="20" header_height="0" footer_height="10"
+					item_desc="<MediaVideoIconLayout defaultnodename='common_controls:media_video_icon'/>"
+					title_desc="<Layout defaultnodename='common_controls:media_title'/>" />
+		</HorizontalLayout>
+		<HorizontalLayout height="50" backgroundimage="media_status_bar.png;'0,2,0,0'" backgroundtransparent="true">
+			<PlaceHolder width="25" />
+			<CheckBox name="video_sel_all" text="全选" defaultnodename="common_controls:checkbox_style" width="85"/>
+			<Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+      <PlaceHolder width="15"/>
+      <Label name="video_sel_item_count" text="10" height="18" font="16" textcolor="#FB5A45" align="venter,center" autosize="true"/>
+			<Label text="已选中" height="18" width="60" font="12" textcolor="#656565" padding="0,1,0,0" align="venter,right"/>
+      <PlaceHolder />
+			<Button name="video_add" text="添加本地视频" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter' />
+			<PlaceHolder width="3" />
+			<Button name="video_export" text="导出" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+			<PlaceHolder width="3" />
+			<Button name="video_del" text="删除" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+			<PlaceHolder width="10" />
+		</HorizontalLayout>
+	</VerticalLayout>
+	<Layout name="video_client_waiting" left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC" backgroundtransparent="true" visible="false">
+		<Control left="0" right="0" top="0" bottom="0" backgroundtransparent="true"/>
+		<Control left="0" right="0" top="41" bottom="50" backgroundcolor="#FCFCFC" />
+		<ProgressBarCircle name="video_waiting" left="373" top="267" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+	</Layout>
+	<Layout name="video_client_disconnection" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="disconnection_hint" left="0" right="0" top="345" height="30" text="您还没有连接设备，请连接" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+
+	<Layout name="video_client_no_data" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="35" right="0" bottom="50" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="XX_hint" left="0" right="0" top="345" height="30" text="这里还没有视频哟" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+</Layout>
+</windowless>

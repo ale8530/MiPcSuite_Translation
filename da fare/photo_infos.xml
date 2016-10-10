@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="photo_info_window" size="280,232" type="menu_window" backgroundimage="toolscontainerbk.png" translucent="true" alphaborders="8,9,8,13">
+	<Layout name="info_layout" left="8" top="0" width="270" height="220" autovscroll="true" autohscroll="true">
+	<Label name="photo_info_title" left="15" top="20" width="256" height="20" backgroundtransparent="true" textcolor="#909090" align='left,top'  font="songti_12"/>
+	<Label name="photo_info_time" left="15" top="40" width="256" height="20" backgroundtransparent="true" textcolor="#909090" align='left,top'  font="songti_12"/>
+	<Label name="photo_info_width_height" left="15" top="60" width="256" height="20" backgroundtransparent="true" textcolor="#909090" align='left,top'  font="songti_12"/>
+	<Label name="photo_info_size" left="15" top="80" width="256" height="20" backgroundtransparent="true" textcolor="#909090" align='left,top'  font="songti_12"/>
+	<Label name="photo_info_make" left="15" top="100" width="256" height="20" backgroundtransparent="true" textcolor="#909090" align='left,top'  font="songti_12"/>
+	<Label name="photo_info_model" left="15" top="120" width="256" height="20" backgroundtransparent="true" textcolor="#909090" align='left,top'  font="songti_12"/>
+	<Label name="photo_info_extime" left="15" top="140" width="256" height="20" backgroundtransparent="true" textcolor="#909090" align='left,top'  font="songti_12"/>
+	<Label name="photo_info_iso" left="15" top="160" width="256" height="20" backgroundtransparent="true" textcolor="#909090" align='left,top'  font="songti_12"/>
+	<Label name="photo_info_path" left="15" top="180" width="256" height="30" backgroundtransparent="true" textcolor="#909090" align="left" endellipsis="true" font="songti_12"/>
+	</Layout>
+</window>

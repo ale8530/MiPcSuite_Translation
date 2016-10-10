@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="file_manager_window" size="880,573" type="window">
+	<Layout left="0" right="0" bottom="0" backgroundimage="bro/bro_frame.png;;5,34,5,5" backgroundtransparent="true">
+		<Title name="file_manager_titlebar" left="13" right="10" top="0" height="34" padding="0,10,0,0" align="near">
+			<Label name="title_text" text="文件管理" align="left, venter" font="12" height="18" textcolor="#656565" />
+            <Button name="file_manager_min" backgroundtransparent="true" backgroundimage="common/dialog_min_grey.png" backgroundhotimage="common/dialog_min_grey_hot.png" backgroundpushedimage="common/dialog_min_grey_hot.png" width="14" height="14" />
+            <PlaceHolder width="10"/>
+            <HorizontalLayout width="14" height="14">
+                <Button name="file_manager_max" backgroundtransparent="true" backgroundimage="common/dialog_max.png" backgroundhotimage="common/dialog_max_hot.png" backgroundpushedimage="common/dialog_max_hot.png" width="14" height="14" />
+                <Button name="file_manager_restore" backgroundtransparent="true" backgroundimage="common/dialog_restore.png" backgroundhotimage="common/dialog_restore_hot.png" backgroundpushedimage="common/dialog_restore_hot.png" width="14" height="14" visible="false" />
+            </HorizontalLayout>
+            <PlaceHolder width="10"/>
+			<Button name="file_manager_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" />
+		</Title>
+        <HorizontalLayout left="0" top="34" right="0" bottom="33" padding="0,0,0,0">
+            <VerticalLayout width="170" >
+                <HorizontalLayout height="40">
+                    <PlaceHolder width="32"/>
+                    <Button name="file_manager_back_parent_folder" imagelist="filemanager/back.png" imagelistuistatus="disable" backgroundtransparent="true" width="15" height="14" visible="false" />
+                    <Button name="file_manager_back" imagelist="web_tool_bar/web_back_btn.png" imagelistuistatus="disable" backgroundtransparent="true" width="15" height="14" enabled="false" />
+                    <PlaceHolder width="15"/>
+                    <Button name="file_manager_forward" imagelist="web_tool_bar/web_forward_btn.png" imagelistuistatus="disable" backgroundtransparent="true" width="15" height="14" enabled="false" />
+                    <PlaceHolder width="15"/>
+                    <Button name="file_manager_refresh_current_folder" imagelist="filemanager/refresh.png" backgroundtransparent="true" width="15" height="14" />
+                </HorizontalLayout>
+                <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+                <PlaceHolder height="5"/>
+                <HorizontalLayout>
+                    <PlaceHolder width="10"/>
+                    <TreeView name="file_manager_tree" width="160" backgroundtransparent="true" hasline="true" lineatroot="true" hasbuttons="true" showselalways="true"/>
+                </HorizontalLayout>
+                <PlaceHolder height="2"/>
+            </VerticalLayout>
+            <VerticalLayout width="1">
+                <PlaceHolder height="40"/>
+                <Control backgroundimage="common/vert_seperate_line.png" backgroundtransparent="true" />
+            </VerticalLayout>
+            <VerticalLayout>
+                <HorizontalLayout height="40">
+                    <HorizontalLayout name="path_navigation_bar_layout" height="28" backgroundimage="app_search_bg.png;;2,2,2,2" backgroundtransparent="false" backgroundcolor="#F8F8F8">
+                        <HorizontalLayout name="file_manager_path_layout" width="17" backgroundtransparent="true" visible="false">
+                            <PlaceHolder width="5" />
+                            <Button name="file_manager_path_pull_down" width="12" height="12" backgroundtransparent="true" backgroundimage="filemanager/pull_down.png" />
+                        </HorizontalLayout>
+                        <PlaceHolder width="5" />
+                        <PathNavigationBar name="file_manager_path_navigation_bar" height="22" backgroundtransparent="true"/>
+                    </HorizontalLayout>
+                    <Label name="file_manager_path_desc" font="12" visible="false" padding="5,0,0,0"/>
+                    <PlaceHolder width="10" />
+                    <Layout width="150" height="28" backgroundimage="app_search_bg.png;;2,2,2,2" backgroundtransparent="true">
+                        <RichEdit name="file_manager_search_edit" left="1" top="1" right="16" bottom="1" font="12" backgroundtransparent="false" backgroundcolor="#FFFFFF" align='venter' textlimit="100" placestring="搜索文件" placetextcolor="#8d8d8d" wanttab="false" wantreturn="false" wantctrlreturn="false" rich="false" multiline="false"/>
+                        <Button name="file_manager_stop_search" left="130" top="8" width="15" height="14" imagelist="filemanager/close.png" imagelistuistatus="disable" backgroundtransparent="true" visible="false" />
+                        <Button name="file_manager_search_flag" left="130" top="8" width="15" height="15"  backgroundtransparent="true" backgroundimage="app_search_btn_1.png" hittest="false"/>
+                    </Layout>
+                    <PlaceHolder width="5"/>
+                </HorizontalLayout>
+                <Layout>
+                    <ListView name="file_manager_file_list" left="0" top="0" right="0" bottom="0" view="report" shareimage="true"
+                    backgroundcolor="#FFFFFF" IconSize="0" editlabel="true" showselalways="true" />
+                    <Layout name="file_manager_search_waiting" left="0" top="0" right="0" bottom="0" backgroundcolor="#FFFFFF" backgroundtransparent="false" visible="false">
+                        <Control left="0" top="0" right="0" height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+                        <ProgressBarCircle name="file_manager_waiting" left="280" top="160" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+                    </Layout>
+                </Layout>
+                <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+                <HorizontalLayout height="43">
+                    <PlaceHolder width="10"/>
+                    <CheckBox name="file_manager_select_all" text="全选" defaultnodename="common_controls:checkbox_style" width="60" />
+                    <PlaceHolder />
+                    <Button name="file_manager_delete_selected_item" width="80" text="删除" font="12" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" align='center,venter' />
+                    <PlaceHolder width="5"/>
+                    <Button name="file_manager_export_selected_item" width="80" text="导出所选" font="12" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" align='center,venter' />
+                    <PlaceHolder width="5"/>
+                    <Button name="file_manager_import_selected_item" width="80" text="导入" font="12" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" align='center,venter' />
+                    <PlaceHolder width="5"/>
+                    <Button name="file_manager_create_directory" width="80" text="新建文件夹" font="12" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" align='center,venter' />
+                    <PlaceHolder width="5"/>
+                </HorizontalLayout>
+            </VerticalLayout>
+            <PlaceHolder width="5"/>
+        </HorizontalLayout>
+        <Control left="0" top="33, false" right="1" height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+        <HorizontalLayout left="0" top="0,false" right="0" height="32">
+            <PlaceHolder width="10"/>
+            <Label name="file_manager_select_status_text" font="12" text="" align="left, venter" />
+        </HorizontalLayout>
+	</Layout>
+</window>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<Layout name="note_client" left="0" top="0" right="0" bottom="0">
+	<VerticalLayout name="note_client_layout" left="0" top="0" right="0" bottom="0" visible="true">
+		<HorizontalLayout left="0" top="0" height="555">
+			<Layout name="note_list_client_layout" width="298" height="555">
+				<HorizontalLayout name="note_List_layout_title" left="0" top="0" right="0" height="34" >
+					<Layout backgroundcolor="#F8F8F8" backgroundtransparent="false">
+						<Button name="note_search_btn" left="15" top="11" width="15" height="15"  backgroundtransparent="true" backgroundimage="app_search_btn_1.png" backgroundhotimage="app_search_btn_2.png"/>
+						<RichEdit name="note_search_richedit" left="37" top="6" font="arial_12" width="280" height="34" backgroundtransparent="true" placestring="搜索便签" placetextcolor="#8d8d8d" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false"/>
+					</Layout>
+					<Button name="note_refresh" font="12" top="7" width="15" height="14"
+						imagelist="common_btn_refresh.png;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+					<PlaceHolder width="15" />
+				</HorizontalLayout>
+				<HorizontalLayout name="note_List_layout" backgroundtransparent="true" left="0" top="35" right="0" bottom="0">
+					<VirtualIconsLayout name="NoteVirtualIconsLayout" backgroundcolor="#FCFCFC" backgroundtransparent="false" left="0" top="0" width="298"
+						item_width="298" item_height="35" title_height="35" item_perline="1" line_space="0" cols_space="0" header_height="0" footer_height="0"
+						item_desc="<MediaAudioListLayout defaultnodename='common_controls:media_note_list'/>"
+                        no_title_item_desc="<MediaAudioListLayout defaultnodename='common_controls:media_note_no_title_list'/>"
+						title_desc="<Layout defaultnodename='common_controls:media_note_title'/>" />
+				</HorizontalLayout>
+				<Control left="0" top="35" height="1" right="0" backgroundimage="common_line_horizontal.png" backgroundtransparent="true" />
+			</Layout>
+			<Control top="0" width="1" backgroundimage="common_line_vertical.png" backgroundtransparent="true" />
+			<VerticalLayout>
+				<Layout top="0" left="0" right="0" height="70">
+					<Layout name="note_web_client_title_layout" top="0" left="0" right="0" bottom="0" backgroundtransparent="false">
+						<HorizontalLayout left="0" top="0" right="0" height="70" backgroundtransparent="true">
+							<PlaceHolder width="20" />
+							<VerticalLayout width="150" >
+								<PlaceHolder height="12" />
+								<Label name="note_web_client_title_date" font="arial_blod_16" textcolor="#333333" height="25" align="top,left" backgroundtransparent="true"/>
+								<Label name="note_web_client_title_time" font="bold_12" textcolor="#595959" height="25" backgroundtransparent="true" align="top,left" />
+							</VerticalLayout>
+							<PlaceHolder />
+							<Layout width="300" >
+								<Button name="note_web_client_title_set_color" backgroundimagelist="note_toolbar_set_color.png" backgroundimagelistuistatus="disable" left="0" top="26" width="20" height="20" backgroundtransparent="true"/>
+								<Button name="note_web_client_title_insert_image" backgroundimagelist="note_toolbar_insert_image.png" backgroundimagelistuistatus="disable" left="42" top="26" width="19" height="18" backgroundtransparent="true"/>
+								<Button name="note_web_client_title_insert_checkbox" backgroundimagelist="note_toolbar_insert_checkbox.png" backgroundimagelistuistatus="disable" left="84" top="26" width="19" height="18" backgroundtransparent="true"/>
+								<Button name="note_web_client_title_set_alert_time" backgroundimagelist="note_toolbar_set_alert.png" backgroundimagelistuistatus="disable" left="123" top="26" width="19" height="18" backgroundtransparent="true" visible="true"/>
+								<Button name="note_web_client_title_alert_time" left="145" top="25" width="75" height="20" font="12" textcolor="#595959" align="left,venter" padding="0,2,0,0" backgroundtransparent="true" />
+								<button name="note_web_client_title_save" backgroundimagelist="common_btn_white_edge.png;;5,5,5,5" backgroundimagelistuistatus="disable" left="222" top="20" width="66" height="28" text="保存" textcolor="#656565" backgroundtransparent="true" />
+							</Layout>
+							<PlaceHolder width="20" />
+						</HorizontalLayout>
+						<Control left="0" top="69" height="1" right="0" backgroundimage="common_line_horizontal.png" backgroundtransparent="true" />
+					</Layout>
+				</Layout>
+				<Layout name="note_web_client_layout" >
+				</Layout>
+			</VerticalLayout>
+		</HorizontalLayout>
+		<HorizontalLayout height="50" backgroundimage="media_status_bar.png;'0,2,0,0'" backgroundtransparent="true">
+			<PlaceHolder width="25" />
+			<CheckBox name="note_sel_all" text="全选" defaultnodename="common_controls:checkbox_style" width="60"/>
+			<Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+			<Label text="已选中" height="18" width="50" font="12" textcolor="#656565" padding="0,1,0,0" align="venter,right" backgroundtransparent="true" />
+			<Label name="note_sel_item_count" text="10" height="18" font="16" textcolor="#FB5A45" align="venter,center" autosize="true" />
+			<Label text="个便签" height="18" width="50" font="12" textcolor="#656565" padding="0,1,0,0" align="venter, left"/>
+			<PlaceHolder />
+			<Button name="note_add" text="新建便签" font="12" width="95" height="30"
+					imagelist="common/red_btn_list.png;;'3,3,3,3'" textcolor="#fb5f45" 
+					texthotcolor="#fb5f45"  textpushedcolor="#ffffff" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+			<PlaceHolder width="3" />
+			<Button name="note_del" text="删除所选" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter'/>
+			<PlaceHolder width="3" />
+			<Button name="note_export" text="导出" font="12" width="95" height="30"
+					imagelist="common_btn.png;;'3,3,3,3'" textcolor="#656565" textdisabledcolor="#CCCCCC" imagelistuistatus="disable" align='center,venter' visible="false"/>
+			<PlaceHolder width="10" />
+		</HorizontalLayout>
+	</VerticalLayout>
+	<Layout name="note_client_waiting" left="0" top="0" width="298" bottom="0" backgroundtransparent="true" visible="false">
+		<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true"/>
+		<Control name="note_client_waiting_bk" left="0" right="0" top="36" bottom="50" backgroundcolor="#FCFCFC" />
+		<ProgressBarCircle name="note_waiting" left="111" top="267" width="76" height="76" backgroundtransparent="true" backgroundimage="common_waiting_background.png" progressimage="common_waiting_foreground.png"/>
+	</Layout>
+	<Layout name="note_client_disconnection" left="0" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="0" right="0" bottom="0" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="365" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="disconnection_hint" left="0" right="0" top="345" height="30" text="您还没有连接设备，请连接" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+
+	<Layout name="note_client_no_data" left="299" top="0" right="0" bottom="0" visible="false">
+		<Control left="0" top="0" right="0" bottom="50" backgroundcolor="#FCFCFC"/>
+		<Control backgroundimage="common_disconnection_bk.png" left="215" top="230" width="106" height="106" backgroundtransparent="true" />
+		<Label name="XX_hint" left="0" right="0" top="345" height="30" text="这里还没有便签哟" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+	</Layout>
+</Layout>
+</windowless>

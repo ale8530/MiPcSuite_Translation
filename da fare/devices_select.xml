@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="device_select_window" size="268,123" type="menu_window" backgroundimage="首页/drop box/dropbox.png;;12,12,12,16" translucent="true" alphaborders="8,9,78,13">
+	<Layout left="8" top="12" right="8" bottom="16">
+		<DeviceSelectList name="device_select_list" left="0" top="0" right="0" bottom="0" itemheight="100" backgroundtransparent="true" padding="1,1,1,1">
+			<Indicate value="<PlaceHolder width='1' height='1'/>" />
+			<Content value="<Layout defaultnodename='common_controls:device_select_list_item' combineassingle='true' />" />
+		</DeviceSelectList>
+	</Layout>
+</window>

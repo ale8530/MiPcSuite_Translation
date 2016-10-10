@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="border_window" type="border_window" backgroundimage="projection/m3_v_border.png;;0,51,43,35" offset_border="0,-83,56,-1" translucent="true" alphaborders="500,500,500,500">
+	<HorizontalLayout name="bg" left="21" top="51" right="43" bottom="35" align="near">
+	</HorizontalLayout>
+</window>

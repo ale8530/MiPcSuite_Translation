@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<Layout name="sms_cm_client" left="0" top="0" right="0" bottom="0">
+<VerticalLayout name="sms_cm_layout" width="533" bottom="0">
+    <Layout height="70">
+        <SmsRecipientList name="ssm_recipient_list" width="496" height="69" item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient'/>" input_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient_input'/>" delelable_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient_deletable'/>" hittest="true"/>
+        <Button name="ssm_open_recipient" left="75,false" top="20" width="60" height="30" text="查看" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" visible="false" textcolor="#656565" textdisabledcolor="#CCCCCC" font="12" />
+        <Button name="ssm_edit_recipient" left="10,false" top="20" width="60" height="30" text="编辑" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" visible="false" textcolor="#656565" textdisabledcolor="#CCCCCC" font="12" />
+        <Control height="1" backgroundimage="common/seperate_line.png" right="0" top="0,false" backgroundtransparent="true" />
+    </Layout>
+    <SmsDialogueLayout name="ssm_dialogue_control" send_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_send_item'/>" receive_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_receive_item'/>" title_desc="<Layout defaultnodename='common_controls:sms_dialogue_title'/>">
+    </SmsDialogueLayout>
+    <PlaceHolder height="5"/>
+    <Control height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+    <HorizontalLayout height="28" backgroundtransparent="false" backgroundcolor="#FFFFFF">
+        <PlaceHolder width="5" />
+        <Label name="ssm_input_count_info" text="已输入0个字，0条短信" oritext="已输入%d个字，%d条短信" width="160" height="18" font="12" textcolor="#8d8d8d" />
+        <HorizontalLayout name="ssm_net_message_layout" width="200" height="20" visible="false" >
+            <Control backgroundimage="sms/net_message_icon.png" width="19" height="17" backgroundtransparent="true"/>
+            <PlaceHolder width="5" />
+            <Label text="免费网络短信" width="160" height="18" font="12" textcolor="#8d8d8d" />
+        </HorizontalLayout>
+        <PlaceHolder />
+        <HorizontalLayout name="ssm_sim_list" width="50" defaultnodename="common_controls:sim_list_layout" visible="false" />
+        <PlaceHolder width="10" />
+        <Label name="ssm_send_prompt" text="按Ctrl+回车键发送" autosize="true" maxwidth="200" height="18" font="12" textcolor="#fc5946" />
+        <!--PlaceHolder width="10" /-->
+        <Button name="ssm_send" text="发送" defaultnodename="common_controls:white_red_style_button" width="70" height="30" align='center,venter' enabled="false" visible="false"/>
+        <PlaceHolder width="10" />
+    </HorizontalLayout>
+    <RichEdit name="ssm_message_input" height="80" font="12" vscrollbar="true" autovscroll="true" hscrollbar="false" autohscroll="false" multiline="true" wanttab="false" wantreturn="false" wantctrlreturn="true" rich="false" backgroundtransparent="false" backgroundcolor="#FFFFFF" visible="true" align='venter' readonly="false" textlimit="1000" placestring="" placetextcolor="#8d8d8d" padding="5,0,5,5"/>
+</VerticalLayout>
+</Layout>
+</windowless>

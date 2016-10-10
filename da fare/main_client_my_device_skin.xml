@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowless>
+<HorizontalLayout name="main_myphone" left="0" top="0" right="0" bottom="0" align="near">
+	<Layout name="main_client_myphone" left="0" top="0" bottom="0" width="156" backgroundimage="dev_left_bar.png" backgroundtransparent="true" >
+		<VerticalLayout name="main_client_myphone" left="0" top="0" bottom="0" width="155" backgroundtransparent="true">
+			<DecorateButton name="device_app_btn" optiongroup="phone_content_btn_group" width="156" height="35" backgroundtransparent="true">
+				<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true" focuspriority="true"
+					backgroundfocusimage="device_left_nav_item_selected.png" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="device_left_nav_item_selected.png" />
+				<Button width="16" height="16" left="17" top="9" backgroundtransparent="true" backgroundimagelist="device_nav_btn_app.png" backgroundimagelistuistatus="focus" focuspriority="true"/>
+				<Label left="37" text="应用游戏" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" padding="0,0,0,1"
+					align="left,venter" width="100" height="34" backgroundtransparent="true" focuspriority="true"/>
+				<Control name="udpate_count_bg" visible="false" width="30" height="16" left="107" top="9" backgroundtransparent="true" backgroundimage="app_update_notify.png;;7,2,7,2"/>
+				<Label name="update_count_label" visible="false" width="15" height="16" left="114" top="9" backgroundtransparent="true" text="" align="center,venter"  textcolor="#FB5A45" font="12"/>
+			</DecorateButton>
+			<DecorateButton hittest="true" name="device_pic_btn" optiongroup="phone_content_btn_group" width="156" height="35" backgroundtransparent="true">
+				<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true" focuspriority="true"
+					backgroundfocusimage="device_left_nav_item_selected.png" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="device_left_nav_item_selected.png" />
+
+				<Button hittest="true" width="16" height="16" left="17" top="9" backgroundtransparent="true" backgroundimagelist="device_nav_btn_image.png" backgroundimagelistuistatus="focus" focuspriority="true"/>
+				<Label left="37" text="图库" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" padding="0,0,0,1"
+					align="left,venter" width="100" height="34" backgroundtransparent="true" focuspriority="true"/>
+			</DecorateButton>
+			<DecorateButton name="device_video_btn" optiongroup="phone_content_btn_group" width="156" height="35" backgroundtransparent="true">
+				<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true" focuspriority="true"
+					backgroundfocusimage="device_left_nav_item_selected.png" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="device_left_nav_item_selected.png" />
+
+				<Button width="16" height="16" left="17" top="9" backgroundtransparent="true" backgroundimagelist="device_nav_btn_video.png" backgroundimagelistuistatus="focus" focuspriority="true"/>
+				<Label left="37" text="视频" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" padding="0,0,0,0"
+					align="left,venter" width="100" height="34" backgroundtransparent="true" focuspriority="true" />
+			</DecorateButton>
+			<DecorateButton name="device_audio_btn" optiongroup="phone_content_btn_group" width="156" height="35" backgroundtransparent="true">
+				<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true" focuspriority="true"
+					backgroundfocusimage="device_left_nav_item_selected.png" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="device_left_nav_item_selected.png" />
+
+				<Button width="16" height="16" left="17" top="9" backgroundtransparent="true" backgroundimagelist="device_nav_btn_audio.png" backgroundimagelistuistatus="focus" focuspriority="true"/>
+				<Label left="37" text="音乐" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" padding="0,0,0,0"
+					align="left,venter" width="100" height="34" backgroundtransparent="true" focuspriority="true" />
+			</DecorateButton>
+			<DecorateButton name="device_contact_btn" optiongroup="phone_content_btn_group" width="156" height="35" backgroundtransparent="true">
+				<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true" focuspriority="true"
+					backgroundfocusimage="device_left_nav_item_selected.png" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="device_left_nav_item_selected.png" />
+
+				<Button width="16" height="16" left="17" top="9" backgroundtransparent="true" backgroundimagelist="device_nav_btn_message.png" backgroundimagelistuistatus="focus" focuspriority="true"/>
+				<Label left="37" text="通讯" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" padding="0,0,0,0"
+					align="left,venter" width="100" height="34" backgroundtransparent="true" focuspriority="true" />
+			</DecorateButton>
+			<DecorateButton name="device_note_btn" optiongroup="phone_content_btn_group" width="156" height="35" backgroundtransparent="true">
+				<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true" focuspriority="true"
+					backgroundfocusimage="device_left_nav_item_selected.png" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="device_left_nav_item_selected.png" />
+
+				<Button width="16" height="16" left="17" top="9" backgroundtransparent="true" backgroundimagelist="device_nav_btn_note.png" backgroundimagelistuistatus="focus" focuspriority="true"/>
+				<Label left="37" text="便签" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" padding="0,0,0,0"
+					align="left,venter" width="100" height="34" backgroundtransparent="true" focuspriority="true" />
+			</DecorateButton>
+            <DecorateButton name="device_file_manager" width="156" height="35" backgroundtransparent="true">
+				<Button left="0" right="0" top="0" bottom="0" backgroundtransparent="true" focuspriority="true"
+					backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="device_left_nav_item_selected.png" />
+
+				<Button width="16" height="16" left="17" top="9" backgroundtransparent="true" backgroundimagelist="device_nav_btn_file.png" focusenable="false" backgroundimagelistuistatus="focus"/>
+				<Label left="37" text="文件管理" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#FB5A45" padding="0,0,0,1"
+				align="left,venter" width="100" height="34" backgroundtransparent="true"/>
+          </DecorateButton>
+		</VerticalLayout>
+	</Layout>
+	<Layout name="device_main_layout" left="156" top="0" width="835" bottom="0" backgroundtransparent="false" backgroundcolor="#FCFCFC" >
+	</Layout>
+</HorizontalLayout>
+</windowless>

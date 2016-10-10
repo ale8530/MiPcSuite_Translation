@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="download_window" size="700,500" type="window" borderwindow="dialog_border_skin.xml">
+    <Layout left="0" backgroundimage="download/dialog_bg.png;;2,34,2,2" right="0" bottom="0">
+		<Title left="0" right="0" top="0" height="30" padding="10,10,10,0" align="near">
+			<Label name="download_title" text="任务中心" font="12" textcolor="#656565" align="left, top" />
+			<Button name="download_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,2,0,0"/>
+		</Title>
+        <HorizontalLayout left="1" top="31" right="1" height="37" backgroundtransparent="true" backgroundimage="media_status_bar.png;0,2,0,0">
+            <PlaceHolder width="25"/>
+            <LabelEx name="download_progress_title" optiongroup="download_title_group" text="进行中" hittest="true" width="80" height="30" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left, venter" font="12" autosize="true" />
+            <PlaceHolder width="25"/>
+            <LabelEx name="download_finish_title" optiongroup="download_title_group" text="已完成" hittest="true" width="80" height="30" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="left, venter" font="12" autosize="true" />
+            <PlaceHolder width="330"/>
+            <Control name="xunlei_logo" width="32" height="30" backgroundtransparent="true" backgroundimage="download/xunlei_logo.png" visible="false" />
+            <LabelEx name="xunlei_dl_statistics" text="迅雷为你加速" font="12" textcolor="#3d3d3d" width="120" height="35" align="left, venter" visible="false" />
+        </HorizontalLayout>
+        <SliderIndicator name="download_title_slider" backgroundimage="common_indicator_horizontal.png" sliderorign="horizontal" backgroundtransparent="false" left="0" top="67" height="2" right="0"/>
+        <Control left="1" top="69" right="1" height="1" backgroundimage="download/seperate_line.png" backgroundtransparent="true" />
+        <layout left="1" top="70" right="1" bottom="51">
+            <VerticalLayout name="dl_list_layout" right="0" bottom="0">
+                <DownloadList name="dl_list" itemheight="63" backgroundtransparent="true" ratiowheeldelata="10">
+                    <Indicate value="<PlaceHolder width='1' height='1'/>" />
+                    <Content value="<DownloadListItem defaultnodename='common_controls:download_list_item' combineassingle='false' />" />
+                </DownloadList>
+            </VerticalLayout>
+            <VerticalLayout name="dl_finish_list_layout" right="0" bottom="0">
+                <DownloadList name="dl_finish_list" visible="false" itemheight="63" backgroundtransparent="true" ratiowheeldelata="10">
+                    <Indicate value="<PlaceHolder width='1' height='1'/>" />
+                    <Content value="<DownloadListItem defaultnodename='common_controls:download_list_item' combineassingle='false' />" />
+                </DownloadList>
+            </VerticalLayout>
+            <layout name="show_empty_list" right="0" bottom="0" visible="true">
+                <Control backgroundimage="common_disconnection_bk.png" left="295" top="120" width="106" height="106" backgroundtransparent="true" />
+                <Label name="show_empty_list_text" left="0" right="0" top="243" height="30" text="当前没有任务" font="20" align="center,venter" textcolor="#656565" backgroundtransparent="true" />
+            </layout>
+        </layout>
+        <!--Control left="10" top="46, false" width="680" height="1" backgroundimage="download/seperate_line.png" backgroundtransparent="true" /-->
+        <HorizontalLayout name="download_bottom_bar_layout" top="50, false" left="1" right="1" bottom="1" backgroundtransparent="true" backgroundimage="media_status_bar.png;0,2,0,0">
+            <PlaceHolder width="25"/>
+            <CheckBox name="download_select_all" text="全选" defaultnodename="common_controls:checkbox_style" width="85" />
+            <Control backgroundimage="common_line_vertical.png" width="1" height="16" backgroundtransparent="true"/>
+			<PlaceHolder width="15"/>
+            <HorizontalLayout width="260">
+              <Label name="select_item_count" text="0" font="16" textcolor="#FB5A45" align="venter,center" autosize="true" />
+              <Label text="已选中" width="60" font="12"  textcolor="#656565" padding="0,1,0,0" align="venter,right" backgroundtransparent="true" />
+			</HorizontalLayout>
+            <PlaceHolder />
+            <layout width="88" height="30">
+                <Button name="download_continue_select" text="继续任务" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" align='center,venter' font="12" />
+                <Button name="download_install_select" text="安装所选" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" align='center,venter' visible="false" font="12" />
+            </layout>
+            <Button name="download_pause_select" text="暂停任务" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" align='center,venter' visible="true" font="12" />
+            <PlaceHolder width="5"/>
+            <Button name="download_delete_select" width="80" text="删除所选" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" align='center,venter' font="12" />
+            <PlaceHolder width="10"/>
+        </HorizontalLayout>
+	</Layout>
+</window>

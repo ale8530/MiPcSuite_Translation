@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window size="620,430" type="window" borderwindow="dialog_border_skin.xml">
+  <Layout backgroundimage="connwizard/bg.png;30, 15, 650,445;" backgroundtransparent="true" left="0" right="0" top="0" bottom="0">
+    <Title left="0" right="0" top="0" height="430" align="near">
+      <VerticalLayout >
+        <HorizontalLayout height="32">
+          <PlaceHolder width="5"/>
+          <Label name="window_title" text="" textcolor="#FFFFFF" font="bold_14" align="left,venter" width="200" height="32" />
+          <PlaceHolder/>
+          <Button name="close_box" width="32" heigth="32" backgroundtransparent="true" imagelist="projection/close_btns.png"/>
+        </HorizontalLayout>
+        <HorizontalLayout left="0" top="30" height="400" width="620">
+          <PlaceHolder width="20"/>
+          <!--错误提示-->
+          <VerticalLayout name="install_confirm_layout" visible="true" backgroundimage="connwizard/apply_for_admin_bg.png;-20,0,560,400" backgroundtransparent="true" align="center">
+            <PlaceHolder height="225"/>
+            <Label text="发现小米设备USB驱动没有安装,需要进行安装" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <PlaceHolder height="28"/>
+            <Label text="为了解决这一问题，需要获得系统管理员权限，请在" height="20" align="center" textcolor="#FEE1D6" font="12" />
+            <Label text="即将弹出的系统对话框中点击确定按钮" height="20" align="center" textcolor="#FEE1D6" font="12" />
+            <PlaceHolder/>
+            <Button name="install_driver_btn" text="好，我知道了" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+
+          <!--安装驱动-->
+          <VerticalLayout name="installing_layout" visible="false" backgroundimage="connwizard/connecting_bg.png" imagepadding="48,-100,50,-20" backgroundtransparent="true" align="center">
+            <PlaceHolder height="140"/>
+            <Layout height="10">
+              <Control name="driver_install_animate_1" visible="true" left="325" width="70" height="10" backgroundimage="connwizard/connecting_bg1.png" backgroundtransparent="true" />
+              <Control name="driver_install_animate_2" visible="false" left="325" width="70" height="10" backgroundimage="connwizard/connecting_bg2.png" backgroundtransparent="true" />
+              <Control name="driver_install_animate_3" visible="false" left="325" width="70" height="10" backgroundimage="connwizard/connecting_bg3.png" backgroundtransparent="true" />
+              <Control name="driver_install_animate_4" visible="false" left="325" width="70" height="10" backgroundimage="connwizard/connecting_bg4.png" backgroundtransparent="true" />
+            </Layout>
+            <PlaceHolder height="85"/>
+            <HorizontalLayout height="55">
+              <PlaceHolder width="53"/>
+              <Layout width="34">
+                <RotateImageControl name="gear_20" left="0" width="20" height="20" top="10" backgroundimage="connwizard/gear_20.png" backgroundtransparent="true" />
+                <RotateImageControl name="gear_14" left="16" width="14" height="14" top="25" backgroundimage="connwizard/gear_14.png" backgroundtransparent="true" />
+              </Layout>
+              <PlaceHolder width="10"/>
+              <VerticalLayout>
+                <Label name="device_type_label" text="检测到您的小米设备首次连接在这台电脑上，需要安装必备驱动，" height="27" font="bold_14" textcolor="#FEE1D6"/>
+                <Label text= "过程需要1-3分钟，请耐心等待..." font="bold_14" textcolor="#FEE1D6" align="left" height="27"/>
+              </VerticalLayout>
+            </HorizontalLayout>
+            <PlaceHolder/>
+            <Layout height="30">
+              <Label name="driver_install_msg_label" text="正在安装必备驱动..." left="5" top="0" width="400" height="18" font="14" textcolor="#E3E3E3" align="left"/>
+              <Control name="driver_install_progress_bg" left="5" width="575" height="5" top="20" backgroundimage="connwizard/progress_bg.png" backgroundtransparent="true" />
+              <Control name="driver_install_progress_m" left="5" width="575" height="5" top="20" backgroundimage="connwizard/progress_mark_white.png" backgroundtransparent="true" />
+            </Layout>
+            <PlaceHolder height="20"/>
+          </VerticalLayout>
+
+          <!--连接提示-->
+          <VerticalLayout name="install_finish_layout" visible="false" backgroundimage="connwizard/connecting_bg.png"  imagepadding="48,-100,50,-20" backgroundtransparent="true" align="center">
+            <PlaceHolder height="225"/>
+            <Label text="驱动安装成功" textcolor="#FFFFFF" font="bold_16" height="20" align="center"/>
+            <PlaceHolder height="10"/>
+            <Label text="如果没有反应，请重新插拔一下USB" textcolor="#FFFFFF" font="16" height="20" align="center"/>
+            <PlaceHolder/>
+            <Button name="timer_close_btn" oritext="%d秒后关闭" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
+            <PlaceHolder height="30"/>
+          </VerticalLayout>
+          
+          <PlaceHolder width="20"/>
+        </HorizontalLayout>
+
+      </VerticalLayout>
+    </Title>
+  </Layout>
+</window>
+
+

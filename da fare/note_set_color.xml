@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="note_set_color" size="76,192" type="menu_window" translucent="true" backgroundimage="drop_window_bg.png;;16,15,16,28" alphaborders="14,10,14,25">
+    <VerticalLayout left="0" top="0" right="0" bottom="0" backgroundtransparent="true" >
+		<PlaceHolder height="14" />
+		<Button name="note_set_color_0" width="30" height="30" imagelist="note_set_color_white.png" />
+		<Button name="note_set_color_1" width="30" height="30" imagelist="note_set_color_blue.png" />
+		<Button name="note_set_color_2" width="30" height="30" imagelist="note_set_color_yellow.png" />
+		<Button name="note_set_color_3" width="30" height="30" imagelist="note_set_color_green.png" />
+		<Button name="note_set_color_4" width="30" height="30" imagelist="note_set_color_red.png" />
+	</VerticalLayout>
+</window>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="menu" size="200,95" type="menu_window"  backgroundimage="app_menu_bg.png;;12,12,12,16" translucent="true" alphaborders="1,1,10,10">
+	<Layout left="2" top="2" right="2" bottom="2">
+       <ContactMenuLayout name="contact_group_menu_control_layout" width="300" height="100"
+           item_type_0="<Layout defaultnodename='common_controls:contact_group_select_menu_account_layout'/>"
+           item_type_1="<Layout defaultnodename='common_controls:contact_group_select_menu_group_layout'/>"
+           item_type_2="<Layout defaultnodename='common_controls:contact_group_select_menu_richedit_layout'/>"
+           />
+	</Layout>
+</window>

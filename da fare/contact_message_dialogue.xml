@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window" size="351, 183" borderwindow="dialog_border_skin.xml">
+    <Layout name="contact_message_dlg" left="0" top="0" width="351" height="183" backgroundimage="bro/bro_frame.png;;1,34,1,1">
+        <Title left="0" top="0" width="351" height="33" focusenable="false">
+        	<PlaceHolder width="5" />
+        	<Label name="contact_message_dlg_title" text="导入联系人" left="0" top ="17" width="200" height="20" font="12" textcolor="#606060" align="left, venter" />
+        	<!--<PlaceHolder />-->
+        	<!--<Button name="contact_message_dlg_close" right="0" top="17" width="14" height="14" backgroundtransparent="true" backgroundimage="messagebox_close.png" backgroundhotimage="messagebox_close2.png" backgroundpushedimage="messagebox_close3.png" />-->
+        	<!--<PlaceHolder width="5" />-->
+        </Title>
+        <Control name="contact_message_dlg_icon_waring" left="20" top="56" width="16" height="16" backgroundimage="common_icon_waring.png" backgroundtransparent="true" visible="false" />
+        <Control name="contact_message_dlg_icon_info" left="20" top="56" width="16" height="16" backgroundimage="common_icon_info.png" backgroundtransparent="true" visible="true" />
+        <Label name="contact_message_dlg_text" text="正在导入..." left="40" top="56" right="0" width="200" height="20" font="14" textcolor="#3d3d3d" align="left,venter" backgroundtransparent="true" visible="true" />
+        <ProgressBarSalon name="contact_message_dlg_salon_progress" left="20" top="90" width="310" height="6" backgroundimage="common/salon_bar_bg.png" aniimage="common/salon_bar.png" backgroundtransparent="true" visible="true" />
+        <RichEdit name="contact_message_dlg_edit" left="20" top="80" align="venter" font="14" width="310" height="35" backgroundimage="输入框.png;;2,2,2,2" backgroundtransparent="true" placestring="" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>
+        <Button visible="false" name="contact_message_dlg_btn_done" focusenable="false"
+            text="确定" textcolor="#fb5f45" texthotcolor="#fb5f45" textpushedcolor="#ffffff" textdisabledcolor="#CCCCCC"
+            font="12" left="20,false" top="123" width="75" height="30" align="center, venter"
+            imagelist="common/red_btn_list.png;;'3,3,3,3'" imagelistuistatus="disable" />
+        <Button name="contact_message_dlg_btn_cancel" focusenable="false" text="取消" textcolor="#656565" font="12" left="20,false" top="123" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+    </Layout>
+</window>

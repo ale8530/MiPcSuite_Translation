@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<DecorateButton name="main_left_button" width="90" height="80" optiongroup="left_panel">
+		<Button name="but_old" font="bold_14" left="0" top="0" width="90" height="80" focuspriority="true" />
+		<Label name="but" text="我的设备" font="bold_12" textcolor="#888888" texthotcolor="#FFFFFF" textpushedcolor="#FFFFFF" textfocuscolor="#FFFFFF" align="center, top" right="0" top="44" bottom="0"/>
+		<Control name="sep" backgroundtransparent="true" backgroundimage="spe.png" backgroundpushedimage="none" left="0" top="0, false" right="0" height="1" />
+		<Control name="beta" backgroundtransparent="true" backgroundimage="beta.png" left="3" top="3" width="16" height="5" visible="false" />
+	</DecorateButton>
+    <Button name="white_blue_style_button" font="default" textnormalcolor="#268be9" textfocuscolor="#268be9" textcolor="#ffffff" width="83" height="30" backgroundtransparent="true" backgroundimage="首页/备份还原/白底蓝边按钮1.png;;3,3,3,3" backgroundhotimage="首页/备份还原/白底蓝边按钮2.png;;3,3,3,3" backgroundpushedimage="首页/备份还原/白底蓝边按钮3.png;;3,3,3,3" />
+	<Button name="white_style_button" font="default" textcolor="#333333" textdisabledcolor="#aaaaaa" width="83" height="30" backgroundtransparent="true" imagelist="common/common_btn_list.png;;5,5,5,5" imagelistuistatus="disable" />
+    <Button name="white_red_style_button" font="default" textcolor="#fb5f45" texthotcolor="#fb5f45"  textpushedcolor="#ffffff" textdisabledcolor="#CCCCCC" width="83" height="30" backgroundtransparent="true" imagelist="common/red_btn_list.png;;5,5,5,5" imagelistuistatus="disable" />
+	<Button name="round_close_cancel" width="14" height="14" backgroundtransparent="true" backgroundimage="首页/备份还原/关闭1.png" backgroundpushedimage="首页/备份还原/关闭2.png" backgroundhotimage="首页/备份还原/关闭3.png" />
+	<Button name="white_style_small_button" font="songti_12" textcolor="#656565" textdisabledcolor="#aaaaaa" width="83" height="30" backgroundtransparent="true" backgroundimage="首页/备份还原/白色按钮1.png;;3,3,3,3" backgroundhotimage="首页/备份还原/白色按钮2.png;;3,3,3,3" backgroundpushedimage="首页/备份还原/白色按钮3.png;;3,3,3,3" backgrounddisabledimage="首页/备份还原/白色按钮4.png;;3,3,3,3" />
+
+	<CheckBox name="radiobox_style" height="18" width="160" imagewidth="14" imagepadding="0,1,0,3" spacebetweenimageandtext="5" textcolor="#909090" font="songti_12" align='left,venter' imagelist="common/radio_button_list.png" imagelistuistatus="disable" backgroundimagelist="common/radio_button_list_bg.png" backgroundimagelistuistatus="disable"/>
+	<CheckBox name="checkbox_style" height="18" width="160" imagewidth="14" imagepadding="0,1,0,3" spacebetweenimageandtext="5" textcolor="#656565" texthotcolor="#191919" textpushedcolor="#FB5A45" font="12" align='left,venter' imagelist="common/checkbox_list.png" imagelistuistatus="disable" backgroundimagelist="common/checkbox_list_bg.png" backgroundimagelistuistatus="disable" />
+
+	<DecorateButton name="main_client_function_button" backgroundtransparent="true">
+		<HorizontalLayout name="bg" left="0" top="0" right="0" bottom="0">
+			<Button name="button" width="18" height="18" backgroundtransparent="true" />
+            <PlaceHolder width="4" />
+			<Label name="text" align="left,venter" />
+		</HorizontalLayout>
+	</DecorateButton>
+
+	<DecorateButton name="main_client_function_button_ota_upprade" backgroundtransparent="true">
+		<Layout right="0" bottom="0">
+			<HorizontalLayout name="bg" right="0" bottom="0">
+				<Button name="button" width="18" height="18" backgroundtransparent="true" />
+                <PlaceHolder width="4" />
+				<Label name="text" align="left,venter" />
+			</HorizontalLayout>
+			<Control name="function_panel_ota_flag" backgroundtransparent="true" backgroundimage="bro/select_point.png;10,0,20,10;" left="44" top="0" width="10" height="10" visible="false"/>
+		</Layout>
+	</DecorateButton>
+
+	<DecorateButton name="main_client_upgrade_function_button" backgroundtransparent="true">
+		<VerticalLayout name="bg" left="0" top="0" right="0" bottom="0">
+            <Button name="screen_pulldown" width="14" height="12" backgroundtransparent="true" imagelist="main/pulldown.png" imagepadding="3,5,3,3"/>
+		</VerticalLayout>
+	</DecorateButton>
+
+	<InflateDecorateButton name="main_client_function_nav_button" backgroundtransparent="true">
+		<Layout right="0" bottom="0">
+            <VerticalLayout right="0" bottom="0">
+                <PlaceHolder height="5" />
+                <InflateControl name="icon" width="58" height="58" backgroundimage="main_dev_app.png" backgroundtransparent="true"  imagepadding="5,5,5,5" max_inflate_size="5" middle_inflate_size="3"/>
+                <PlaceHolder height="5" />
+                <Label name="text" align="center,venter" width="136" font="14" textcolor="#575757" />
+            </VerticalLayout>
+		</Layout>
+	</InflateDecorateButton>
+    
+    <InflateDecorateButton name="main_client_function_nav_button_left" backgroundtransparent="true">
+		<Layout right="0" bottom="0">
+            <VerticalLayout right="5" bottom="0">
+                <PlaceHolder height="5" />
+                <InflateControl name="icon" width="58" height="58" backgroundimage="main_dev_app.png" backgroundtransparent="true"  imagepadding="5,5,5,5" max_inflate_size="5" middle_inflate_size="3"/>
+                <PlaceHolder height="5" />
+                <Label name="text" align="center,venter" width="136" font="14" textcolor="#575757" />
+            </VerticalLayout>
+		</Layout>
+	</InflateDecorateButton>
+    
+    <InflateDecorateButton name="main_client_function_nav_button_right" backgroundtransparent="true">
+		<Layout right="0" bottom="0">
+            <VerticalLayout left="5" right="0" bottom="0">
+                <PlaceHolder height="5" />
+                <InflateControl name="icon" width="58" height="58" backgroundimage="main_dev_app.png" backgroundtransparent="true"  imagepadding="5,5,5,5" max_inflate_size="5" middle_inflate_size="3"/>
+                <PlaceHolder height="5" />
+                <Label name="text" align="center,venter" width="136" font="14" textcolor="#575757" />
+            </VerticalLayout>
+		</Layout>
+	</InflateDecorateButton>
+
+	<TrackBar name="player_track_bar" width="100" height="10" horizontal="true">
+		<Control name="track_bar_progress_background" left="0" right="0" right="0" bottom="0" backgroundimage="common_track_bar_bg.png;;2,0,2,0" imagepadding="0,4,0,4" backgroundtransparent="true" />
+		<Control name="track_bar_progress_middle" left="0" width="1" top="0" bottom="0" backgroundimage="common_track_bar_bg.png;;2,0,2,0" imagepadding="0,4,0,4" backgroundtransparent="true" />
+		<Control name="track_bar_progress_front" left="0" width="1" top="0" bottom="0" backgroundimage="common_track_bar_front.png;;2,0,2,0" imagepadding="0,4,0,4" backgroundtransparent="true" />
+		<ScrollBar name="track_bar_tracker" left="0" right="0" top="0" bottom="0" thumbnormalimage="common_track_bar_tracker.png" thumblength="10" horizontal="true" backgroundtransparent="true"/>
+	</TrackBar>
+
+	<TrackBar name="player_volume_track_bar" width="6" height="65" horizontal="false" >
+		<Control name="track_bar_progress_background" left="0" right="0" right="0" bottom="0" backgroundimage="audio_volume_track_bar_bg.png;;2,0,2,0" imagepadding="2,0,2,0" backgroundtransparent="true" />
+		<Control name="track_bar_progress_front" left="0" right="0" top="0,false" height="1" backgroundimage="audio_volume_track_bar_front.png;;2,0,2,0" imagepadding="2,0,2,0" backgroundtransparent="true" />
+		<ScrollBar name="track_bar_tracker" left="0" right="0" top="0" bottom="0" thumbnormalimage="audio_volume_track_bar_tracker.png" thumblength="6" horizontal="false" backgroundtransparent="true" />
+	</TrackBar>
+
+	<TextComboBox name="wifi_security_combobox" padding="0,3,0,3" backgroundtransparent="true" defaultshowitemcount="3" width="25">
+		<Content name="wifi_security_content" left="0" top="0" right="0" height="30" font="songti_12" textcolor="#909090" padding="13,2,26,0" multiline="false" wanttab="false" align="venter,left" readonly="true" enabled="true" backgroundtransparent="true" />
+		<DropListButton name="wifi_security_combobox_button" left="10,false" top="5" height="8" width="14" backgroundimagelist="common_btn_drop.png" backgroundtransparent="true" />
+		<window name="wifi_security_droplist_wnd" type="menu_window" backgroundimage="app_menu_bg.png;;12,0,12,16" translucent="true" alphaborders="1,1,2,10" >
+			<TextList name="wifi_security_list" itemheight="30" backgroundtransparent="true" left="0" top="0" right="0" bottom="0" padding="0,1,0,1">
+				<Indicate value="<PlaceHolder width='1' height='1'/>" />
+				<Content value="<Label backgroundhotimage='common/list_item_hot_bg.png;;4,2,4,2' padding='10,0,0,5' left='0' right='0' height='29' backgroundtransparent='true'
+					textcolor='#656565' texthotcolor='#191919' align='left,bottom'/>" />
+			</TextList>
+		</window>
+	</TextComboBox>
+
+	<StatusListItem name="status_list_item" hittest="true">
+		<Layout name="status_list_layout" left="0" right="0" top="4" bottom="4" hittest="false" backgroundhotimage="下拉框选中.png">
+			<HorizontalLayout right="0" bottom="0">
+				<PlaceHolder width="6" />
+				<Layout width="4" height="4">
+					<Control name="status_item_icon" width="4" height="4" backgroundtransparent="true" hittest="false" visible="false"/>
+				</Layout>
+				<PlaceHolder width="5" />
+				<Label name="status_item_text" font="songti_12" align="left,venter" endellipsis="true" hittest="false" />
+			</HorizontalLayout>
+		</Layout>
+		<Control name="status_list_item_line" backgroundtransparent="true" backgroundimage="还原bgspe.png" left="0" right="0" top="0,false" height="1" hittest="false" />
+	</StatusListItem>
+
+    <Layout name="restore_list_item" hittest="true" backgroundpushedimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundfocusimage="common/list_item_selected_bg.png;;4,2,4,2">
+		<HorizontalLayout right="0" bottom="0">
+			<PlaceHolder width="22" />
+			<Control width="14" height="14" backgroundtransparent="true" normalimage="bro/radio.png;0,0,14,14;" hotimage="bro/radio.png;14,0,28,14;" pushedimage="bro/radio.png;28,0,42,14;" backgroundnormalimage="bro/radio.png;0,0,14,14;" backgroundfocusimage="bro/radio.png;28,0,42,14;" backgroundhotimage="bro/radio.png;14,0,28,14;" backgroundpushedimage="bro/radio.png;28,0,42,14;"/>
+			<PlaceHolder width="14" />
+			<Label name="restore_item_time" width="186" align="left,venter" textcolor="#191919" textfocuscolor='#191919' font="12" padding="0,0,0,2" hittest="false" />
+			<Label name="restore_item_type" width="80" align="left,venter" textcolor="#191919" textfocuscolor='#191919' font="12" padding="0,0,0,2" hittest="false" />
+			<PlaceHolder width="90" />
+            <Button name="restore_list_item_del_button" backgroundtransparent="true" width="29" height="29" imagelist="bro/trash.png" imagelistuistatus="disable" hittest="true" focusenable="false"/>
+		</HorizontalLayout>
+        <Control backgroundtransparent="true" backgroundimage="common/seperate_line.png" left="25" right="25" top="0,false" height="1" hittest="false" />
+	</Layout>
+
+	<Layout name="device_select_list_item" hittest="true" backgroundhotimage="首页/drop box/选中.png">
+		<HorizontalLayout right="0" bottom="0" >
+			<PlaceHolder width="28" />
+			<Layout>
+				<HorizontalLayout right="0" bottom="0" align="near">
+					<Layout width="50">
+						<Control name="icon" backgroundtransparent="true" right="0" top="20" height="60" hittest="false" />
+					</Layout>
+					<PlaceHolder width="15" />
+					<Layout>
+						<Label name="device_name" align="left,top" left="0" top="20" right="10" height="16" textcolor="#000000" font="12"  hittest="false"/>
+						<Control name="device_media" left="0,false" top="20" width="16" height="16" backgroundtransparent="true" hittest="false" />
+						<Control name="storage_type" backgroundtransparent="true" left="0" top="44" width="32" height="16" hittest="false" />
+						<Layout name="capacity_bg" left="0" top="70" width="128" height="10" ackgroundtransparent="true" backgroundimage="首页/drop box/容量bg.png;;2,0,2,0" hittest="false">
+							<Control name="capacity_used" backgroundtransparent="true" backgroundimage="首页/drop box/容量.png" left="0" top="1" width="50" height="8" hittest="false" />
+						</Layout>
+					</Layout>
+				</HorizontalLayout>
+			</Layout>
+			<PlaceHolder width="28" />
+		</HorizontalLayout>
+	</Layout>
+
+	<Label name="function_panel_title_label" left="107" right="0" top="42" height="24" font="20" textcolor="#3d3d3d" />
+	<Label name="version_upgrade_log" oritext="{u}{c #8b8b8b}{a web:%s}版本%s更新日志{/a}{/c}{/u}" showhtml="true" left="107" right="0" top="83" height="14" font="songti_12" textcolor="#8b8b8b" align="venter" />
+
+	<Layout name="backup_list_item" hittest="true" backgroundhotimage="setting/selected_hot_bg.png;;4,2,4,2" backgroundpushedimage="setting/selected_hot_bg.png;;4,2,4,2">
+		<HorizontalLayout right="0" bottom="0">
+			<PlaceHolder width="12" />
+			<Control width="16" height="16" backgroundtransparent="true" backgroundfocusimage="setting/selected_flag.png" />
+			<PlaceHolder width="12" />
+			<VerticalLayout width="235" hittest="false">
+				<PlaceHolder height="17" />
+				<Label name="backup_list_item_device" height="20" align="left,top" textcolor="#333333" textfocuscolor='#ff6911' font="16" backgroundtransparent="true" hittest="false" />
+				<Label name="backup_list_item_time" height="15" align="left,venter" font="songti_12" textcolor="#333333" textfocuscolor='#ff6911' showhtml="true" padding="2,0,0,0" backgroundtransparent="true" hittest="false"/>
+			</VerticalLayout>
+			<Label name="backup_list_item_type" width="55" align="left,venter" font="songti_12" textcolor="#333333" textfocuscolor='#ff6911' hittest="false" />
+			<PlaceHolder width="5" />
+			<Control backgroundtransparent="true" backgroundimage="I.png" width="1" height="21" hittest="false" />
+			<PlaceHolder width="5" />
+			<Label name="backup_list_item_size" width="60" align="left,venter" font="arial_12" textcolor="#333333" textfocuscolor='#ff6911' padding="0,0,0,2" hittest="false" />
+		</HorizontalLayout>
+		<Control backgroundtransparent="true" backgroundimage="还原bgspe.png" left="0" right="0" top="0,false" height="1" hittest="false" />
+	</Layout>
+
+	<Layout name="restore_progress_list_item" hittest="true">
+		<HorizontalLayout right="0" bottom="0">
+			<Label name="restore_item_content" align="left,venter" textcolor="#909090" font="12" hittest="false" />
+			<Label name="restore_item_size" align="right,venter" font="arial_12" textcolor="#909090" width="200" />
+			<PlaceHolder width="5" />
+            <RestoreListItemResult name="restore_item_result" backgroundtransparent="true" waitingimage="bro/progress.png" processingimage="bro/progress.png" successimage="bro/restore_step_complete.png" failedimage="bro/restore_step_error.png" width="18" height="18" />
+		</HorizontalLayout>
+        <Control backgroundtransparent="true" backgroundimage="common/seperate_line.png" left="0" right="0" top="0,false" height="1" hittest="false" />
+	</Layout>
+
+  <Layout name="checked_list_item" hittest="true" backgroundpushedimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundfocusimage="common/list_item_selected_bg.png;;4,2,4,2">
+    <HorizontalLayout right="0" bottom="0">
+      <PlaceHolder width="20" />
+      <!--<Label name="chekced_list_item_content" width="320" align="left,venter" textcolor="#1d1d1d" font="14" padding="0,0,0,2" hittest="false" />-->
+      <VerticalLayout width="200" hittest="false">
+        <PlaceHolder height="17" />
+        <Label name="chekced_list_item_content" height="20" align="left,top" textcolor="#191919" font="14" backgroundtransparent="true" hittest="false" />
+        <Label name="chekced_list_item_time" height="15" align="left,venter" font="arial_12" textcolor="#999999" showhtml="true" padding="2,0,0,0" backgroundtransparent="true" hittest="false"/>
+      </VerticalLayout>
+      <PlaceHolder width="100"/>
+      <Control name="chekced_list_item_active" backgroundtransparent="true" backgroundimage="bro/select_point.png;10,0,20,10;" left="0" right="0" top="0" bottom="0" width="10" height="10" hittest="false" />
+      <Control name="chekced_list_item_inactive" backgroundtransparent="true" backgroundimage="bro/select_point.png;0,0,10,10;" left="0" right="0" top="0" bottom="0" width="10" height="10" hittest="false" visible="false" />
+      <PlaceHolder width="5"/>
+      <Button name="checked_list_item_btn" focusenable="false" text="已启用" font="12" backgroundtransparent="true" textcolor="#191919" width="48" height="23" imagelist="common_btn.png;;2,2,2,2" imagelistuistatus="disable" />
+      <PlaceHolder width="30" />
+      <Button name="checked_list_item_del_button" focusenable="false" backgroundtransparent="true" width="29" height="29" imagelist="bro/trash.png" imagelistuistatus="disable" hittest="true"/>
+    </HorizontalLayout>
+    <Control backgroundtransparent="true" backgroundimage="还原bgspe2.png" left="0" right="0" top="0,false" height="1" hittest="false" />
+  </Layout>
+
+    <Layout name="backup_device_list_item" hittest="true" backgroundpushedimage="setting/selected_hot_bg.png;;4,2,4,2" backgroundhotimage="setting/selected_hot_bg.png;;4,2,4,2">
+      <Control name="backup_device_list_item_bg" visible="false" backgroundtransparent="true" backgroundimage="setting/selected_hot_bg.png"  hittest="false" right="0" bottom="0" />
+      <HorizontalLayout right="0" bottom="0">
+      <PlaceHolder width="10" />
+      <CheckBox name="backup_device_list_item_checkbox" width="16" height="16" imagewidth="16" spacebetweenimageandtext="6" font="songti_bold_12" textcolor="#909090" align='left,venter'
+				backgroundimage="多选框1.png" backgroundnormalimage="多选框1.png" backgroundhotimage="多选框2.png" backgroundpushedimage="多选框3.png"
+				normalimage="多选框_选中.png" hotimage="多选框_选中.png" pushedimage="多选框_选中.png"/>
+      <PlaceHolder width="10" />
+      <!--<Label name="chekced_list_item_content" width="320" align="left,venter" textcolor="#1d1d1d" font="14" padding="0,0,0,2" hittest="false" />-->
+      <VerticalLayout width="170" hittest="false">
+        <PlaceHolder height="17" />
+        <Label name="backup_device_list_item_content" height="20" align="left,top" textcolor="#333333" font="16" backgroundtransparent="true" hittest="false" />
+        <Label name="backup_device_list_item_time" height="15" align="left,venter" font="songti_12" textcolor="#333333" showhtml="true" padding="2,0,0,0" backgroundtransparent="true" hittest="false"/>
+      </VerticalLayout>
+      <Label name="backup_device_file_size" text="700MB" width="70" height="30" align="left,venter" backgroundtransparent="true" hittest="false" />
+      <PlaceHolder width="70" />
+      <Button name="backup_device_explorer" text="查看" width="50" height="30" />
+      <PlaceHolder width="10" />
+    </HorizontalLayout>
+    <Control backgroundtransparent="true" backgroundimage="还原bgspe2.png" left="0" right="0" top="0,false" height="1" hittest="false" />
+  </Layout>
+
+	<DownloadListItem name="download_list_item" hittest="true" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="common/list_item_selected_bg.png">
+        <Control name="dl_list_item_selected_bg" visible="false" backgroundtransparent="true" backgroundimage="common/list_item_selected_bg.png"  hittest="false" right="0" bottom="0" />
+		<HorizontalLayout right="0" bottom="0">
+			<PlaceHolder width="25" />
+            <CheckBox name="dl_list_item_checked" width="16" defaultnodename="common_controls:checkbox_style"/>
+			<HorizontalLayout width="260">
+				<PlaceHolder width="15" />
+				<Layout width="36" height="36">
+					<Control name="dl_list_item_icon" backgroundtransparent="true" left="0" top="0" right="0" bottom="0" backgroundimage="download/default_app_icon.png" hittest="false" />
+				</Layout>
+				<PlaceHolder width="3" />
+                <VerticalLayout width="260" height="36">
+				    <Label name="dl_list_item_text" height="20" font="14" textcolor="#3d3d3d" align="left,venter" endellipsis="true" hittest="false" />
+                    <Label name="dl_progress_text" height="16" oritext="" font="12" textcolor="#666666" align="left,venter" hittest="false" />
+                </VerticalLayout>
+			</HorizontalLayout>
+            <PlaceHolder width="50" />
+            <layout width="190" height="36">
+                <VerticalLayout name="dl_progress_layout" left="0" top="0" right="0" bottom="0" hittest="false">
+                    <PlaceHolder height="5" />
+                    <layout right="0" bottom="0" height="10" >
+                        <layout name="dl_list_item_progress_bg" right="0" bottom="0" >
+                            <Control name="dl_b" width="180" height="6" top="3" backgroundimage="download/progress_bar_bg.png;;4,0,4,0" backgroundtransparent="true" />
+                            <Control name="dl_m" width="1" height="6" top="3" backgroundimage="download/progress_bar.png;;4,0,4,0" backgroundtransparent="true" />
+                            <Control name="dl_m_error" width="1" height="6" top="3" backgroundimage="download/error_progress_bar.png;;4,0,4,0" backgroundtransparent="true" visible="false" />
+                        </layout>
+                        <ProgressBarSalon name="dl_list_item_salon_progress" width="180" height="6" top="3" backgroundimage="common/salon_bar_bg.png" aniimage="common/salon_bar.png" backgroundtransparent="true" visible="false" />
+                    </layout>
+                    <PlaceHolder height="3" />
+                    <HorizontalLayout right="0" height="20">
+                        <Label name="dl_status_text" font="12" width="210" textcolor="#3d3d3d" align="left,venter" endellipsis="true" hittest="false" />
+                        <PlaceHolder />
+                        <Label name="dl_status_percent" font="12" width="40" textcolor="#3d3d3d" align="right,venter" endellipsis="true" hittest="false" />
+                    </HorizontalLayout>
+                </VerticalLayout>
+                <Label name="dl_storage_text" visible="false" textcolor="#3d3d3d" font="arial_12" left="30" top="0" right="0" bottom="0" align="right,venter" endellipsis="true" hittest="false" />
+            </layout>
+            <PlaceHolder width="20" />
+            <Layout width="97" height="29">
+                <HorizontalLayout name="dl_list_group_control_buttons" right="0" bottom="0">
+                    <Layout width="29" height="29">
+                        <Button name="dl_pause_button" backgroundtransparent="true" left="0" top="0" right="0" bottom="0" imagelist="download/pause_button_list.png" imagelistuistatus="disable" hittest="true" focusenable="false"/>
+                        <Button name="dl_continue_button" backgroundtransparent="true" left="0" top="0" right="0" bottom="0" imagelist="download/download_button_list.png" imagelistuistatus="disable" hittest="true" focusenable="false"/>
+                        <Button name="dl_install_button" backgroundtransparent="true" left="0" top="0" right="0" bottom="0" imagelist="download/install_button_list.png" imagelistuistatus="disable" hittest="true" focusenable="false"/>
+                    </Layout>
+                    <PlaceHolder width="5" />
+                    <Button name="dl_list_item_del" backgroundtransparent="true" left="1" top="1" right="0" bottom="0" width="29" height="29" imagelist="download/delete_button_list.png" imagelistuistatus="disable" hittest="true" focusenable="false"/>
+                    <PlaceHolder width="5" />
+                    <Button name="dl_list_item_open_directory" backgroundtransparent="true" left="1" top="1" right="0" bottom="0" width="29" height="29" imagelist="download/open_directory_button_list.png" imagelistuistatus="disable" hittest="true" focusenable="false"/>
+                </HorizontalLayout>
+                <Button name="dl_list_retry_button" text="重试" font="12" right="0" height="28" imagelist="download/retry_button_list.png" imagelistuistatus="disable" backgroundtransparent="true" focusenable="false" visible="false" />
+            </Layout>
+		</HorizontalLayout>
+		<Control backgroundtransparent="true" backgroundimage="common_line_horizontal.png" left="15" right="15" top="0,false" height="1" hittest="false" />
+	</DownloadListItem>
+	<AppListItem name="app_list_item" hittest="true" backgroundpushedimage="common/list_item_selected_bg.png;;4,2,4,2" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2">
+		<Control name="app_list_item_selected_bg"  hittest="false" visible="false" backgroundtransparent="true" backgroundimage="common/list_item_selected_bg.png;;4,2,4,2"  hittest="false" right="0" bottom="0"/>
+		<Control left="25" right="25" top="62" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+		<HorizontalLayout right="0" bottom="0" >
+			<PlaceHolder width="25" />
+			<HorizontalLayout width="280"  hittest="false">
+				<CheckBox name="app_list_item_check"  left="17" top="22" width="29" height="14" imagewidth="14" imagelist="common/checkbox_list.png" imagelistuistatus="disable" backgroundimagelist="common/checkbox_list_bg.png" backgroundimagelistuistatus="disable" backgroundtransparent="true" />
+				<Layout width="46" height="46">
+					<Control name="app_list_item_icon"  left="0" top="0" hittest="false" backgroundtransparent="true" backgroundimage="download/default_app_icon.png;;2,2,44,44" width="46" height="46"/>
+					<Control name="app_list_item_icon_cover" left="2" top="2" hittest="false" backgroundtransparent="true" backgroundimage="app_list_item_icon_cover.png;0,0,42,42" width="42" height="42"/>
+					<Control name="app_list_item_icon_hot" visible="false" left="2" top="2" hittest="false" backgroundtransparent="true" backgroundimage="app_list_item_icon_cover.png;42,0,84,42" width="42" height="42"/>
+				</Layout>
+				<PlaceHolder width="5"/>
+				<Layout width="200" height="60"  hittest="false">
+					<Label name="app_list_item_name"  hittest="false" left="0" top="10" right="0" bottom="20" font="default" textcolor="#191919" align="left,venter"  endellipsis="true" backgroundtransparent="true"/>
+					<Label name="app_list_item_version"  hittest="false" left="3" top="32" right="0" bottom="10" font="arial_12" textcolor="#999999" align="left,venter" endellipsis="true" backgroundtransparent="true"/>
+				</Layout>
+				<PlaceHolder />
+			</HorizontalLayout>
+			<PlaceHolder  width="13"/>
+			<Layout width="189" heigth="60"  hittest="false">
+				<Label left="0" top="2" font="12"  hittest="false" name="app_list_item_data_label" textcolor="#999999" text="应用: " align="left,venter"   width="50" height="58" backgroundtransparent="true"/>
+				<Label left="32" top="0" font="arial_12"  hittest="false" name="app_list_item_app_size"   textcolor="#999999"  align="right,venter"   width="39" height="60" backgroundtransparent="true"/>
+				<Label left="71" top="0" font="12"  hittest="false" name="app_list_item_data_label" textcolor="#999999" text="|" align="center,venter"   width="20" height="60" backgroundtransparent="true"/>
+				<Label left="91" top="2" font="12"  hittest="false" name="app_list_item_data_label" textcolor="#999999" text="数据: " align="left,venter"  width="50" height="58" backgroundtransparent="true"/>
+				<Label left="123" top="0" font="arial_12"  hittest="false" name="app_list_item_data_size"   textcolor="#999999"  align="right,venter"   width="39" height="60" backgroundtransparent="true"/>
+			</Layout>
+			<Layout width="78" height="29" top="18">
+				<Label name="app_list_item_status"  hittest="false" left="0" top="0" font="12" textcolor="#ff0000" align="left,venter" endellipsis="true"   width="78" height="30" backgroundtransparent="true"/>
+				<HorizontalLayout width="68" height="29">
+					<Button name="app_list_item_del_btn" width="34"  imagepadding="0,0,5,0" height="29" imagelist="app_list_item_del_btn.png" imagelistuistatus="disable" backgroundtransparent="true" hittest="true" focusenable="false"/>
+					<Button name="app_list_item_update_btn"  width="34" imagepadding="0,0,5,0" height="29" imagelist="app_list_item_update_btn.png" imagelistuistatus="disable" backgroundtransparent="true" hittest="true" focusenable="false"/>
+					<Button name="app_list_item_ignore" visible="false" text="忽略" font="12" textcolor="#f8663d" textdisabledcolor="#CCCCCC" texthotcolor="#ff0000" align="right,venter" width="35" height="30" backgroundtransparent="true" focusenable="false"/>
+				</HorizontalLayout>
+			</Layout>
+		</HorizontalLayout>
+		<Button name="app_list_item_hide_btn" left="25" top="10" width="35" height="40" focusenable="false" backgroundtransparent="true"/>
+	</AppListItem>
+	<AppIgnoredListItem name="ignored_app_list_item" hittest="true" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="common/list_item_selected_bg.png">
+        <Control name="app_list_item_selected_bg" visible="false" backgroundtransparent="true" backgroundimage="common/list_item_selected_bg.png"  hittest="false" right="0" bottom="0" />
+		<HorizontalLayout right="0" bottom="0">
+			<PlaceHolder width="25" />
+            <CheckBox name="app_list_item_check" width="16" defaultnodename="common_controls:checkbox_style"/>
+			<PlaceHolder width="15" />
+			<Control name="app_list_item_icon" backgroundtransparent="true" width="36" height="36" backgroundimage="download/default_app_icon.png" hittest="false"/>
+			<PlaceHolder width="3" />
+            <VerticalLayout width="100" height="36">
+				<Label name="app_list_item_name" height="20" font="14" textcolor="#3d3d3d" align="left,venter" endellipsis="true" hittest="false" />
+                <Label name="app_list_item_version" height="16"  font="12" textcolor="#666666" align="left,venter" hittest="false" />
+            </VerticalLayout>
+			<PlaceHolder  width="50"/>
+			<layout width="120" height="36" hittest="false">
+				<Label left="0" top="2" font="12"  hittest="false"  textcolor="#999999" text="最新版本: " align="left,venter"   width="60" height="36" backgroundtransparent="true"/>
+				<Label left="50" top="0" font="arial_12"  hittest="false" name="app_list_item_new_version"   textcolor="#999999"  align="right,venter"   width="60" height="36" backgroundtransparent="true"/>
+			</Layout>
+			<PlaceHolder  />
+			<Button name="app_list_item_recover_btn" width="50" text="恢复" focusenable="false" defaultnodename="common_controls:white_style_button" backgroundtransparent="true" textcolor="#656565" align='center,venter' font="12" />
+			<PlaceHolder width="14"/>
+		</HorizontalLayout>
+		<Control backgroundtransparent="true" backgroundimage="common_line_horizontal.png" left="15" right="15" top="0,false" height="1" hittest="false" />
+	</AppIgnoredListItem>
+	<AppRelatedListItem  name="ra_list_item" hittest="true" focusenable="false">
+		<HorizontalLayout right="0" bottom="0">
+			<PlaceHolder width="1"/>
+			<Button name="ra_list_item_icon" backgroundtransparent="true" width="40" height="40" backgroundimage="download/default_app_icon.png"/>
+			<PlaceHolder width="6" />
+            <VerticalLayout width="100" height="36">
+				<Label name="ra_list_item_name" width="100" height="22" font="14" textcolor="#3d3d3d" align="left,venter" endellipsis="true" hittest="false" />
+                <ScoreControl name="ra_list_item_score" width="93" height="14"  defaultnodename="common_controls:star_score_control" hittest="false" />
+            </VerticalLayout>
+			<PlaceHolder  />
+			<Button name="ra_list_item_install_btn" width="44" height="26" text="安装" focusenable="false" imagelist="common/round_gray_s_btn_list.png" imagelistuistatus="disable" textcolor="#656565" backgroundtransparent="true" align='center,venter' font="12" />
+			<PlaceHolder width="1"/>
+		</HorizontalLayout>
+	</AppRelatedListItem>
+	<AppSelectListItem  name="asel_list_item" hittest="true" focusenable="false"  backgroundhotimage="app_selectlist_itemt_bg.png;;4,2,4,2" backgroundpushedimage="app_selectlist_itemt_bg.png">
+		<HorizontalLayout right="0" bottom="0">
+			<PlaceHolder width="12"/>
+			<Control name="asel_list_item_icon" backgroundtransparent="true" width="40" height="40" backgroundimage="download/default_app_icon.png"  hittest="false"/>
+			<PlaceHolder width="6" />
+            <VerticalLayout width="130" height="36">
+				<Label name="asel_list_item_name" width="130" height="22" font="14" textcolor="#3d3d3d" align="left,venter" endellipsis="true" hittest="false" />
+                <ScoreControl name="asel_list_item_score" width="124" height="14"  defaultnodename="common_controls:star_score_control" hittest="false" />
+            </VerticalLayout>
+			<PlaceHolder  />
+			<Button name="asel_list_item_del_btn" width="22" height="22" hittest="false"  visible="true" focusenable="false" backgroundimage="sms/remove_recipient.png" backgroundhotimage="sms/remove_recipient.png" backgroundtransparent="true" />
+			<PlaceHolder width="10"/>
+		</HorizontalLayout>
+	</AppSelectListItem>
+	<MsgRecordListItem name="msg_re_list_item" hittest="true" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="common/list_item_selected_bg.png">
+        <Control name="msg_re_list_item_selected_bg" visible="false" backgroundtransparent="true" backgroundimage="common/list_item_selected_bg.png"  hittest="false" right="0" bottom="0" />
+		<HorizontalLayout right="0" bottom="0">
+			<PlaceHolder width="20" />
+            <CheckBox name="msg_re_list_item_check" width="14" defaultnodename="common_controls:checkbox_style"/>
+			<PlaceHolder width="15" />
+			<Control name="msg_re_list_item_icon" backgroundtransparent="true" width="40" height="40" backgroundimage="common/account_icon.png" hittest="false" />
+			<PlaceHolder width="5" />
+            <Layout width="190" height="36" hittest="false">
+                <HorizontalLayout left="0" top="0" width="150" height="20">
+                    <Label name="msg_re_list_item_name" autosize="true" maxwidth="130" font="14" textcolor="#3d3d3d" align="left,venter" endellipsis="true" hittest="false" />
+                    <Label name="msg_re_list_item_count" width="50" font="12" textcolor="#666666" align="left,venter" hittest="false" />
+                </HorizontalLayout>
+				<Label name="msg_re_list_item_lastone" left="0" top="20" width="190" height="16"   font="12"  hittest="false"  textcolor="#999999" text="" align="left,bottom"  backgroundtransparent="true"/>
+				<Label name="msg_re_list_item_data" left="150" top="0" width="40" height="16" font="arial_12"  hittest="false"   textcolor="#999999"  align="left,top" backgroundtransparent="true"/>
+			</Layout>
+			<PlaceHolder />
+		</HorizontalLayout>
+		<Control backgroundtransparent="true" backgroundimage="common_line_horizontal.png" left="15" right="15" top="0,false" height="1" hittest="false" />
+        <Control name="msg_unread_flag" left="46" top="5" width="10" height="10" backgroundtransparent="true" backgroundimage="sms/unread_flag.png" visible="false" />
+	</MsgRecordListItem>
+
+	<ScoreControl name="star_score_control" hittest="false" backgroundtransparent="true" >
+		<Control name="0" left="0" top="0" width="13" height="12" backgroundimage="app_score_bg.png;26,0,39,12" visible="true" backgroundtransparent="true" hittest="false"/>
+		<Control name="1" left="0" top="0" width="13" height="12" backgroundimage="app_score_bg.png;13,0,26,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="2" left="0" top="0" width="13" height="12" backgroundimage="app_score_bg.png;0,0,13,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="3" left="17" top="0" width="13" height="12" backgroundimage="app_score_bg.png;26,0,39,12" visible="true" backgroundtransparent="true" hittest="false"/>
+		<Control name="4" left="17" top="0" width="13" height="12" backgroundimage="app_score_bg.png;13,0,26,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="5" left="17" top="0" width="13" height="12" backgroundimage="app_score_bg.png;0,0,13,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="6" left="34" top="0" width="13" height="12" backgroundimage="app_score_bg.png;26,0,39,12" visible="true" backgroundtransparent="true" hittest="false"/>
+		<Control name="7" left="34" top="0" width="13" height="12" backgroundimage="app_score_bg.png;13,0,26,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="8" left="34" top="0" width="13" height="12" backgroundimage="app_score_bg.png;0,0,13,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="9" left="51" top="0" width="13" height="12" backgroundimage="app_score_bg.png;26,0,39,12" visible="true" backgroundtransparent="true" hittest="false"/>
+		<Control name="10" left="51" top="0" width="13" height="12" backgroundimage="app_score_bg.png;13,0,26,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="11" left="51" top="0" width="13" height="12" backgroundimage="app_score_bg.png;0,0,13,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="12" left="67" top="0" width="13" height="12" backgroundimage="app_score_bg.png;26,0,39,12" visible="true" backgroundtransparent="true" hittest="false"/>
+		<Control name="13" left="67" top="0" width="13" height="12" backgroundimage="app_score_bg.png;13,0,26,12" visible="false" backgroundtransparent="true" hittest="false"/>
+		<Control name="14" left="67" top="0" width="13" height="12" backgroundimage="app_score_bg.png;0,0,13,12" visible="false" backgroundtransparent="true" hittest="false"/>
+	</ScoreControl>
+
+	<IndexControl name="index_control" hittest="true" backgroundtransparent="true" >
+		<!--<Button name="*" text="★" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="left,top"/>-->
+		<Button name="#" text="#" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="A" text="A" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="B" text="B" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="C" text="C" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="D" text="D" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="E" text="E" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="F" text="F" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="G" text="G" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="H" text="H" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="I" text="I" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="J" text="J" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="K" text="K" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="L" text="L" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="M" text="M" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="N" text="N" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="O" text="O" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="P" text="P" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="Q" text="Q" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="R" text="R" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="S" text="S" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="T" text="T" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="U" text="U" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="V" text="V" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="W" text="W" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="X" text="X" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="Y" text="Y" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+		<Button name="Z" text="Z" enabled="false" width="18" height="17" font="arial_12" focuspriority="true" optiongroup="index_control_group" textcolor="#656565" textfocuscolor="#FB5A45" textdisabledcolor="#CCCCCC" texthotcolor="#191919" textpushedcolor="#FB5A45" backgroundtransparent="true" align="center,top"/>
+	</IndexControl>
+
+  <Button name="white_style_button_with_focus" font="default" textcolor="#333333" textdisabledcolor="#aaaaaa" width="83" height="30" backgroundtransparent="true" backgroundimage="首页/备份还原/白色按钮1.png;;3,3,3,3" backgroundhotimage="首页/备份还原/白色按钮2.png;;3,3,3,3" backgroundpushedimage="首页/备份还原/白色按钮3.png;;3,3,3,3" backgrounddisabledimage="首页/备份还原/白色按钮4.png;;3,3,3,3" backgroundfocusimage="首页/备份还原/白色按钮4.png;;3,3,3,3" />
+
+	<Layout name="file_manager_left_item_content" right="0" height="40">
+		<HorizontalLayout right="0" bottom="0">
+			<PlaceHolder name="space" width="1" />
+			<CheckBox name="UIVTreeNodeContentE" imagewidth="16"  backgroundimage="多选框1.png" backgroundnormalimage="多选框1.png" backgroundhotimage="多选框2.png" backgroundpushedimage="多选框3.png"
+			normalimage="多选框_选中.png" hotimage="多选框_选中.png" pushedimage="多选框_选中.png" backgroundtransparent="true" backgroundtransparent="true" width="16" height="16" visible="false" />
+			<Button name="UIVTreeNodeContentContent" defaultnodename="common_controls:white_style_button_with_focus" width="0" bottom="0" align="left,venter" />
+		</HorizontalLayout>
+	</Layout>
+
+	<Layout name="file_manager_right_item_content" right="0" height="40">
+		<Button name="UIVFMRightListItemBGButton" defaultnodename="common_controls:white_style_button_with_focus" right="0" bottom="0" align="left,venter" />
+		<HorizontalLayout right="0" bottom="0">
+			<CheckBox name="sel" defaultnodename="common_controls:normal_checkbox" />
+			<Label name="label" textcolor="#333333" font="14" width="0" align="left,venter" endellipsis="true" hittest="false" />
+		</HorizontalLayout>
+	</Layout>
+
+
+<!--多媒体相关控件-->
+	<!--多媒体title信息-->
+	<Layout name="media_title" left="0" right="0" height="45">
+		<Button name="media_title_background" left="0" top="0" right="0" bottom="0" showidchand="false" backgroundtransparent="true"/>
+		<Control name="media_title_top_line" left="0" right="0" top="0" height="1" backgroundimage="common_line_horizontal.png" backgroundtransparent="true" />
+		<HorizontalLayout left="25" top="15" right="0" bottom="12">
+			<CheckBox name="media_title_sel_all" defaultnodename="common_controls:checkbox_style" width="16"/>
+			<PlaceHolder width="5" />
+			<Label name="title" textcolor="#191919" padding="0,0,0,1" width="300" autosize="true" />
+			<Label name="total" textcolor="#191919" padding="0,0,0,1" width="100" autosize="true" />
+		</HorizontalLayout>
+	</Layout>
+
+	<!--多媒体title信息-->
+	<Layout name="media_title_2" left="25" right="0" height="40">
+		<Button name="media_title_background" left="0" top="0" right="0" bottom="0" showidchand="false" backgroundtransparent="true"/>
+		<Control name="media_title_top_line" left="0" right="0" top="0" height="1" backgroundimage="common_line_horizontal.png" backgroundtransparent="true" />
+		<HorizontalLayout top="15" right="0" bottom="7">
+			<CheckBox name="media_title_sel_all" defaultnodename="common_controls:checkbox_style" width="16"/>
+			<PlaceHolder width="5" />
+			<Label name="title" textcolor="#191919" padding="0,1,0,0" width="300" autosize="true" />
+			<Label name="total" textcolor="#191919" padding="0,1,0,0" width="100" autosize="true" />
+		</HorizontalLayout>
+	</Layout>
+
+	<!--多媒体图片icon-->
+	<Layout name="media_image_icon" width="110" height="110" >
+		<VirtualIconButton name="icon_background_button" left="0" top="0" right="0" bottom="0" align="center,venter"
+			backgroundimage="media_image_def_thumb.png" normalimage="media_list_overlay.png" focusimage="media_list_sel_overlay.png" pushedimage="media_list_sel_overlay.png" hotimage="media_list_hot_overlay.png"
+			background_image_padding="5,5,5,5"/>
+	</Layout>
+
+	<!--多媒体视频icon-->
+	<MediaVideoIconLayout name="media_video_icon" width="181" height="162" combineassingle='true'>
+		<VirtualIconButton name="icon_background_button" left="0" top="0" right="0" bottom="0" align="center,venter"
+			backgroundimage="media_video_def_thumb.png" normalimage="media_video_list_overlay.png" focusimage="media_video_list_sel_overlay.png" pushedimage="media_video_list_sel_overlay.png" hotimage="media_video_list_hot_overlay.png"
+			background_image_padding="0,0,0,58"/>
+		<Button name="media_video_play" left="132" top="67" width="38" height="26" backgroundtransparent="true" visible="false" hittest="false"/>
+
+		<CheckBox name="media_video_icon_checkbox" left="10" top="115" width="160" height="14" imagewidth="14" spacebetweenimageandtext="5" textcolor="#191919" font="12" align='left,venter' endellipsis="true"
+			imagelist="common/checkbox_list.png" imagelistuistatus="disable" backgroundimagelist="common/checkbox_list_bg.png" backgroundimagelistuistatus="disable" backgroundtransparent="true" hittest="false"/>
+		<HorizontalLayout left="30" top="132" right="0" height="22">
+			<Label name="media_video_icon_size" width="50" text="1039.99K" autosize="true" font="12" textcolor="#656565" align="left,venter" hittest="false"/>
+			<PlaceHolder width="3" />
+			<Label width="1" height="10" top="123" backgroundimage="common_line_vertical.png" hittest="false"/>
+			<PlaceHolder width="3" />
+			<Label name="media_video_icon_duration" width="50" text="01:20:30" autosize="true" font="12" textcolor="#656565" align="left,venter" hittest="false"/>
+		</HorizontalLayout>
+	</MediaVideoIconLayout>
+
+	<!--多媒体音乐list-->
+	<MediaAudioListLayout name="media_audio_list" left="0" right="0" height="40">
+		<VirtualIconButton name="icon_background_button" left="0" top="0" right="0" bottom="1"
+			backgroundpushedimage="common/list_item_selected_bg.png;;4,2,4,2" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundfocusimage="common/list_item_selected_bg.png;;4,2,4,2" backgroundtransparent="true" />
+		<Control left="25" right="25" top="39" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+		<CheckBox name="audio_list_item_check" left="25" top="13" width="20" height="14" imagewidth="14" imagelist="common/checkbox_list.png" imagelistuistatus="disable" backgroundimagelist="common/checkbox_list_bg.png"
+			backgroundimagelistuistatus="disable" backgroundtransparent="true" />
+		<ImageViewer name="audio_list_playing" contentimage="audio_playing%1d.png;;" imageidbegin="1" imageidend="5" interval="300" left="42" top="15" width="10" height="10" backgroundtransparent="true" visible="false"/>
+		<HorizontalLayout left="52" right="0" top="0" bottom="0" >
+			<Label name="media_audio_name" hittest="false" top="11" width="200" textcolor="#656565" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder width="3" />
+			<Control name="media_audio_playing" hittest="false" width="17"  imagepadding="0,11,0,12" backgroundtransparent="true"/>
+			<PlaceHolder width="61" />
+			<Label name="media_audio_artist" hittest="false" top="10" width="130" textcolor="#656565" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder width="1" />
+			<Label name="media_audio_album" hittest="false" top="10" width="160" textcolor="#656565" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder width="1" />
+			<Label name="media_audio_duration" hittest="false" top="10" width="75" textcolor="#656565" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder width="1" />
+			<Label name="media_audio_mime" hittest="false" top="10" width="55" right="0" textcolor="#656565" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder width="1" />
+			<Label name="media_audio_size" hittest="false" top="10" width="75" right="0" textcolor="#656565" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder width="1" />
+		</HorizontalLayout>
+		<HorizontalLayout name="media_audio_ring_type_bar" left="230" width="100" top="0" bottom="0" >
+			<Control name="media_audio_ring_type_5" hittest="false" width="17" imagepadding="0,11,0,12" backgroundtransparent="true"/>
+			<PlaceHolder width="3" />
+			<Control name="media_audio_ring_type_4" hittest="false" width="17" imagepadding="0,11,0,12" backgroundtransparent="true"/>
+			<PlaceHolder width="3" />
+			<Control name="media_audio_ring_type_3" hittest="false" width="17" imagepadding="0,11,0,12" backgroundtransparent="true"/>
+			<PlaceHolder width="3" />
+			<Control name="media_audio_ring_type_2" hittest="false" width="17" imagepadding="0,11,0,12" backgroundtransparent="true"/>
+			<PlaceHolder width="3" />
+			<Control name="media_audio_ring_type_1" hittest="false" width="17" imagepadding="0,11,0,12" backgroundtransparent="true"/>
+		</HorizontalLayout>
+	</MediaAudioListLayout>
+
+	<!--多媒体便签title信息-->
+	<Layout name="media_note_title" left="0" right="0" height="35">
+		<Button name="media_title_background" left="0" top="0" right="0" bottom="0" showidchand="false" backgroundtransparent="true"/>
+		<Control name="media_note_title_top_line" left="0" right="0" top="0" height="1" hittest="false"  backgroundimage="common_line_horizontal.png" backgroundtransparent="true" />
+		<HorizontalLayout left="15" top="10" right="0" bottom="7">
+			<CheckBox name="media_title_sel_all" defaultnodename="common_controls:checkbox_style" width="16" imagepadding="0,2,0,2"/>
+			<PlaceHolder width="10" />
+			<Control width="17" backgroundimage="note_list_fld.png" backgroundtransparent="true" />
+			<PlaceHolder width="10" />
+			<Label name="title" textcolor="#333333" width="300" autosize="true" font="bold_12" />
+			<PlaceHolder width="2" />
+			<Label name="total" textcolor="#ABABAB" padding="0,1,0,0" width="100" autosize="true" font="songti_12" textcolor="#7f7f7f"/>
+			<PlaceHolder />
+			<CheckBox name="media_title_collapse" switchcheck="true" width="10" imagewidth="10" imagepadding="0,6,0,6" imagelist="common_arrow_down2.png" backgroundimagelist="common_arrow_up2.png" />
+			<PlaceHolder width="20" />
+		</HorizontalLayout>
+		<Control name="media_note_title_bottom_line" left="0" right="0" top="34" height="1" hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true" />
+	</Layout>
+
+	<!--多媒体便签list-->
+	<MediaAudioListLayout name="media_note_list" left="0" right="0" height="35">
+		<VirtualIconButton name="icon_background_button" left="0" top="0" right="0" bottom="0"
+			backgroundpushedimage="common/list_item_selected_bg.png;;4,2,4,2" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundfocusimage="common/list_item_selected_bg.png;;4,2,4,2" backgroundtransparent="true" />
+        <Control name="media_note_list_line" left="40" right="20" top="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+		<CheckBox name="note_list_item_check" left="40" top="10" width="20" height="14" imagewidth="14" imagelist="common/checkbox_list.png" imagelistuistatus="disable" backgroundimagelist="common/checkbox_list_bg.png"
+			backgroundimagelistuistatus="disable" backgroundtransparent="true" />
+		<HorizontalLayout left="62" right="0" top="0" bottom="0" >
+			<Label name="media_note_snippet" hittest="false" top="10" width="150" textcolor="#656565" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder />
+			<Layout width="11">
+				<Control name="media_note_stick" left="0" top="13" width="12" height="12" hittest="false" backgroundimage="note_stick.png" backgroundtransparent="true" visible="false" />
+			</Layout>
+			<placeHolder width="10" />
+			<Layout width="8">
+				<Control name="media_note_color" left="0" top="14" width="8" height="8" hittest="false" backgroundtransparent="true" />
+			</Layout>
+			<placeHolder width="7" />
+			<Label name="media_note_date" hittest="false" top="10" width="40" textcolor="#4c4c4c" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder width="20" />
+		</HorizontalLayout>
+        <Control name="media_note_list_bottom_line" left="0" right="0" top="34" height="1" hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"visible="false" />
+	</MediaAudioListLayout>
+    
+    <MediaAudioListLayout name="media_note_no_title_list" left="0" right="0" height="35">
+		<VirtualIconButton name="icon_background_button" left="0" top="0" right="0" bottom="0"
+			backgroundpushedimage="common/list_item_selected_bg.png;;4,2,4,2" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundfocusimage="common/list_item_selected_bg.png;;4,2,4,2" backgroundtransparent="true" />
+        <Control name="media_note_list_line" left="0" right="0" top="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+		<CheckBox name="note_list_item_check" left="15" top="10" width="20" height="14" imagewidth="14" imagelist="common/checkbox_list.png" imagelistuistatus="disable" backgroundimagelist="common/checkbox_list_bg.png"
+			backgroundimagelistuistatus="disable" backgroundtransparent="true" />
+		<HorizontalLayout left="47" right="0" top="0" bottom="0" >
+			<Label name="media_note_snippet" hittest="false" top="10" width="165" textcolor="#656565" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder />
+			<Layout width="11">
+				<Control name="media_note_stick" left="0" top="13" width="12" height="12" hittest="false" backgroundimage="note_stick.png" backgroundtransparent="true" visible="false" />
+			</Layout>
+			<placeHolder width="10" />
+			<Layout width="8">
+				<Control name="media_note_color" left="0" top="14" width="8" height="8" hittest="false" backgroundtransparent="true" />
+			</Layout>
+			<placeHolder width="7" />
+			<Label name="media_note_date" hittest="false" top="10" width="40" textcolor="#4c4c4c" align="left,venter" font="12" endellipsis="true" backgroundtransparent="true"/>
+			<PlaceHolder width="20" />
+		</HorizontalLayout>
+        <Control name="media_note_list_bottom_line" left="0" right="0" top="34" height="1" hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true" visible="false" />
+	</MediaAudioListLayout>
+
+	<!--restore collison app icon-->
+	<Layout name="restore_collison_app_icon" backgroundtransparent="true" width="100" height="100" >
+		<VirtualIconButton name="icon_background_button" left="20" top="15" width="65" height="65" align="center,venter" backgroundimage="download/default_app_icon.png" backgroundtransparent="true" background_image_padding="0,0,0,0"/>
+        <HorizontalLayout left="20" top="85" width="80" height="15">
+		    <CheckBox name="collison_app_icon_checkbox" left="0" top="0" width="80" height="15" imagewidth="14" spacebetweenimageandtext="3" textcolor="#191919" font="songti_12" align='left,venter' endellipsis="true"
+    			imagelist="common/checkbox_list.png" imagelistuistatus="disable" backgroundimagelist="common/checkbox_list_bg.png" backgroundimagelistuistatus="disable" backgroundtransparent="true"/>
+        </HorizontalLayout>
+	</Layout>
+
+    <!--便签夹选择-->
+    <Layout name="note_fld_layout" left="0" top="0" width="300" height="35" >
+        <CheckBox name="check_box" left="23" top="9" width="16" defaultnodename="common_controls:radiobox_style"/>
+        <Label name="fld_name" left="44" top="0" width="256" height="35" font="14" align="left,venter" textcolor="#000000" />
+    </Layout>
+
+    <!--便签夹编辑-->
+    <Layout name="note_fld_edit_layout" left="0" top="0" width="300" height="35" >
+        <CheckBox name="check_box" left="23" top="9" width="16" defaultnodename="common_controls:radiobox_style"/>
+        <Layout left="44" top="0" width="246" height="35" backgroundtransparent="true" backgroundimage="输入框.png;;2,2,2,2">
+            <RichEdit name="note_fld_edit_inner" left="0" top="2" align="venter" font="12" width="100" height="35" backgroundtransparent="true" placestring="  创建便签夹" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" textlimit="256" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>
+        </Layout>
+    </Layout>
+
+	<CheckBox name="normal_checkbox" imagewidth="31" backgroundimage="app_checkbox_1.png" backgroundnormalimage="app_checkbox_1.png" backgroundhotimage="app_checkbox_1.png" backgroundpushedimage="app_checkbox_1.png"
+		normalimage="app_checkbox_2.png" hotimage="app_checkbox_2.png" pushedimage="app_checkbox_2.png" backgroundtransparent="true" left="165" top="145" width="31" height="18" switchcheck="true"/>
+    <DecorateButton name="device_space_button" backgroundtransparent="true" width="230" height="46">
+        <VerticalLayout right="0" bottom="0" align="near">
+            <Label name="text" height="18" font="14" textcolor="#6695EB" align="left,venter"/>
+            <PlaceHolder height="5" />
+            <VerticalLayout name="show_progress"  height="15">
+				<PlaceHolder  height="4" />
+				<HorizontalLayout  height="10">
+					<Layout name="capability_layout" >
+                    <Control name="space_bg" width="210" height="10" backgroundimage="common_progress_bk.png;;4,4,4,4" backgroundtransparent="true" />
+                    <Control name="space_m" width="1" height="9" backgroundimage="common_progress_deep_blue.png;;4,4,4,4" backgroundtransparent="true" />
+					</Layout>
+					<PlaceHolder width="5" />
+				</HorizontalLayout>
+			</VerticalLayout>
+            <HorizontalLayout name="show_info" height="18" visible="false">
+                <Label text="可用" width="30" font="12" textcolor="#7e7e7e" align="left,venter" autosize="true"/>
+                <Label name="available_space" width="40" oritext="%.1lfG" text="0G" font="bold_12" textcolor="#7e7e7e" align="left,venter" />
+				<Label width="1" text="|" font="bold_12" textcolor="#7e7e7e" align="center,venter" />
+                <PlaceHolder width="5"/>
+				<Label text="共" width="15" font="12" textcolor="#7e7e7e" align="left,venter" autosize="true"/>
+                <Label name="total_space" width="40" oritext="%.1lfG" text="0G" font="bold_12" textcolor="#7e7e7e" align="left,venter"/>
+            </HorizontalLayout>
+        </VerticalLayout>
+    </DecorateButton>
+	<DecorateButton name="device_space_button_ex" backgroundtransparent="true" width="160" height="46">
+        <VerticalLayout right="0" bottom="0" align="near">
+		    <HorizontalLayout name="show_info" height="18">
+                <Label name="text"  width="67" font="14" textcolor="#6695EB" align="right,venter" />
+				<Label text="可用" width="30" font="12" textcolor="#7e7e7e" align="right,venter" autosize="true"/>
+                <Label name="available_space" width="45" oritext="%.1lfG" text="0G" font="bold_12" textcolor="#7e7e7e" align="left,venter" />
+				<Label width="1" text="|" font="bold_12" textcolor="#7e7e7e" align="center,venter" />
+                <PlaceHolder width="5"/>
+				<Label text="共" width="15" font="12" textcolor="#7e7e7e" align="left,venter" autosize="true"/>
+                <Label name="total_space" width="45" oritext="%.1lfG" text="0G" font="bold_12" textcolor="#7e7e7e" align="left,venter"/>
+            </HorizontalLayout>
+            <PlaceHolder height="5" />
+            <VerticalLayout name="show_progress"  height="15">
+				<PlaceHolder  height="4" />
+				<HorizontalLayout  height="10">
+					<Layout name="capability_layout" >
+                    <Control name="space_bg" width="140" height="10" backgroundimage="common_progress_bk.png;;4,4,4,4" backgroundtransparent="true" />
+                    <Control name="space_m" width="1" height="9" backgroundimage="common_progress_deep_blue.png;;4,4,4,4" backgroundtransparent="true" />
+					</Layout>
+					<PlaceHolder width="5" />
+				</HorizontalLayout>
+			</VerticalLayout>
+        </VerticalLayout>
+    </DecorateButton>
+    <DecorateButton name="main_mihome_button" width="156" height="80">
+        <Layout right="0" bottom="0">
+            <Button name="button" backgroundtransparent="true" right="0" bottom="0" focuspriority="true"/>
+            <VerticalLayout left="0" top="44" height="14" right="0">
+                <Label name="text" text="无设备" font="bold_12" textcolor="#888888" texthotcolor="#FFFFFF" textpushedcolor="#FFFFFF" textfocuscolor="#FFFFFF" autosize="true" maxwidth="150" hittest="false" align="center,top" />
+            </VerticalLayout>
+        </Layout>
+    </DecorateButton>
+    <DecorateButton name="main_download_indicate_button" width="365" height="30">
+        <HorizontalLayout right="0" bottom="0">
+            <Label name="content" font="12" textcolor="#999999" align="left,venter" autosize="true" maxwidth="120" height="18" endellipsis="true" />
+            <PlaceHolder width="2" />
+            <layout width="120" height="11">
+                <Layout name="progress_bar" right="0" bottom="0">
+                    <Control name="progress_bar_bg" width="120" height="6" top="3" backgroundimage="download/progress_bar_bg.png;;4,0,4,0" backgroundtransparent="true" />
+                    <Control name="progress_bar_m" width="1" height="6" top="3" backgroundimage="download/progress_bar.png;;4,0,4,0" backgroundtransparent="true" visible="false" />
+                    <Control name="progress_bar_m_error" width="1" height="6" top="3" backgroundimage="download/error_progress_bar.png;;4,0,4,0" backgroundtransparent="true" visible="false" />
+                </Layout>
+                <ProgressBarSalon name="salone_bar" width="120" height="6" top="3" backgroundimage="common/salon_bar_bg.png" aniimage="common/salon_bar.png" backgroundtransparent="true" visible="false" />
+            </layout>
+            <PlaceHolder width="5" />
+            <label name="title" text=" " autosize="true" maxwidth="65" font="12" textcolor="#999999" />
+            <PlaceHolder width="5" />
+            <Control backgroundimage="common_line_vertical.png" width="1" height="20" backgroundtransparent="true"/>
+            <PlaceHolder width="7" />
+            <Control name="dl_icon" width="16" height="16" backgroundtransparent="true" />
+            <PlaceHolder width="5" />
+            <label name="task_count" text="0" font="12" textcolor="#6695EB" autosize="true" maxwidth="20" />
+        </HorizontalLayout>
+    </DecorateButton>
+	<ContactListItem name="contact_list_item" hittest="true" backgroundpushedimage="common/list_item_selected_bg.png;;4,2,4,2" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2">
+		<Control name="contact_list_item_selected_bg"  hittest="false" visible="false" backgroundtransparent="true" backgroundimage="common/list_item_selected_bg.png;;4,2,4,2"  hittest="false" right="0" bottom="0"/>
+		<Control left="20" right="20" top="59" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
+		<HorizontalLayout right="0" bottom="0" >
+			<PlaceHolder width="20" />
+			<HorizontalLayout width="70" >
+                <CheckBox name="contact_list_item_check" width="14" defaultnodename="common_controls:checkbox_style"/>
+				<PlaceHolder width="15"/>
+				<Layout width="46" height="40">
+                    <Control name="contact_list_item_icon"  left="0" top="0" hittest="false" backgroundtransparent="true" backgroundimage="common/account_icon.png" width="40" height="40" />
+				</Layout>
+				<PlaceHolder />
+			</HorizontalLayout>
+			<Layout width="200" height="60" hittest="false">
+				<Label name="contact_list_item_title"  hittest="false" left="2" top="5" right="0" bottom="20" font="default" textcolor="#191919" align="left,venter"  endellipsis="true" backgroundtransparent="true"/>
+				<Label name="contact_list_item_info"  hittest="false" left="2" top="27" right="0" bottom="10" font="arial_12" textcolor="#999999" align="left,venter" endellipsis="true" backgroundtransparent="true"/>
+			</Layout>
+		</HorizontalLayout>
+	</ContactListItem>
+
+    <!-- 30是默认值，高度根据text内容自动调整 -->
+    <Layout name="sms_dialogue_send_item" width="400" height="30" hittest="true" height='40'>
+        <Layout right="0" bottom="0" padding="0,0,10,0">
+            <HorizontalLayout name="item_control_button_layout" left="0" right="0" top="0" height="20" visible="false">
+                <PlaceHolder />
+                <Button name="sms_copy" imagelist="sms/copy.png" imagelistuistatus="disable" width="17" height="17" ignore_mouse_event="true" />
+                <PlaceHolder width="5" />
+                <Button name="sms_delete" imagelist="sms/delete.png" imagelistuistatus="disable" width="17" height="17" ignore_mouse_event="true" />
+                <PlaceHolder width="20" />
+            </HorizontalLayout>
+            <VerticalLayout left="0" top="21" right="12" bottom="0" align="far">
+                <HorizontalLayout name="sender_content_hor_layout" height="40" >
+                    <Label name="tip" font="12" autosize="true" text="发送中" maxwidth="100" align="right,venter" visible="false" padding="0,0,5,0" />
+                    <Button name="retry_send_message" font="underline_12" textcolor="#DD0000" autosize="true" text="重试" maxwidth="50" height="18" backgroundtransparent="true" align="right" visible="false"/>
+                    <Control name="icon" width="16" height="16" backgroundimage="common_icon_waring.png" backgroundtransparent="true" visible="false" padding="0,0,5,0"/>
+                    <PlaceHolder width="5" />
+                    <Label name="text" autosize='true' autoheight="true" maxwidth='380' height='40' font="12" hittest="false" padding="5,10,10,10" backgroundimage="sms/send_bg.png;;2,15,12,2" textcolor="#FFFFFF"/>
+                    <Label name="text_net" autosize='true' autoheight="true" maxwidth='380' height='40' font="12" hittest="false" padding="5,10,10,10" backgroundimage="sms/net_send_bg.png;;2,15,12,2" textcolor="#FFFFFF" visible="false"/>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Layout>
+    </Layout>
+
+    <!-- 30是默认值，高度根据text内容自动调整 -->
+    <Layout name="sms_dialogue_receive_item" width="400" height="30" hittest="true">
+        <Layout right="0" bottom="0" padding="10,0,0,0">
+            <HorizontalLayout name="item_control_button_layout" left="0" right="0" top="0" height="20" visible="false">
+                <PlaceHolder width="15" />
+                <Button name="sms_copy" imagelist="sms/copy.png" imagelistuistatus="disable" width="17" height="17" ignore_mouse_event="true" />
+                <PlaceHolder width="5" />
+                <Button name="sms_delete" imagelist="sms/delete.png" imagelistuistatus="disable" width="17" height="17" ignore_mouse_event="true" />
+                <PlaceHolder />
+            </HorizontalLayout>
+            <VerticalLayout left="0" top="21" right="0" bottom="0" align="near">
+                <Label name="text" autosize='true' autoheight="true" maxwidth='380' height='40' font="12" align="left" hittest="false" padding="12,10,0,10" backgroundimage="sms/receive_bg.png;;12,15,2,2"/>
+            </VerticalLayout>
+        </Layout>
+    </Layout>
+
+    <Layout name="sms_dialogue_title" width="200" height="40">
+        <Label name="content" autosize="true" maxwidth='200' left="0" top="20" right="0" bottom="0" font='12' textcolor='#B1B1B1'/>
+    </Layout>
+
+    <!-- 宽度自适应 -->
+    <Layout name="sms_dialogue_recipient" width="100" height="40">
+        <HorizontalLayout right="0" bottom="0">
+            <Control name="recipient_icon" backgroundtransparent="true" width="40" height="40" backgroundimage="common/account_icon.png" hittest="false" />
+            <PlaceHolder width="5" />
+            <Layout width="135">
+                <VerticalLayout name="familiar_address" left="0" top="0" right="0" bottom="0" align="near">
+                    <Label name="recipient_name" autosize="true" maxwidth="120" height="20" endellipsis="true"/>
+                    <PlaceHolder height="2" />
+                    <HorizontalLayout height="14">
+                        <Label name="address" font="arial_12" autosize="true" maxwidth="120" height="14" textcolor="#3d3d3d" hittest="false" endellipsis="true"/>
+                        <Label name="no_number" text="无号码" font="12" width="120" height="16" textcolor="#fb5a45" visible="false" />
+                        <PlaceHolder width="2" />
+                        <Button name="address_show_more" width="11" height="11" backgroundimage="sms/pull_down.png" backgroundtransparent="true" visible="false"/>
+                    </HorizontalLayout>
+                </VerticalLayout>
+                <Label name="stranger_address" left="0" top="10" right="0" bottom="0" autosize="true" maxwidth="140" textcolor="#3d3d3d" height="20" visible="false" endellipsis="true"/>
+            </Layout>
+        </HorizontalLayout>
+    </Layout>
+
+    <Layout name="sms_dialogue_recipient_input" width="165" height="27" backgroundimage="app_search_bg.png;;2,2,2,2" backgroundtransparent="true" hittest="true">
+        <RichEdit name="address_input" left="1" top="1" right="1" bottom="1" font="arial_12" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" wanttab="false" wantreturn="false" wantctrlreturn="false" rich="false" backgroundtransparent="true" align='left' readonly="false" textlimit="10000" placestring="输入收信人" placetextcolor="#8d8d8d"/>
+    </Layout>
+
+    <Layout name="sms_dialogue_recipient_deletable" width="165" height="65">
+        <Layout left="0" top="0" right="0" bottom="0" />
+        <HorizontalLayout right="0" bottom="0" padding="5,12,1,12">
+            <Control name="recipient_icon" backgroundtransparent="true" width="40" height="40" backgroundimage="common/account_icon.png" hittest="false" />
+            <PlaceHolder width="3" />
+            <Layout width="117">
+                <VerticalLayout name="familiar_address" right="0" height="40" align="near" padding="0,5,0,0">
+                    <Label name="recipient_name" autosize="true" maxwidth="85" height="18" padding="0,0,5,0" hittest="false" endellipsis="true"/>
+                    <HorizontalLayout height="14">
+                        <Label name="address" font="arial_12" autosize="true" maxwidth="104" height="14" textcolor="#999999" hittest="false" />
+                        <Label name="no_number" text="无号码" font="12" width="109" height="16" textcolor="#fb5a45" visible="false" />
+                        <Button name="address_show_more" width="11" height="11" backgroundimage="sms/pull_down.png" backgroundtransparent="true" visible="false"/>
+                        <PlaceHolder width="2" />
+                    </HorizontalLayout>
+                </VerticalLayout>
+                <Label name="stranger_address" font="arial_12" left="0" top="10" right="0" bottom="0" autosize="true" maxwidth="120" height="14" visible="false" hittest="false" endellipsis="true"/>
+            </Layout>
+        </HorizontalLayout>
+        <Control name="remove_recipient" left="3,false" top="2" width="18" height="18" backgroundtransparent="true" backgroundimage="sms/remove_recipient.png;4,4,4,4;" hittest="false" visible="false" />
+    </Layout>
+
+    <Layout name="recipient_info" width="217" height="35">
+        <HorizontalLayout right="0" bottom="5">
+            <PlaceHolder width="5" />
+            <Control name="icon" backgroundtransparent="true" width="40" height="40" backgroundimage="common/account_icon.png" hittest="false" />
+            <PlaceHolder width="2" />
+            <Label name="recipient_name" autosize="true" maxwidth="60" height="29" padding="0,0,2,0"/>
+            <Label name="address" autosize="true" maxwidth="120" height="29"/>
+        </HorizontalLayout>
+    </Layout>
+
+    <!--contact ui controls-->
+    <!--detail & edit-->
+    <Layout name="contact_detail_space_line" left="0" top="0" width="515" height="10" />
+    <Layout name="contact_detail_icon" left="40" top="0" width="515" height="90">
+        <Control name="contact_detail_icon_inner"  left="0" top="0" width="90" height="90" hittest="false" backgroundtransparent="true" backgroundimage="common/account_icon_big.png" />
+    </Layout>
+    <Layout name="contact_detail_name" left="40" top="0" width="515" height="40">
+        <HorizontalLayout left="0" top="0" height="25" width="515">
+            <Control name="contact_detail_name_mark"  left="0" top="0" width="13" height="12" hittest="false" backgroundtransparent="true" backgroundimage="app_score_bg.png;0,0,13,12;" align="venter" visible="false" />
+            <Label name="contact_detail_name_title" text="Bat Man" width='515' height="20" left="0" top="0" right="0" bottom="0" font='16' textcolor='#000000' align="left,venter"/>
+        </HorizontalLayout>
+        <Label name="contact_detail_name_desc" text="Xiaomi | Dev" width='515' height="15" left="0" top="25" right="0" bottom="0" font='12' textcolor='#B1B1B1' align="left,venter"/>
+    </Layout>
+    <Layout name="contact_detail_phone" left="40" top="0" width="515" height="35">
+        <Label name="contact_detail_phone_title" width='515' height="20" left="0" top="0" right="0" bottom="0" font='14' textcolor='#000000' align="left,venter"/>
+        <Label name="contact_detail_phone_desc" width='515' height="15" left="0" top="20" right="0" bottom="0" font='12' textcolor='#B1B1B1' align="left,venter"/>
+    </Layout>
+    <Layout name="contact_detail_note" left="40" top="0" width="515" height="105">
+        <RichEdit name="contact_detail_note_fld" wordwrap="true" font="12" left="0" top="0" height="105" width="300" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="true" wanttab="true" wantreturn="false" wantctrlreturn="true" rich="false" backgroundtransparent="true" visible="true" align='venter' readonly="true" />
+    </Layout>
+    <Layout name="contact_detail_richedit" left="90" top="0" width="354" height="35" backgroundtransparent="true" backgroundimage="输入框.png;;2,2,2,2">
+        <DecorateButton name="contact_detail_edit_btn" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundtransparent="true" left="0" top="0" width="90" height="35">
+            <VerticalLayout name="bg" left="12" top="2" width="60" height="30" >
+                <Label name="contact_detail_edit_btn_text" text="移动" left="12" width="60" height="30" font="12" backgroundhotcolor="#656565" textcolor="#4e4e4e" textnormalcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" textdisabledcolor="#cccccc"/>
+            </VerticalLayout>
+            <Button name="contact_detail_edit_pulldown_btn_inner" left="61" top="14" width="11" height="5" backgroundtransparent="true" imagelist="contact_edit_arrow_down.png" imagelistuistatus="disable" align="venter"/>
+        </DecorateButton>
+        <Control left="90" top="0" width="1" height="35" backgroundimage="common/vert_seperate_line.png" backgroundtransparent="true" />
+        <RichEdit name="contact_detail_richedit_inner" left="92" top="2" align="venter" font="12" width="230" height="35" backgroundtransparent="true" placestring="请输入号码" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" textlimit="256" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>
+        <Button name="contact_detail_edit_clear_btn" left="325" top="9" width="16" height="16" backgroundtransparent="true" imagelist="bro/auto_backup_close.png" imagepadding="0,0,0,0"/>
+    </Layout>
+    <Layout name="contact_detail_edit_name" left="90" top="0" width="354" height="105" backgroundtransparent="true" >
+        <Control name="contact_detail_edit_name_icon"  left="0" top="0" width="90" height="90" hittest="false" backgroundtransparent="true" backgroundimage="common/account_icon_big.png" />
+        <Layout left="120" top="0" align="venter" font="12" width="234" height="35" backgroundimage="输入框.png;;2,2,2,2" backgroundtransparent="true">
+            <RichEdit name="contact_detail_edit_name_display" left="0" top="2" align="venter" font="12" width="234" height="35" backgroundtransparent="true" placestring="姓名" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>
+        </Layout>
+        <Layout left="120" top="35" align="venter" font="12" width="234" height="35" backgroundimage="输入框.png;0,1,486,30;2,2,2,2" backgroundtransparent="true">
+            <RichEdit name="contact_detail_edit_name_company" left="0" top="2" align="venter" font="12" width="234" height="35" backgroundtransparent="true" placestring="公司" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>
+        </Layout>
+        <Layout left="120" top="70" align="venter" font="12" width="234" height="35" backgroundimage="输入框.png;0,1,486,30;2,2,2,2" backgroundtransparent="true">
+            <RichEdit name="contact_detail_edit_name_title" left="0" top="2" align="venter" font="12" width="234" height="35" backgroundtransparent="true" placestring="职位" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>
+        </Layout>
+        <!--<RichEdit name="contact_detail_edit_name_display" left="120" top="0" align="venter" font="12" width="234" height="35" backgroundimage="输入框.png;;2,2,2,2" backgroundtransparent="true" placestring="姓名" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>-->
+        <!--<RichEdit name="contact_detail_edit_name_company" left="120" top="35" align="venter" font="12" width="234" height="35" backgroundimage="输入框.png;0,1,486,30;2,2,2,2" backgroundtransparent="true" placestring="公司" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>-->
+        <!--<RichEdit name="contact_detail_edit_name_title" left="120" top="70" align="venter" font="12" width="234" height="35" backgroundimage="输入框.png;0,1,486,30;2,2,2,2" backgroundtransparent="true" placestring="职位" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" textlimit="30" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>-->
+    </Layout>
+    <Layout name="contact_detail_edit_add_group" left="90" top="0" width="354" height="35" backgroundtransparent="true" backgroundimage="输入框.png;;2,2,2,2">
+        <DecorateButton name="contact_detail_edit_add_group_btn" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundtransparent="true" left="0" top="0" width="354" height="35">
+            <Label name="contact_detail_edit_add_group_btn_text" text="群组" left="12" top="2" width="300" height="30" align="venter" font="12" textcolor="#4e4e4e" textnormalcolor="#656565" texthotcolor="#000000" textpushedcolor="#000000" textdisabledcolor="#cccccc"/>
+            <Button name="contact_detail_edit_add_group_btn_inner" left="325" top="14" width="11" height="5" backgroundtransparent="true" imagelist="contact_edit_arrow_down.png" imagelistuistatus="disable" align="venter"/>
+        </DecorateButton>
+    </Layout>
+    <Layout name="contact_detail_edit_more" left="90" top="0" width="354" height="35" backgroundtransparent="true" backgroundimage="输入框.png;;2,2,2,2">
+        <DecorateButton name="contact_detail_edit_more_btn" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundtransparent="true" left="0" top="0" width="354" height="35">
+            <Button name="contact_detail_edit_more_mark" left="136" top="9" width="16" height="16" hittest="false" backgroundtransparent="true" imagelist="plus.png" />
+            <Label name="contact_detail_edit_more_btn_text" text="添加更多项" left="154" top="2" width="100" height="30" align="venter" font="12" textcolor="#4e4e4e" textnormalcolor="#656565" texthotcolor="#000000" textpushedcolor="#000000" textdisabledcolor="#cccccc"/>
+            <Button name="contact_detail_edit_more_btn_inner" left="325" top="14" width="11" height="5" backgroundtransparent="true" imagelist="contact_edit_arrow_down.png" imagelistuistatus="disable" align="venter"/>
+        </DecorateButton>
+    </Layout>
+    <Layout name="contact_detail_edit_note" left="90" top="0" width="354" height="105" backgroundtransparent="true" backgroundimage="输入框.png;;2,2,2,2" >
+        <RichEdit name="contact_detail_edit_note_fld" wordwrap="true" font="12" left="0" top="0" height="105" width="354" backgroundtransparent="true" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="true" wanttab="true" wantreturn="false" wantctrlreturn="true" rich="false" visible="true" align='venter' readonly="false" />
+    </Layout>
+    <!--menu-->
+    <Layout name="contact_group_select_menu_account_layout" left="0" top="0" width="300" height="35">
+        <Layout name="contact_group_select_menu_account_btn" left="0" top="0" width="300" height="35" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundtransparent="true">
+            <Label name="account_type" left="0" top="0" width="100" height="34" padding="8,0,0,0" text="小米账号" font="12" align="left,venter" textcolor="#4e4e4e" textnormalcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" textdisabledcolor="#cccccc" />
+            <Label name="account_name" left="100" top="0" width="200" height="34" padding="0,0,8,0" text="110119" font="12" align="right,venter" textcolor="#4e4e4e" textnormalcolor="#656565" texthotcolor="#191919" textpushedcolor="#191919" textdisabledcolor="#cccccc" />
+            <Control left="10" top="34" width="280" height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+        </Layout>
+    </Layout>
+    <Layout name="contact_group_select_menu_group_layout" left="0" top="0" width="300" height="35" >
+        <DecorateButton name="contact_group_select_menu_group_btn" left="0" top="0" width="300" height="35" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundtransparent="true">
+            <Label name="group_name" left="0" top="0" width="300" height="35" padding="23,0,0,0" text="同学" font="14" align="left,venter" textcolor="#000000" textnormalcolor="#191919" texthotcolor="#000000" textpushedcolor="#191919" textdisabledcolor="#cccccc" />
+        </DecorateButton>
+        <Layout left="10" top="13" width="11" height="8">
+            <Control name="check" left="0" top="0" width="11" height="8" hittest="false" backgroundtransparent="true" backgroundimage="对号.png" />
+        </Layout>
+    </Layout>
+    <!--group edit-->
+    <Layout name="contact_group_edit_account_layout" left="0" top="0" width="300" height="35">
+        <Label name="account_type" left="0" top="0" width="100" height="34" padding="8,0,0,0" text="小米账号" font="12" align="left,venter" textcolor="#4e4e4e" />
+        <Label name="account_name" left="100" top="0" width="200" height="34" padding="0,0,8,0" text="110119" font="12" align="right,venter" textcolor="#4e4e4e" />
+        <Control left="10" top="34" width="280" height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" />
+    </Layout>
+    <Layout name="contact_group_edit_group_layout" left="0" top="0" width="300" height="35" >
+        <CheckBox name="check_box" left="23" top="9" width="16" defaultnodename="common_controls:checkbox_style"/>
+        <Label name="group_name" left="44" top="0" width="256" height="35" text="同学" font="14" align="left,venter" textcolor="#000000" />
+    </Layout>
+    <Layout name="contact_group_edit_richedit_layout" left="0" top="0" width="300" height="35" >
+        <Layout left="23" top="0" width="254" height="35" backgroundtransparent="true" backgroundimage="输入框.png;;2,2,2,2">
+            <RichEdit name="contact_group_edit_richedit_inner" left="0" top="2" align="venter" font="12" width="185" height="35" backgroundtransparent="true" placestring="  快速创建分组" placetextcolor="#8d8d8d" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" textlimit="256" wanttab="false"  multiline="false" wantreturn="false" readonly="false"/>
+            <!--<Control left="238" top="13" width="8" height="8" hittest="false" backgroundtransparent="true" backgroundimage="return.png" />-->
+            <Button name="contact_group_edit_richedit_btn" focusenable="false" text="创建" textcolor="#656565" font="12" left="189" top="0" width="65" height="35" imagelist="contact_group_create_btn.png" imagelistuistatus="disable" />
+        </Layout>
+    </Layout>
+
+    <DecorateButton name="new_message_content" width="350" height="130">
+        <Layout right="0" bottom="0">
+            <SmsRecipientList name="recipient_info" width="330" height="50" item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient'/>" input_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient_input'/>" delelable_item_desc="<Layout defaultnodename='common_controls:sms_dialogue_recipient_deletable'/>" hittest="true"/>
+            <Label name="text" left="8" top="51" right="10" height="75" />
+        </Layout>
+    </DecorateButton>
+
+    <Layout name="contact_list_bar_layout" width="320" height="35">
+        <Layout left="0" top="0" right="0" height="35" backgroundimage="media_title_bar.png" backgroundtransparent="true">
+            <HorizontalLayout name="contact_list_bar_hlayout" left="25" top="0" width="124" height="35">
+                <DecorateButton name="all_contact_list_btn" optiongroup="contact_client_title_group" width="110" height="35" backgroundtransparent="true" combineassingle="true">
+                    <Label name="all_contact_list_label_title" text="全部联系人(0)" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="center,venter" backgroundtransparent="true" autosize="true" maxwidth="110" height="35" left="0" focuspriority="true"/>
+                </DecorateButton>
+                <Button name="contact_group_menu_btn" width="14" height="12" backgroundtransparent="true" imagelist="main/pulldown.png" imagepadding="3,5,3,3" align="venter"/>
+            </HorizontalLayout>
+            <DecorateButton name="all_sms_list_btn" optiongroup="contact_client_title_group" left="155" top="0" width="120" height="35" backgroundtransparent="true" combineassingle="true">
+                <Label name="all_sms_list_label" text="短信记录(0)" font="12" textcolor="#656565" textfocuscolor="#FB5A45" texthotcolor="#191919" textpushedcolor="#FB5A45" align="center,venter" backgroundtransparent="true" autosize="true" maxwidth="120" height="35" left="0" focuspriority="true"/>
+                <Control name="sms_unread_flag" left="120" top="5" width="10" height="10" backgroundtransparent="true" backgroundimage="sms/unread_flag.png" visible="false" />
+            </DecorateButton>
+            <Button name="commu_refresh" font="12" left="280" top="10" width="15" height="14" imagelist="common_btn_refresh.png;'3,3,3,3'" imagelistuistatus="disable" textcolor="#656565" textdisabledcolor="#CCCCCC" align='center,venter'/>
+        </Layout>
+        <Layout left="0" top="33" right="0" height="2">
+            <SliderIndicator name="contact_client_top_sliderIndicator" backgroundimage="common_indicator_horizontal.png" sliderorign="horizontal" backgroundtransparent="false" left="0" height="2" right="0" />
+        </Layout>
+    </Layout>
+
+    <!-- 用于显示多个号码的下列窗口 -->
+    <DecorateButton name="recipient_address_info" width="165" height="30" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="common/list_item_selected_bg.png" backgroundtransparent="true" >
+        <HorizontalLayout right="15" bottom="0">
+            <PlaceHolder width="12" />
+            <Layout width="11">
+                <Control name="check" top="10" width="11" height="8" backgroundimage="对号.png" backgroundtransparent="true" visible="false" />
+            </Layout>
+            <PlaceHolder width="5" />
+            <Label name="address" autosize="true" maxwidth="120" height="20"/>
+        </HorizontalLayout>
+        <Control name="seperate_line" left="10" top="1,false" width="140" height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" visible="false" />
+    </DecorateButton>
+
+    <!-- 群发短信收信人控件 -->
+    <Layout name="mass_text_recipient_list" width="509" width="60">
+        <HorizontalLayout right="0" bottom="0">
+            <PlaceHolder width="12" />
+            <Control name="icon" backgroundtransparent="true" width="40" height="40" backgroundimage="common/account_icon.png" hittest="false" />
+            <PlaceHolder width="5" />
+            <Label name="text" autosize="true" maxwidth="345" height="16" endellipsis="true" />
+            <Label name="count_text" width="80" height="16" />
+        </HorizontalLayout>
+    </Layout>
+
+    <HorizontalLayout name="sim_list_layout" width="50" height="25" >
+        <Button name="sim_list_sim1" width="25" height="25" backgroundtransparent="true" imagelist="sms/sim1.png" imagelistuistatus="focus" focuspriority="true" optiongroup="sim_tool_panel" />
+        <Button name="sim_list_sim2" width="25" height="25" backgroundtransparent="true" imagelist="sms/sim2.png" imagelistuistatus="focus" focuspriority="true" optiongroup="sim_tool_panel" />
+    </HorizontalLayout>
+
+    <!-- 新建短信界面输入号码搜索联系人的结果Item -->
+    <DecorateButton name="search_recipient_item" width="180" height="40" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="common/list_item_selected_bg.png" backgroundtransparent="true">
+        <Control name="select_bg" visible="false" backgroundtransparent="true" backgroundimage="common/list_item_selected_bg.png"  hittest="false" right="0" bottom="0" />
+        <HorizontalLayout right="15" bottom="0">
+            <PlaceHolder width="12" />
+            <Layout width="153">
+                <Label name="name" autosize="true" height="20" textcolor="#191919" />
+                <Label name="address" left="0" top="20" font="12" autosize="true" height="20" textcolor="#999999" />
+            </Layout>
+        </HorizontalLayout>
+        <Control name="seperate_line" left="10" top="0,false" width="155" height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" visible="false" />
+    </DecorateButton>
+
+    <DecorateButton name="web_tab_item" optiongroup="web_tab_list_group" width="170" height="40" backgroundtransparent="false" backgroundfocuscolor="#FFFFFF" backgroundcolor="#F8F8F8" combineassingle="true" >
+        <Control name="left_border" left="0" top="0" width="1" height="40" backgroundtransparent="true" backgroundimage="common/vert_seperate_line.png" />
+        <Button name="icon" left="45" top="10" width="14" height="14" visible="false" backgroundtransparent="true" focuspriority="true" />
+        <Label name="title" text="" font="12" textcolor="#4B4B4B" textfocuscolor="#FF5215" texthotcolor="#191919" textpushedcolor="#FF5215" align="center,venter" backgroundtransparent="true" autosize="true" maxwidth="110" height="35" left="65" focuspriority="true"/>
+        <Control name="right_border" left="169" top="0" width="1" height="40" backgroundtransparent="true" backgroundimage="common/vert_seperate_line.png" />
+        <Control name="bottom_border" left="0" right="0" top="1,false" bottom="0" backgroundtransparent="true" backgroundimage="common/seperate_line.png" />
+    </DecorateButton>
+
+    <Layout name="web_tab_list" width="600" height="41">
+        <Layout left="0" top="0" right="0" height="4">
+            <SliderIndicator name="web_tab_slider" backgroundimage="web_tool_bar/tab_slider.png" sliderorign="horizontal" backgroundtransparent="true" left="0" height="4" right="0" />
+        </Layout>
+        <WebTabListControl name="web_tab_list_container" left="0" top="4" right="0" bottom="0" backgroundtransparent="true" >
+        </WebTabListControl>
+    </Layout>
+
+	<DecorateButton name="login_button" width="100" height="25" backgroundtransparent="true">
+	    <HorizontalLayout right="0" bottom="0">
+		    <Control name="login_icon" width="25" height="25" backgroundtransparent="true" backgroundimage="common/account_icon.png"/>
+			<PlaceHolder width="5" />
+			<Label name="login_text" autosize="true" height="18" text="请登陆" font="12" textcolor="#FFFFFF" backgroundtransparent="true" />
+		</HorizontalLayout>
+	</DecorateButton>
+    
+    <DecorateButton name="path_navigate_item" width="60" height="22" backgroundtransparent="true">
+        <HorizontalLayout right="0" bottom="0">
+            <Label name="name" height="18" autosize="true" textcolor="#7F7F7F" textfocuscolor="#333333" texthotcolor="#333333" textpushedcolor="#333333" backgroundtransparent="true" font="12" />
+        </HorizontalLayout>
+    </DecorateButton>
+    <DecorateButton name="path_navigate_item_seperator" width="22" height="22" backgroundtransparent="true" hittest="false">
+        <HorizontalLayout right="0" bottom="0" >
+            <PlaceHolder width="8" />
+            <Button name="seperator" width="6" height="11" backgroundtransparent="true" backgroundimage="filemanager/path_seperator.png"/>
+            <PlaceHolder width="8" />
+        </HorizontalLayout>
+    </DecorateButton>
+    <DecorateButton name="path_navigate_pulldown_list_item" width="180" height="30" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="common/list_item_selected_bg.png" backgroundtransparent="true" >
+        <HorizontalLayout right="0" bottom="0">
+            <PlaceHolder width="5" />
+            <Control name="path_icon" width="16" height="16" backgroundtransparent="true" backgroundimage="filemanager/folder.png"/>
+            <PlaceHolder width="5" />
+            <Label name="path_name" autosize="true" maxwidth="158" height="20" endellipsis="true"/>
+        </HorizontalLayout>
+        <Control name="seperate_line" left="10" top="1,false" width="140" height="1" backgroundimage="common/seperate_line.png" backgroundtransparent="true" visible="false" />
+    </DecorateButton>
+
+    <DecorateButton name="menu_item_decorate_button" width="200" height="26" backgroundtransparent="true" backgroundhotimage="common/list_item_hot_bg.png;;4,2,4,2" backgroundpushedimage="common/list_item_hot_bg.png;;4,2,4,2">
+        <HorizontalLayout right="0" bottom="0">
+            <HorizontalLayout name="check_layout" width="30" visible="false">
+                <PlaceHolder width="10" />
+                <Control name="check" width="11" height="8" hittest="false" backgroundimage="对号.png" backgroundtransparent="true" />
+            </HorizontalLayout>
+            <HorizontalLayout name="icon_layout" width="40" visible="false">
+                <PlaceHolder width="10" />
+                <Button name="icon" width="24" height="14" hittest="false" backgroundtransparent="true" />
+            </HorizontalLayout>
+            <HorizontalLayout name="blank_layout" width="20" />
+            <Label name="item_text" autosize="true" height="20" backgroundtransparent="true" textcolor="#636363" texthotcolor="#505050" textpushedcolor="#FF4808" text="" font="12" align='left,bottom'/>
+        </HorizontalLayout>
+    </DecorateButton>
+    
+    <DecorateButton name="forum_item_layout" width="120" height="25" backgroundtransparent="true" hittest="false">
+        <HorizontalLayout right="0" bottom="0">
+            <Label name="item_label" font="12" textcolor="#636363" autosize="true" />
+        </HorizontalLayout>
+    </DecorateButton>
+    
+    <DecorateButton name="about_item_button" width="180" height="25" backgroundtransparent="true">
+        <HorizontalLayout right="0" bottom="0">
+            <Button name="icon" width="28" height="18" />
+            <PlaceHolder width="6" />
+            <Label name="text" font="12" height="18" textcolor="#666666" texthotcolor="#232323" textpushedcolor="#FF4808" autosize="true" />
+        </HorizontalLayout>
+    </DecorateButton>
+	<ClipBoardListItem name="clipboard_list_item" hittest="true" backgroundtransparent="true">
+		<Layout name="clipboard_file_layout" left="0" top="0" right="0" bottom="0" >
+			<Layout left="0" top="0" right="20" bottom="10" backgroundimage="clipboard/item_bg.png;;12,15,2,2">
+				<Control left="25" top="15" width="37" height="43" backgroundimage="clipboard/fileicon.png" backgroundtransparent="true" hittest="false" />
+				<Label left="70" top="17" height="20" width="200" name="clipboard_filename" align="left,bottom"  endellipsis="true" hittest="false" font="12" textcolor="#2c333a" hittest="false" />
+				<Label left="70" top="37" height="20" width="200" name="clipboard_filesize" align="left,bottom"  endellipsis="true" hittest="false" font="12" textcolor="#2c333a" hittest="false" />
+				<Layout left="25" top="65" height="3" width="445" name="clipboard_progress" hittest="false">
+					<Control name="clipboard_progress_bg" width="445" height="3" backgroundcolor="#dedede" />
+					<Control name="clipboard_progress_m" width="1" height="3" backgroundcolor="#54c15b"/>
+				</Layout>
+				<Button name="clipboard_look_button" backgroundtransparent="true" left="400" top="27" width="29" height="29" imagelist="clipboard/look_button_list.png" imagelistuistatus="disable" hittest="true" focusenable="false"/>
+				<Button name="clipboard_del_button" backgroundtransparent="true" left="440" top="27" width="29" height="29" imagelist="clipboard/delete_button_list.png" imagelistuistatus="disable" hittest="true" focusenable="false"/>                    
+				<Button name="clipboard_cancel_button" backgroundtransparent="true" left="440" top="27" width="40" height="32" font="14" text="取消" textcolor="#4c4c4c" texthotcolor="#2c333a" textpushedcolor="#ff5114" align="left,bottom" hittest="true"/>                    
+			</Layout>
+		</layout>
+		<VerticalLayout name="clipboard_text_layout" left="0" top="0" right="0" bottom="0" align="near">
+            <Label name="clipboard_text_label" autosize='true' autoheight="true" maxwidth='493' height='40' font="12" align="left" hittest="false" padding="12,6,2,6" backgroundimage="sms/receive_bg.png;;12,15,2,2"/>
+			<PlaceHolder height="3" />
+			<Label name="send_result_label" padding="9,0,0,0" height="20" textcolor="#656565" hittest="false" font="12" align="left,bottom" />	
+		</VerticalLayout>
+	</ClipBoardListItem>
+</root>
+

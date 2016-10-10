@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window name="file_conflict_message_box" size="351,223" type="message_box" translucent="true" alphaborders="5,0,5,10">
+    <Layout right="0" bottom="0" backgroundimage="bro/bro_frame.png;;10,50,10,10" padding="5,0,5,10">
+		<VerticalLayout left="0" top="0" right="0" bottom="0">
+			<Title height="33" focusenable="false">
+				<PlaceHolder width="5" />
+				<Label name="dialog_title" text="导入文件" top="17" width="200" font="12" textcolor="#606060" align="left,venter" />
+				<PlaceHolder />
+				<Button name="dialog_close" width="14" height="14" backgroundtransparent="true" backgroundimage="messagebox_close.png" backgroundhotimage="messagebox_close2.png" backgroundpushedimage="messagebox_close3.png" />
+				<PlaceHolder width="5" />
+			</Title>
+			<PlaceHolder height="23" />
+			<VerticalLayout height="80">
+                <HorizontalLayout height="50">
+                    <PlaceHolder width="20" />
+                    <Control width="16" height="16" backgroundimage="common_icon_info.png" backgroundtransparent="true" />
+                    <Label name="dialog_text" oritext="%s已经有同名文件，请选择保存方式" width="300" font="14" textcolor="#3d3d3d" align="left,venter_multiline" backgroundtransparent="true" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                    <PlaceHolder width="35" />
+                    <CheckBox name="remeber_operate_type" text="为全部冲突执行此操作" defaultnodename="common_controls:checkbox_style" />
+                </HorizontalLayout>
+			</VerticalLayout>
+			<PlaceHolder />
+            <HorizontalLayout height="30" >
+                <placeHolder />
+                <Button name="dialog_button_1" width="80" text="覆盖" backgroundtransparent="true" textcolor="#3d3d3d" imagelist="common_btn.png;;5,5,5,5" imagelistuistatus="disable" />
+                <placeHolder width="5" />
+                <Button name="dialog_button_2" width="120" text="另存为新文件" backgroundtransparent="true" textcolor="#3d3d3d" imagelist="common_btn.png;;5,5,5,5" imagelistuistatus="disable" />
+                <placeHolder width="5" />
+                <Button name="dialog_button_3" width="80" text="跳过" backgroundtransparent="true" focusenable="false" textcolor="#fb5f45" texthotcolor="#fb5f45"  textpushedcolor="#ffffff" textdisabledcolor="#CCCCCC" imagelist="common/red_btn_list.png;;5,5,5,5" imagelistuistatus="disable" />
+                <placeHolder width="10" />
+            </HorizontalLayout>
+            <PlaceHolder height="10"/>
+		</VerticalLayout>
+	</Layout>
+</window>
