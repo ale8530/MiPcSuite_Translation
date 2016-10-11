@@ -1,4 +1,4 @@
-# MiPcSuite_Translation
+# Mi Pc Suite Translation
 
 This is a conversion project from Chinese to English for Mi Pc Suite.
 
