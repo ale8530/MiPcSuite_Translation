@@ -10,10 +10,10 @@ This is a conversion project from Chinese to English for Mi Pc Suite.
 
 3) Open Mi Pc Suite
 
-Collaborators:
+#Collaborators:#
 ale8530,
 Giannicoter,
 Michel Cognon
 
-Site:
+#Site:#
 www.miui.it
