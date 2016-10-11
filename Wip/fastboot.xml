@@ -27,7 +27,7 @@
             <PlaceHolder height="10"/>
             <Label text="Failed to get device info.Please try again" font="14" align="center, venter" height="20" textcolor="#333333"/>
             <PlaceHolder height="10"/>
-            <Button name="re_read_dev_btn" text="Reacquire" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+            <Button name="re_read_dev_btn" text="Retry" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
             <PlaceHolder/>
           </VerticalLayout>
 
@@ -37,7 +37,7 @@
             <PlaceHolder height="10"/>
             <Label text="Too many failures,it is recommended to restart the device and try again" font="14" align="center, venter" height="20" textcolor="#333333"/>
             <PlaceHolder height="10"/>
-            <Button name="reboot_dev_btn" text="Reacquire" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+            <Button name="reboot_dev_btn" text="Restart" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
             <PlaceHolder/>
           </VerticalLayout>
 
@@ -46,9 +46,9 @@
             <PlaceHolder height="120"/>
             <Label text="Unlocked device does not support the use of this model" font="16" align="center, venter" height="20"/>
             <PlaceHolder height="10"/>
-            <Label text="请使用Recovery模式刷机或者申请设备解锁" font="14" align="center, venter" height="20"/>
+            <Label text="Please use the Recovery mode to restore or unlock your device" font="14" align="center, venter" height="20"/>
             <PlaceHolder height="20"/>
-            <Button name="goto_unlock_site_btn" text="前往解锁" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+            <Button name="goto_unlock_site_btn" text="Go to Unlock" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
             <PlaceHolder height="10"/>
             <Button name="reboot_recovery_btn" text="Recovery" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
             <PlaceHolder/>
@@ -57,7 +57,7 @@
           <VerticalLayout name="fastboot_select_layout" visible="false" left="40" width="510">
             <PlaceHolder height="15"/>
             <HorizontalLayout height="30">
-              <Label text="请选择机型:"  font="14" align="left,venter" width="100"/>
+              <Label text="Please select a model:"  font="14" align="left,venter" width="100"/>
               <Layout  width="240" backgroundtransparent="true" height="30" backgroundimage="common_input_box_bg.png;;5,5,5,5">
                 <TextComboBox name="device_type_cbx" defaultnodename="common_controls:wifi_security_combobox" left="0" top="7" right="0" height="30"/>
               </Layout>
@@ -67,49 +67,49 @@
                 <Button name="check_device_btn"  backgroundtransparent="true" imagelist="common_btn_refresh.png" imagelistuistatus="disable"/>
                 <PlaceHolder height="8"/>
               </VerticalLayout>
-              <Label text="（若不匹配,请手动选择）" font="12" align="left,venter"/>
+              <Label text="If they do not match, select manually" font="12" align="left,venter"/>
             </HorizontalLayout>
 
             <PlaceHolder height="10"/>
             <HorizontalLayout height="30">
-              <Label text="请选择区域:"  font="14" align="left,venter" width="100"/>
+              <Label text="Please select an area:"  font="14" align="left,venter" width="100"/>
               <Layout  width="240" backgroundtransparent="true" height="35" backgroundimage="common_input_box_bg.png;;5,5,5,5">
                 <TextComboBox name="region_type_cbx" defaultnodename="common_controls:wifi_security_combobox" left="0" top="7" right="0" height="30"/>
               </Layout>
               <PlaceHolder width="18"/>
-              <Button name="check_net_fastboot_rom_btn" text="检测刷机包" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+              <Button name="check_net_fastboot_rom_btn" text="Detection package Fastboot" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
             </HorizontalLayout>
             <PlaceHolder height="20"/>
             <!--rom select-->
-            <Label text="请选择刷机包"  textcolor="#41474d" font="14" align="left" height="20"/>
+            <Label text="Please select package Fastboot"  textcolor="#41474d" font="14" align="left" height="20"/>
             <PlaceHolder height="5"/>
             <Control left="0" top="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
             <Layout name="stable_rom_layout" height="50" backgroundtransparent="true">
               <CheckBox name="stable_rom_checkbox" optiongroup="rom_select" left="0" top="17" width="15" defaultnodename="common_controls:checkbox_style"/>
-              <label left="32" top="10" text="稳定版" font="18" width="200" height="28"  align="left" />
-              <Label name="stable_rom_info_label" text="（待检索）" left="100" top="14" width="300" height="20" font="14" align="left" />
+              <label left="32" top="10" text="Stable" font="18" width="200" height="28"  align="left" />
+              <Label name="stable_rom_info_label" text="To be retrieved" left="100" top="14" width="300" height="20" font="14" align="left" />
               <Button name="stable_rom_radio_btn" left="0" top="5" width="600"  height="45" backgroundtransparent="true"/>
-              <Button name="stable_rom_log_btn" visible="false" left="420" top="16" width="60"  height="20"  text="更新日志" font="underline_12" textcolor="#656565" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
+              <Button name="stable_rom_log_btn" visible="false" left="420" top="16" width="60"  height="20"  text="Update log" font="underline_12" textcolor="#656565" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
             </Layout>
             <Control left="0" top="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
 
             <Layout name="dev_rom_layout" height="50" backgroundtransparent="true">
               <CheckBox name="dev_rom_checkbox" optiongroup="rom_select" left="0" top="17" width="15" defaultnodename="common_controls:checkbox_style"/>
-              <label left="32" top="10" text="开发版" font="18" width="200" height="28"  align="left" />
-              <Label name="dev_rom_info_label" text="（待检索）" left="100" top="14" width="300" height="20" font="14" align="left" />
+              <label left="32" top="10" text="Developer" font="18" width="200" height="28"  align="left" />
+              <Label name="dev_rom_info_label" text="To be retrieved" left="100" top="14" width="300" height="20" font="14" align="left" />
               <Button name="dev_rom_radio_btn" left="0" top="5" width="600"  height="45" backgroundtransparent="true"/>
-              <Button name="dev_rom_log_btn"  visible="false" left="420" top="16" width="60"  height="20"  text="更新日志" font="underline_12" textcolor="#656565" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
+              <Button name="dev_rom_log_btn"  visible="false" left="420" top="16" width="60"  height="20"  text="Update log" font="underline_12" textcolor="#656565" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
             </Layout>
             <Control left="0" top="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
             <PlaceHolder height="15"/>
             <CheckBox name="fastboot_flash_clear_data_btn"  height="18" width="240" defaultnodename="common_controls:checkbox_style"
-                      text="刷机时清除手机数据（可提高成功率）"
+                      text="Delete mobile phone data (can improve the success rate)"
                       textcolor="#333333" texthotcolor="#333333" textpushedcolor="#333333" />
             <PlaceHolder height="10"/>
             <HorizontalLayout height="30" width="258" >
-              <Button name="select_local_fastboot_rom_btn" text="选择本地刷机包" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+              <Button name="select_local_fastboot_rom_btn" text="Select the local package Fastboot" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
               <PlaceHolder width="18"/>
-              <Button name="downoad_fastboot_rom_btn" text="下载刷机包" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+              <Button name="downoad_fastboot_rom_btn" text="Download package Fastboot" textcolor="#333333" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
             </HorizontalLayout>
             <PlaceHolder height="10"/>
             <PlaceHolder/>
@@ -125,21 +125,21 @@
             </Layout>
             <PlaceHolder height="12"/>
             <VerticalLayout name="downloading_op_layout" height="80" visible="false">
-              <Label name="download_title_label" height="30" text="正在下载..." oritext="正在下载： %s" textcolor="#191919" font="14" align="center,venter"/>
+              <Label name="download_title_label" height="30" text="Downloading..." oritext="Downloading: %s" textcolor="#191919" font="14" align="center,venter"/>
               <PlaceHolder height="20"/>
-              <Button name="cancel_download_btn" text="取消下载" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="cancel_download_btn" text="Cancel the download" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
             </VerticalLayout>
             <VerticalLayout name="download_fail_layout" height="115" visible="true">
-              <Label height="30" text="下载失败，请重试" textcolor="#ff0000" font="14" align="center,venter"/>
+              <Label height="30" text="Download failed.Please try again" textcolor="#ff0000" font="14" align="center,venter"/>
               <PlaceHolder height="20"/>
-              <Button name="redownload_btn" text="重新下载" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="redownload_btn" text="Download again" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
               <PlaceHolder height="5"/>
-              <Button name="download_back_btn" text="上一步" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="download_back_btn" text="Previous" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
             </VerticalLayout>
             <VerticalLayout name="download_success_layout" height="115" visible="false">
-              <Label height="30" text="下载完成，点击进行下一步"  font="14" align="center,venter"/>
+              <Label height="30" text="Download is complete,click to proceed to the next step"  font="14" align="center,venter"/>
               <PlaceHolder height="20"/>
-              <Button name="download_next_btn" text="下一步" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="download_next_btn" text="Next" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
             </VerticalLayout>
             <PlaceHolder />
           </VerticalLayout>
@@ -155,21 +155,21 @@
             </Layout>
             <PlaceHolder height="12"/>
             <VerticalLayout name="flashing_op_layout" height="30" visible="false">
-              <Label height="30" text="正在刷机，请勿断开连接" textcolor="#191919" font="14" align="center,venter"/>
+              <Label height="30" text="Flash is being,do not disconnect" textcolor="#191919" font="14" align="center,venter"/>
               <PlaceHolder height="20"/>
             </VerticalLayout>
             <VerticalLayout name="flash_fail_layout" height="120" visible="false">
-              <Label name="flash_fail_msg_lbl" height="30" text="刷机失败，请重试" textcolor="#ff0000" font="14" align="center,venter"/>
+              <Label name="flash_fail_msg_lbl" height="30" text="Flash failed.Please try again" textcolor="#ff0000" font="14" align="center,venter"/>
               <PlaceHolder height="20"/>
-              <Button name="reflash_btn" text="重试" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="reflash_btn" text="Retry" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
               <PlaceHolder height="10"/>
-              <Button name="cancel_flash_btn" text="取消" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="cancel_flash_btn" text="Cancel" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
             </VerticalLayout>
 
             <VerticalLayout name="flash_finish_layout" height="80" visible="true">
-              <Label height="30" text="刷机完成" textcolor="#191919" font="14" align="center,venter"/>
+              <Label height="30" text="Flash completed" textcolor="#191919" font="14" align="center,venter"/>
               <PlaceHolder height="20"/>
-              <Button name="flash_finish_btn" text="完成" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="flash_finish_btn" text="Complete" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
             </VerticalLayout>
             <PlaceHolder />
           </VerticalLayout>
@@ -178,7 +178,7 @@
         <VerticalLayout height="80">
           <PlaceHolder/>
           <PlaceHolder height="10"/>
-          <Label text="Info:during this process,please try to temporarily close the QQ and other mobile assistant tools" font="12" align="center, venter" height="20"/>
+          <Label text="Info: During this process,please try to temporarily close the QQ and other mobile assistant tools" font="12" align="center, venter" height="20"/>
           <PlaceHolder height="20"/>
         </VerticalLayout>
       </VerticalLayout>
