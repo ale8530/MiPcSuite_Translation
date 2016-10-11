@@ -24,7 +24,7 @@
           <VerticalLayout width="262">
             <VerticalLayout height="82" backgroundimage="img/two_lines_edit_bg.png" backgroundtransparent="true">
               <PlaceHolder height="5"/>
-              <RichEdit name="account_id_input" text="" font="14" height="31" backgroundtransparent="true" placestring="Email/mobile number/ID" placetextcolor="#888888"
+              <RichEdit name="account_id_input" text="" font="14" height="31" backgroundtransparent="true" placestring="Email/Mobile number/ID" placetextcolor="#888888"
                         multiline="false" textlimit="40" wanttab="false" wantreturn="false" autohscroll="false" align="venter"/>
               <PlaceHolder height="10"/>
               <RichEdit name="account_pwd_input" text="" font="14" height="31" backgroundtransparent="true" placestring="Password" placetextcolor="#888888" password="true"

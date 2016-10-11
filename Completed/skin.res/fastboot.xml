@@ -86,19 +86,19 @@
             <Control left="0" top="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
             <Layout name="stable_rom_layout" height="50" backgroundtransparent="true">
               <CheckBox name="stable_rom_checkbox" optiongroup="rom_select" left="0" top="17" width="15" defaultnodename="common_controls:checkbox_style"/>
-              <label left="32" top="10" text="Stable" font="8" width="200" height="28"  align="left" />
+              <label left="32" top="10" text="Stable" font="11" width="200" height="28"  align="left" />
               <Label name="stable_rom_info_label" text="To be retrieved" left="100" top="14" width="300" height="20" font="8" align="left" />
               <Button name="stable_rom_radio_btn" left="0" top="5" width="600"  height="45" backgroundtransparent="true"/>
-              <Button name="stable_rom_log_btn" visible="false" left="420" top="16" width="60"  height="20"  text="Change Log" font="underline_8" textcolor="#656565" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
+              <Button name="stable_rom_log_btn" visible="false" left="420" top="16" width="60"  height="20"  text="Log" font="underline_8" textcolor="#656565" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
             </Layout>
             <Control left="0" top="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
 
             <Layout name="dev_rom_layout" height="50" backgroundtransparent="true">
               <CheckBox name="dev_rom_checkbox" optiongroup="rom_select" left="0" top="17" width="15" defaultnodename="common_controls:checkbox_style"/>
-              <label left="32" top="10" text="Developer" font="8" width="200" height="28"  align="left" />
+              <label left="32" top="10" text="Beta" font="11" width="200" height="28"  align="left" />
               <Label name="dev_rom_info_label" text="To be retrieved" left="100" top="14" width="300" height="20" font="8" align="left" />
               <Button name="dev_rom_radio_btn" left="0" top="5" width="600"  height="45" backgroundtransparent="true"/>
-              <Button name="dev_rom_log_btn"  visible="false" left="420" top="16" width="60"  height="20"  text="Change Log" font="underline_8" textcolor="#656565" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
+              <Button name="dev_rom_log_btn"  visible="false" left="420" top="16" width="60"  height="20"  text="Log" font="underline_8" textcolor="#656565" align="right"  texthotcolor="#656565" backgroundtransparent="true"/>
             </Layout>
             <Control left="0" top="0" height="1"  hittest="false" backgroundimage="common_line_horizontal.png" backgroundtransparent="true"/>
             <PlaceHolder height="15"/>
