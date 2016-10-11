@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<window name="drop_down_window" size="230,286" type="menu_window" backgroundimage="common/drop_window_bg.png;;5,12,5,5" translucent="true" alphaborders="2,10,2,2">
-	<Layout left="2" top="10" right="2" bottom="2">
-	    <AddressList name="recipient_address_list" right="0" bottom="0" itemheight="30" backgroundtransparent="true" ratiowheeldelata="10">
-            <Indicate value="<PlaceHolder width='1' height='1'/>" />
-            <Content value="<DecorateButton defaultnodename='common_controls:recipient_address_info' />" />
-        </AddressList>
-	</Layout>
-</window>

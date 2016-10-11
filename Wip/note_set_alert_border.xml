@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<window name="note_set_alert_border_window" type="border_window" backgroundcolor="#FFFFFF" backgroundimage="note_set_alert_shadow.png;;20,70,20,40" translucent="true" alphaborders="500,500,500,500">
-	<HorizontalLayout name="bg" left="15" top="13" right="14" bottom="24" align="near">
-	</HorizontalLayout>
-</window>

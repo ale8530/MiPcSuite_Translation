@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<window name="screenshot_wnd" type="window" size="1,1" mainwindow="false" backgroundcolor="#000000" >
-	<Layout left="0" right="0" top="0" bottom="0" backgroundcolor="#000000" >
-		<Button name="canvas" left="0" top="5" height="1" width="1" visible="true" backgroundcolor="#000000" backgroundtransparent="false" showidchand="false" enable="false" focusenable="true"  maintainaspectratio="true" imagepadding="1,1,1,1"/>
-	    <Button name="btn_close" left="0" top="5" width="18" height="18" visible="true" backgroundtransparent="false" imagelist="projection/white_btn_close.png" focusenable="false"/> 
-  </Layout>
-</window>
