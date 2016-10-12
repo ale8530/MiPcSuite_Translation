@@ -25,15 +25,15 @@
               <VerticalLayout width="150">
                 <Button name="show_rcy_lyt_btn" text="Recovery mode" textcolor="#656565" width="150" height="40" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
                 <PlaceHolder height="10"/>
-                <Label text="The device does not need to be unlocked" font="14" align="center, venter" height="20"/>
-                <Label text="This process will keep your information" font="12" align="center, venter" height="20" textcolor="#656565"/>
+                <Label text="Not need to be unlocked" font="4" align="center, venter" height="20"/>
+                <Label text="Will keep your data" font="4" align="center, venter" height="20" textcolor="#656565"/>
               </VerticalLayout>
               <PlaceHolder width="20"/>
               <VerticalLayout width="150">
                 <Button name="show_fsbt_lyt_btn" text="Fastboot mode" textcolor="#656565" height="40" width="150" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
                 <PlaceHolder height="10"/>
-                <Label text="The device does not need to be unlocked" font="14" align="center, venter" height="20"/>
-                <Label text="This process will clear the data" font="12" align="center, venter" height="20" textcolor="#656565"/>
+                <Label text="Not need to be unlocked" font="4" align="center, venter" height="20"/>
+                <Label text="Will clear the data" font="4" align="center, venter" height="20" textcolor="#656565"/>
               </VerticalLayout>
             </HorizontalLayout>
           </VerticalLayout>
