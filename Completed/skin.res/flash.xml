@@ -6,7 +6,7 @@
         <!--title-->
         <HorizontalLayout height="33">
           <PlaceHolder width="10"/>
-          <Label name="title_label" text="刷机" font="12" textcolor="#606060" align="left,venter" padding="0, 0, 0, 0" />
+          <Label name="title_label" text="Flash" font="12" textcolor="#606060" align="left,venter" padding="0, 0, 0, 0" />
           <Button name="window_close_btn" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,0,0,0"/>
           <PlaceHolder width="10"/>
         </HorizontalLayout>
@@ -16,24 +16,24 @@
           <!--刷机模式选择-->
           <VerticalLayout name="mode_select_lyt" visible="true">
             <PlaceHolder height="80"/>
-            <Label text="请选择刷机模式" font="18" align="center, venter" height="30"/>
+            <Label text="Please select mode" font="18" align="center, venter" height="30"/>
             <PlaceHolder height="5"/>
-            <Label text="刷机有可能导致您的数据被清除，请谨慎操作！" font="12" align="center, venter" height="20" textcolor="#656565"/>
+            <Label text="Flash may cause your data to be cleared, please exercise caution!!" font="12" align="center, venter" height="20" textcolor="#656565"/>
             <PlaceHolder height="40"/>
 
             <HorizontalLayout height="100" width="320">
               <VerticalLayout width="150">
-                <Button name="show_rcy_lyt_btn" text="Recovery刷机模式" textcolor="#656565" width="150" height="40" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+                <Button name="show_rcy_lyt_btn" text="Recovery mode" textcolor="#656565" width="150" height="40" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
                 <PlaceHolder height="10"/>
-                <Label text="设备无需解锁" font="14" align="center, venter" height="20"/>
-                <Label text="刷机过程中保留数据" font="12" align="center, venter" height="20" textcolor="#656565"/>
+                <Label text="The device does not need to be unlocked" font="14" align="center, venter" height="20"/>
+                <Label text="This process will keep your information" font="12" align="center, venter" height="20" textcolor="#656565"/>
               </VerticalLayout>
               <PlaceHolder width="20"/>
               <VerticalLayout width="150">
-                <Button name="show_fsbt_lyt_btn" text="Fastboot刷机模式" textcolor="#656565" height="40" width="150" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
+                <Button name="show_fsbt_lyt_btn" text="Fastboot mode" textcolor="#656565" height="40" width="150" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable"/>
                 <PlaceHolder height="10"/>
-                <Label text="设备需解锁" font="14" align="center, venter" height="20"/>
-                <Label text="刷机过程中会清除数据" font="12" align="center, venter" height="20" textcolor="#656565"/>
+                <Label text="The device does not need to be unlocked" font="14" align="center, venter" height="20"/>
+                <Label text="This process will clear the data" font="12" align="center, venter" height="20" textcolor="#656565"/>
               </VerticalLayout>
             </HorizontalLayout>
           </VerticalLayout>
@@ -43,29 +43,29 @@
             <PlaceHolder height="120"/>
             <Control width="31" height="67" backgroundimage="common_usb.png" backgroundtransparent="true"/>
             <PlaceHolder height="5"/>
-            <Label text="请连接已进入Recovery模式的设备" font="14" align="center, venter" height="20"/>
+            <Label text="Recovery mode" font="14" align="center, venter" height="20"/>
             <PlaceHolder height="5"/>
-            <Label text="Recovery模式进入方法:关机状态下，请按【音量加】和【电源键】3秒" font="12" align="center, venter" height="20" textcolor="#656565"/>
+            <Label text="Press and hold the volume key up and power button for 3 seconds to enter this mode" font="4" align="center, venter" height="20" textcolor="#656565"/>
             <PlaceHolder/>
-            <Button name="recy_help_back_btn" text="返回" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            <Button name="recy_help_back_btn" text="Back" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
           </VerticalLayout>
           <!--fastboot help-->
           <VerticalLayout name="fsbt_help_lyt" visible="false">
             <PlaceHolder height="120"/>
             <Control width="31" height="67" backgroundimage="common_usb.png" backgroundtransparent="true"/>
             <PlaceHolder height="5"/>
-            <Label text="请连接已进入Fastboot模式的设备" font="14" align="center, venter" height="20"/>
+            <Label text="Fastboot mode" font="14" align="center, venter" height="20"/>
             <PlaceHolder height="5"/>
-            <Label text="Fastboot模式进入方法:关机状态下，请按【音量减】和【电源键】3秒" font="12" align="center, venter" height="20" textcolor="#656565"/>
+            <Label text="Press and hold the volume key down and power button for 3 seconds to enter this mode" font="4" align="center, venter" height="20" textcolor="#656565"/>
             <PlaceHolder/>
-            <Button name="fsbt_help_back_btn" text="返回" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+            <Button name="fsbt_help_back_btn" text="Back" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
           </VerticalLayout>
        </VerticalLayout>
         <!--bottom-->
         <VerticalLayout height="80">
           <PlaceHolder/>
           <PlaceHolder height="10"/>
-          <Label text="提示：刷机过程中请尽量临时关闭QQ以及其他手机助手类工具" font="12" align="center, venter" height="20"/>
+          <Label text="During this process,please try to temporarily close the QQ and other mobile assistant tools" font="4" align="center, venter" height="20"/>
           <PlaceHolder height="20"/>
         </VerticalLayout>
       </VerticalLayout>

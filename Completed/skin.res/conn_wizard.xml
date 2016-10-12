@@ -26,11 +26,11 @@
             <Label text="Flash may cause your data to be cleared, please exercise caution!" height="30" textcolor="#FFFFFF" font="bold_16" align="center"/>
             <PlaceHolder height="20"/>
             <Control backgroundtransparent="true" backgroundimage="bro/recovery_help.png" left="0" top="0" width="456" height="69" />
-            <Label text="Press and hold the volume key up and power button for 3 seconds to enter the Recovery mode" height="30" textcolor="#FFFFFF" font="16" align="center"/>
+            <Label text="Press and hold the volume key up and power button for 3 seconds to enter this mode" height="30" textcolor="#FFFFFF" font="4" align="center"/>
             <PlaceHolder height="10"/>
             
             <Control backgroundtransparent="true" backgroundimage="bro/fastboot_help.png" left="0" top="0" width="456" height="69" />
-            <Label text="Press and hold the volume key down and power button for 3 seconds to enter the Fastboot mode" height="30" textcolor="#FFFFFF" font="16" align="center"/>
+            <Label text="Press and hold the volume key down and power button for 3 seconds to enter this mode" height="30" textcolor="#FFFFFF" font="4" align="center"/>
             <PlaceHolder height="10"/>
             <HorizontalLayout height="28" width="120">
               <Button name="flash_help_close_btn" text="OK, I get it" width="120" height="28" backgroundtransparent="true" imagelist="common/round_gray_btn_list.png;;15,2,15,2" imagelistuistatus="disable" textcolor="#FB6831" font="bold_14" />
