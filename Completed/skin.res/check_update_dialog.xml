@@ -4,7 +4,7 @@
 		<Title left="0" top="0" right="0" height="60" align="near">
             <HorizontalLayout width="580" height="35">
                 <PlaceHolder width="10" />
-                <Label text="检查更新" font="12" width="120" height="18" textcolor="#FFFFFF" align="left, top" />
+                <Label text="Check for updates" font="12" width="120" height="18" textcolor="#FFFFFF" align="left, top" />
                 <PlaceHolder />
                 <Button name="check_update_close" backgroundtransparent="true" imagelist="about/close.png" width="11" height="11" />
                 <PlaceHolder width="10" />
@@ -19,14 +19,14 @@
                     <ImageCircleAnimate name="image_circle_outer" left="0" top="0" width="170" height="170" animateimage="checkupdate/outer_circle.png" backgroundtransparent="true" hittest="false" />
                 </Layout>
                 <PlaceHolder height="10" />
-                <Label text="正在检查更新..." textcolor="#FFFFFF" width="200" height="30" align="center" font="16" />
+                <Label text="Checking for updates..." textcolor="#FFFFFF" width="200" height="30" align="center" font="18" />
             </VerticalLayout>
             <VerticalLayout name="downloading_layout" backgroundtransparent="true" visible="false">
                 <PlaceHolder height="40" />
                 <HorizontalLayout width="460" height="120">
                     <Control width="180" backgroundimage="checkupdate/update_flag.png" backgroundtransparent="true"/>
                     <VerticalLayout height="80">
-                        <Label text="检查到新版本！" font="bold_18" textcolor="#FFFFFF" height="40" />
+                        <Label text="New version detected！" font="bold_18" textcolor="#FFFFFF" height="40" />
                         <PlaceHolder height="10" />
                         <HorizontalLayout height="25">
                             <Label name="download_layout_version_info" font="12" textcolor="#FFFFFF" autosize="true" />
@@ -35,7 +35,7 @@
                             <PlaceHolder width="8" />
                             <DecorateButton name="link_update_log_btn" width="160" backgroundtransparent="true">
                                 <HorizontalLayout right="0" bottom="0">
-                                    <Label text="版本更新日志" font="12" autosize="true" height="28" textcolor="#FFFFFF" backgroundtransparent="true" />
+                                    <Label text="The version update log" font="12" autosize="true" height="28" textcolor="#FFFFFF" backgroundtransparent="true" />
                                     <Button width="15" height="15" imagelist="checkupdate/link_update_log.png" backgroundtransparent="true"/>
                                 </HorizontalLayout>
                             </DecorateButton>
@@ -44,14 +44,14 @@
                 </HorizontalLayout>
                 <VerticalLayout name="download_finish_layout" visible="false" height="120" >
                     <PlaceHolder height="60"/>
-                    <Label text="重启小米助手立即升级" height="18" font="12" textcolor="#FFFFFF" autosize="true" />
+                    <Label text="Restart Mi Account immediately for upgrade" height="18" font="12" textcolor="#FFFFFF" autosize="true" />
                     <PlaceHolder height="5"/>
-                    <Button name="invoke_update" text="立即升级" font="12" textcolor="#fb5a45" width="130" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+                    <Button name="invoke_update" text="Upgrade now" font="12" textcolor="#fb5a45" width="130" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
                 </VerticalLayout>
                 <VerticalLayout name="download_progress_layout" visible="false" width="530" height="160" align="near" >
                     <PlaceHolder height="100"/>
                     <HorizontalLayout height="18">
-                        <Label text="正在下载更新..." font="12" textcolor="#FFFFFF" width="100" />
+                        <Label text="Downloading updates..." font="12" textcolor="#FFFFFF" width="100" />
                         <Label name="download_percent" font="12" textcolor="#FFFFFF" width="30" />
                     </HorizontalLayout>
                     <layout height="10" >
@@ -65,7 +65,7 @@
                 <PlaceHolder height="20" />
                 <Control width="240" height="126" backgroundimage="checkupdate/latest_version.png" backgroundtransparent="true"/>
                 <PlaceHolder height="15" />
-                <Label text="恭喜，小米助手已是最新版本" height="30" font="bold_16" textcolor="#FFFFFF" autosize="true" />
+                <Label text="Congratulations, is the latest version" height="30" font="bold_16" textcolor="#FFFFFF" autosize="true" />
                 <HorizontalLayout height="25">
                     <PlaceHolder width="180" />
                     <Label name="newest_layout_version_info" font="12" textcolor="#FFFFFF" autosize="true" />
@@ -74,7 +74,7 @@
                     <PlaceHolder width="8" />
                     <DecorateButton name="link_update_log_btn" width="160" backgroundtransparent="true">
                         <HorizontalLayout right="0" bottom="0">
-                            <Label text="版本更新日志" font="12" autosize="true" height="28" textcolor="#FFFFFF" backgroundtransparent="true" />
+                            <Label text="Update log" font="12" autosize="true" height="28" textcolor="#FFFFFF" backgroundtransparent="true" />
                             <Control width="1" height="15" backgroundimage="checkupdate/sep.png" backgroundtransparent="true" />
                             <PlaceHolder width="5" />
                             <Button width="15" height="15" imagelist="checkupdate/link_update_log.png" backgroundtransparent="true"/>
@@ -82,13 +82,13 @@
                     </DecorateButton>
                 </HorizontalLayout>
                 <PlaceHolder height="25" />
-                <Button name="check_update_close_dialog" text="我知道了" font="12" textcolor="#fb5a45" width="130" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+                <Button name="check_update_close_dialog" text="Close" font="12" textcolor="#fb5a45" width="130" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
             </VerticalLayout>
             <VerticalLayout name="error_layout" backgroundtransparent="true" visible="false">
                 <PlaceHolder height="40" />
                 <Control width="270" height="125" backgroundimage="checkupdate/update_failed.png" backgroundtransparent="true"/>
                 <PlaceHolder height="30" />
-                <Label text="检查更新出错了" textcolor="#FFFFFF" width="200" height="30" font="bold_18" align="center" />
+                <Label text="Check for an update error" textcolor="#FFFFFF" width="200" height="30" font="bold_18" align="center" />
             </VerticalLayout>
         </VerticalLayout>
 	</Layout>

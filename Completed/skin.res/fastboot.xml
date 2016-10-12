@@ -132,9 +132,9 @@
             <VerticalLayout name="download_fail_layout" height="115" visible="true">
               <Label height="30" text="Download failed.Please try again" textcolor="#ff0000" font="8" align="center,venter"/>
               <PlaceHolder height="20"/>
-              <Button name="redownload_btn" text="Again" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="redownload_btn" text="Retry" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
               <PlaceHolder height="5"/>
-              <Button name="download_back_btn" text="Previous" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
+              <Button name="download_back_btn" text="Back" height="30" width="120" backgroundtransparent="true" imagelist="common/common_btn_list.png" imagelistuistatus="disable" textcolor="#333333"/>
             </VerticalLayout>
             <VerticalLayout name="download_success_layout" height="115" visible="false">
               <Label height="30" text="Download is complete,click to proceed to the next step"  font="8" align="center,venter"/>
@@ -155,7 +155,7 @@
             </Layout>
             <PlaceHolder height="12"/>
             <VerticalLayout name="flashing_op_layout" height="30" visible="false">
-              <Label height="30" text="Flash is being,do not disconnect" textcolor="#191919" font="8" align="center,venter"/>
+              <Label height="30" text="Flash started,do not disconnect" textcolor="#191919" font="8" align="center,venter"/>
               <PlaceHolder height="20"/>
             </VerticalLayout>
             <VerticalLayout name="flash_fail_layout" height="120" visible="false">
