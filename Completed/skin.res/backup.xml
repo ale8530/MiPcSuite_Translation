@@ -17,14 +17,14 @@
                 <PlaceHolder height="70"/>
     		    <Control name="backup_start_icon" backgroundtransparent="true" backgroundimage="bro/backup_start.png" left="0" top="0" width="43" height="43" />
                 <PlaceHolder height="15"/>
-                <Label name="backup_start_title" height="25" text="This device has not been backed up" textcolor="#191919" font="18" align="center"/>
-                <Label name="backup_start_second_title" height="30" text="A complete backup of your mi device will be stored on this computer" textcolor="#656565" font="14" align="center"/>
+                <Label name="backup_start_title" height="25" text="This device has not been backed up" textcolor="#191919" font="8" align="center"/>
+                <Label name="backup_start_second_title" height="30" text="A complete backup of your mi device will be stored on this computer" textcolor="#656565" font="8" align="center"/>
                 <PlaceHolder height="55"/>
                 <Layout width="590" height="40">
                     <Control backgroundtransparent="true" backgroundimage="bro/tips.png" left="102" top="0" width="18" height="18" />
                     <Label left="122" top="0" width="500" height="20" text="Currently, only text messages, contacts, photo data, application and application data are supported" textcolor="#878f9a" font="4" />
-                    <Label left="170" top="20" width="290" height="20" text="Restore is not supported at this time. Other backup methods" textcolor="#878f9a" font="14" />
-                    <Label left="360" top="20" width="70" height="20" text="{f id:14}{a cmd:open_backup_bbs}{c #ff591f}Look here{/c}{/a}{/f}。" font="14" textcolor="#878f9a" align="left" showhtml="true" padding="0,0,0,2"/>
+                    <Label left="170" top="20" width="290" height="20" text="Restore is not supported at this time.Other backup methods" textcolor="#878f9a" font="4" />
+                    <Label left="360" top="20" width="70" height="20" text="{f id:14}{a cmd:open_backup_bbs}{c #ff591f}Look here{/c}{/a}{/f}。" font="8" textcolor="#878f9a" align="left" showhtml="true" padding="0,0,0,2"/>
                 </Layout>
                 <PlaceHolder height="15"/>
                 <Button name="backup_start_btn" text="Start" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
@@ -53,46 +53,46 @@
                 <PlaceHolder height="62"/>
                 <Layout width="590" height="40">
                     <Control backgroundtransparent="true" backgroundimage="bro/tips.png" left="102" top="0" width="18" height="18" />
-                    <Label left="122" top="0" width="500" height="20" text="Currently, only text messages, contacts, photo data, application and application data are supported" textcolor="#878f9a" font="14" />
-                    <Label left="170" top="20" width="290" height="20" text="还原暂不支持。其他备份方式" textcolor="#878f9a" font="14" />
-                    <Label left="360" top="20" width="70" height="20" text="{f id:14}{a cmd:open_backup_bbs}{c #ff591f}请看这里{/c}{/a}{/f}。" font="14" textcolor="#878f9a" align="left" showhtml="true" padding="0,0,0,2"/>
+                    <Label left="122" top="0" width="500" height="20" text="Currently,only text messages, contacts, photo data, application and application data are supported" textcolor="#878f9a" font="4" />
+                    <Label left="170" top="20" width="290" height="20" text="Restore is not supported at this time.Other backup methods" textcolor="#878f9a" font="8" />
+                    <Label left="360" top="20" width="70" height="20" text="{f id:14}{a cmd:open_backup_bbs}{c #ff591f}Look here{/c}{/a}{/f}." font="8" textcolor="#878f9a" align="left" showhtml="true" padding="0,0,0,2"/>
                 </Layout>
                 <PlaceHolder height="15"/>
-                <Button name="backup_progress_cancel_btn" text="取消" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+                <Button name="backup_progress_cancel_btn" text="Cancel" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
             </VerticalLayout>
             <VerticalLayout name="backup_complete" left="0" top="0" right="0" bottom="0" visible="false">
                 <PlaceHolder height="104"/>
     		    <Control name="backup_complete_icon" backgroundtransparent="true" backgroundimage="bro/complete.png" left="0" top="0" width="43" height="43" />
                 <PlaceHolder height="16"/>
-                <Label name="backup_complete_title" height="23" text="整机备份完成" textcolor="#191919" font="18" align="center"/>
-                <Label text="{f id:14}{a cmd:show_backup_directory}{c #656565}查看备份文件{/c}{/a}{/f}" showhtml="true" height="30" width="90" align="center" />
+                <Label name="backup_complete_title" height="23" text="Backup complete" textcolor="#191919" font="18" align="center"/>
+                <Label text="{f id:14}{a cmd:show_backup_directory}{c #656565}View the backup file{/c}{/a}{/f}" showhtml="true" height="30" width="90" align="center" />
                 <PlaceHolder height="91" />
-                <CheckBox name="backup_complete_auto" height="14" width="140" imagewidth="14" text="设备连接后自动备份" textcolor="#656565" font="12" align="left,top" spacebetweenimageandtext="3" backgroundimage="common_checkbox_.png;0,0,14,14" backgroundnormalimage="common_checkbox_.png;0,0,14,14" backgroundhotimage="common_checkbox_.png;14,0,28,14"  backgroundpushedimage="common_checkbox_.png;14,0,28,14" backgrounddisabledimage="common_checkbox_.png;0,0,14,14" normalimage="common_checkbox_.png;28,0,42,14" hotimage="common_checkbox_.png;28,0,42,14" pushedimage="common_checkbox_.png;28,0,42,14" backgroundtransparent="true"/>
+                <CheckBox name="backup_complete_auto" height="14" width="140" imagewidth="14" text="The device is automatically backed up after connection" textcolor="#656565" font="4" align="left,top" spacebetweenimageandtext="3" backgroundimage="common_checkbox_.png;0,0,14,14" backgroundnormalimage="common_checkbox_.png;0,0,14,14" backgroundhotimage="common_checkbox_.png;14,0,28,14"  backgroundpushedimage="common_checkbox_.png;14,0,28,14" backgrounddisabledimage="common_checkbox_.png;0,0,14,14" normalimage="common_checkbox_.png;28,0,42,14" hotimage="common_checkbox_.png;28,0,42,14" pushedimage="common_checkbox_.png;28,0,42,14" backgroundtransparent="true"/>
                 <PlaceHolder height="10" />
-                <Button name="backup_complete_btn" text="完成" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+                <Button name="backup_complete_btn" text="Complete" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
             </VerticalLayout>
             <VerticalLayout name="backup_setting" left="10" top="0" right="0" bottom="0" visible="false">
                 <PlaceHolder height="20"/>
                 <HorizontalLayout height="30" backgroundtransparent="true">
-                    <Label text="备份目录" textcolor="#191919" align="left,venter" width="70" height="30"/>
+                    <Label text="Back up the directory" textcolor="#191919" align="left,venter" width="70" height="30"/>
                     <PlaceHolder width="25" />
                     <HorizontalLayout width="300" height="30" backgroundtransparent="true" backgroundimage="输入框.png" >
                         <RichEdit name="backup_setting_client_backup_fld" height="24" width="345" vscrollbar="false" autovscroll="false" hscrollbar="false" autohscroll="true" multiline="false" wanttab="true" wantreturn="false" wantctrlreturn="true" rich="false" font="arial_12" backgroundtransparent="true" visible="true" align='venter' textcolor="#a5a5a5" readonly="true" />
                     </HorizontalLayout>
                     <PlaceHolder width="5" />
-                    <Button name="backup_setting_client_backup_open_directory" text="打开" textcolor="#656565" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+                    <Button name="backup_setting_client_backup_open_directory" text="Turn on" textcolor="#656565" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
                     <PlaceHolder width="5" />
-                    <Button name="backup_setting_client_backup_sel_fld" text="修改" textcolor="#656565" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+                    <Button name="backup_setting_client_backup_sel_fld" text="Modify" textcolor="#656565" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
                 </HorizontalLayout>
                 <PlaceHolder height="20" />
                 <HorizontalLayout >
-                    <Label font="14" text="已备份设备" width="95" textcolor="#191919" align='left,top' height="300"/>
+                    <Label font="8" text="The device has been backed up" width="95" textcolor="#191919" align='left,top' height="300"/>
                     <VerticalLayout width="460" height="300" backgroundtransparent="true" align="top" backgroundimage="setting/backup_frame.png">
                         <HorizontalLayout left="0" top="0" height="37">
                             <PlaceHolder width="10" />
-                            <Label name="backup_setting_client_backup_device_title" width="230" text="设备" textcolor="#191919" font="14" />
+                            <Label name="backup_setting_client_backup_device_title" width="230" text="Equipment" textcolor="#191919" font="8" />
                             <PlaceHolder width="90" />
-                            <Label name="backup_setting_client_backup_device_auto_backup_title" width="100" text="自动备份" textcolor="#191919" font="14"/>
+                            <Label name="backup_setting_client_backup_device_auto_backup_title" width="100" text="Automatic" textcolor="#191919" font="8"/>
                         </HorizontalLayout>
                         <CheckboxList name="backup_setting_client_device_list" itemheight="70" backgroundtransparent="true" padding="1,1,1,1">
                             <Indicate value="<PlaceHolder width='1' height='1'/>" />
@@ -103,8 +103,8 @@
                 <PlaceHolder height="79" />
             </VerticalLayout>
             <Layout name="backup_setting_bottom_buttons_layout" right="0" bottom="0" visible="false">
-                <Button name="backup_setting_btn_done" focusenable="false" text="确定" textcolor="#656565" texthotcolor="#c02020" textpushedcolor="#ffffff" font="12" left="108,false" top="24,false" width="75" height="30" imagelist="strong_btn.png" imagelistuistatus="disable" />
-                <Button name="backup_setting_btn_cancel" focusenable="false" text="返回" textcolor="#656565" font="12" left="29,false" top="24,false" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
+                <Button name="backup_setting_btn_done" focusenable="false" text="Done" textcolor="#656565" texthotcolor="#c02020" textpushedcolor="#ffffff" font="8" left="108,false" top="24,false" width="75" height="30" imagelist="strong_btn.png" imagelistuistatus="disable" />
+                <Button name="backup_setting_btn_cancel" focusenable="false" text="Cancel" textcolor="#656565" font="8" left="29,false" top="24,false" width="75" height="30" imagelist="common_btn.png" imagelistuistatus="disable" />
             </Layout>
         </Layout>
     </Layout>
