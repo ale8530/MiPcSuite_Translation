@@ -2,7 +2,7 @@
 <window type="window" size="592, 422" borderwindow="dialog_border_skin.xml">
     <Layout name="backup_client_backup" left="0" right="0" bottom="0" backgroundimage="bro/bro_frame.png;;1,34,1,1">
         <Title left="0" right="0" top="0" height="33" padding="10,9,10,0" align="near">
-			<Label name="backup_title" text="整机备份" font="12" textcolor="#656565" align="left, top" padding="0, 0, 0, 0" />
+			<Label name="backup_title" text="Backup" font="12" textcolor="#656565" align="left, top" padding="0, 0, 0, 0" />
 			<Button name="backup_min" backgroundtransparent="true" backgroundimage="common/dialog_min_grey.png" backgroundhotimage="common/dialog_min_grey_hot.png" backgroundpushedimage="common/dialog_min_grey_hot.png" width="14" height="14" padding="0,0,0,0"/>
             <PlaceHolder width="8"/>
 			<Button name="backup_close" backgroundtransparent="true" backgroundimage="common/dialog_close.png" backgroundhotimage="common/dialog_close_hot.png" backgroundpushedimage="common/dialog_close_hot.png" width="14" height="14" padding="0,0,0,0"/>
@@ -12,33 +12,33 @@
                 <PlaceHolder height="10"/>
                 <HorizontalLayout height="25">
                     <PlaceHolder/>
-                    <Label text="{f id:12}{a cmd:backup_device_mgr}{c #656565}设备管理{/c}{/a}{/f}" padding="0,0,10,0" width="75" showhtml="true" align="right,top"/>
+                    <Label text="{f id:12}{a cmd:backup_device_mgr}{c #656565}Equipment management{/c}{/a}{/f}" padding="0,0,10,0" width="75" showhtml="true" align="right,top"/>
                 </HorizontalLayout>
                 <PlaceHolder height="70"/>
     		    <Control name="backup_start_icon" backgroundtransparent="true" backgroundimage="bro/backup_start.png" left="0" top="0" width="43" height="43" />
                 <PlaceHolder height="15"/>
-                <Label name="backup_start_title" height="25" text="此设备尚未备份" textcolor="#191919" font="18" align="center"/>
-                <Label name="backup_start_second_title" height="30" text="您的小米设备的完整备份将存储在这台电脑上" textcolor="#656565" font="14" align="center"/>
+                <Label name="backup_start_title" height="25" text="This device has not been backed up" textcolor="#191919" font="18" align="center"/>
+                <Label name="backup_start_second_title" height="30" text="A complete backup of your mi device will be stored on this computer" textcolor="#656565" font="14" align="center"/>
                 <PlaceHolder height="55"/>
                 <Layout width="590" height="40">
                     <Control backgroundtransparent="true" backgroundimage="bro/tips.png" left="102" top="0" width="18" height="18" />
-                    <Label left="122" top="0" width="500" height="20" text="当前仅支持还原短信、联系人、照片数据，应用与应用数据" textcolor="#878f9a" font="14" />
-                    <Label left="170" top="20" width="290" height="20" text="还原暂不支持。其他备份方式" textcolor="#878f9a" font="14" />
-                    <Label left="360" top="20" width="70" height="20" text="{f id:14}{a cmd:open_backup_bbs}{c #ff591f}请看这里{/c}{/a}{/f}。" font="14" textcolor="#878f9a" align="left" showhtml="true" padding="0,0,0,2"/>
+                    <Label left="122" top="0" width="500" height="20" text="Currently, only text messages, contacts, photo data, application and application data are supported" textcolor="#878f9a" font="4" />
+                    <Label left="170" top="20" width="290" height="20" text="Restore is not supported at this time. Other backup methods" textcolor="#878f9a" font="14" />
+                    <Label left="360" top="20" width="70" height="20" text="{f id:14}{a cmd:open_backup_bbs}{c #ff591f}Look here{/c}{/a}{/f}。" font="14" textcolor="#878f9a" align="left" showhtml="true" padding="0,0,0,2"/>
                 </Layout>
                 <PlaceHolder height="15"/>
-                <Button name="backup_start_btn" text="开始备份" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
-                <Button name="backup_start_cancel_btn" text="取消" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+                <Button name="backup_start_btn" text="Start" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+                <Button name="backup_start_cancel_btn" text="Cancel" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
             </VerticalLayout>
             <VerticalLayout name="backup_err" left="0" top="0" right="0" bottom="0" visible="false">
                 <PlaceHolder height="105"/>
     		        <Control name="backup_err_icon" backgroundtransparent="true" backgroundimage="bro/error.png" left="0" top="0" width="43" height="43" />
                 <PlaceHolder height="15"/>
-    		        <Label name="backup_err_diskfull" height="30" text="{f id:18}{a cmd:show_log_directory}{c #fb5a45}磁盘已满，点击更换存储目录{/c}{/a}{/f}" showhtml="true" width="350" align="center"/>
-                <Label name="backup_err_msg" height="30" text="设备备份出错" textcolor="#fb5a45" font="18" align="center"/>
+    		        <Label name="backup_err_diskfull" height="30" text="{f id:18}{a cmd:show_log_directory}{c #fb5a45}When the disk is full,click Replace Storage Directory{/c}{/a}{/f}" showhtml="true" width="350" align="center"/>
+                <Label name="backup_err_msg" height="30" text="Backup error" textcolor="#fb5a45" font="18" align="center"/>
                 <Label name="backup_err_detail" height="30" text="" textcolor="#969696" align="center"/>
                 <PlaceHolder />
-                <Button name="backup_error_cancel_btn" text="确定" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
+                <Button name="backup_error_cancel_btn" text="Determine" textcolor="#656565" width="134" height="28" backgroundtransparent="true" imagelist="bro/normal_big_button.png;;12,0,12,0" imagelistuistatus="disable"/>
                 <PlaceHolder height="25" />
             </VerticalLayout>
             <VerticalLayout name="backup_progress" left="0" top="0" right="0" bottom="0" visible="false">
@@ -49,11 +49,11 @@
                     <Control name="backup_progress_m" width="1" height="6" backgroundimage="bro/progress_mark_blue.png;;3,2,3,2" 	backgroundtransparent="true" />
     			</Layout>
                 <PlaceHolder height="15"/>
-                <Label name="backup_progress_title" height="30" text="正在备份中..." textcolor="#191919" font="18" align="left"/>
+                <Label name="backup_progress_title" height="30" text="Backing up..." textcolor="#191919" font="18" align="left"/>
                 <PlaceHolder height="62"/>
                 <Layout width="590" height="40">
                     <Control backgroundtransparent="true" backgroundimage="bro/tips.png" left="102" top="0" width="18" height="18" />
-                    <Label left="122" top="0" width="500" height="20" text="当前仅支持还原短信、联系人、照片数据，应用与应用数据" textcolor="#878f9a" font="14" />
+                    <Label left="122" top="0" width="500" height="20" text="Currently, only text messages, contacts, photo data, application and application data are supported" textcolor="#878f9a" font="14" />
                     <Label left="170" top="20" width="290" height="20" text="还原暂不支持。其他备份方式" textcolor="#878f9a" font="14" />
                     <Label left="360" top="20" width="70" height="20" text="{f id:14}{a cmd:open_backup_bbs}{c #ff591f}请看这里{/c}{/a}{/f}。" font="14" textcolor="#878f9a" align="left" showhtml="true" padding="0,0,0,2"/>
                 </Layout>
